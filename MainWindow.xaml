@@ -16,12 +16,27 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
             <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
 
         <Grid Background="#e1f5fe"
-            Grid.ColumnSpan="2"
-            MouseDown="Grid_MouseDown">
+            Grid.ColumnSpan="4"
+            MouseDown="Grid_MouseDown" Margin="0,0,0,399" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.149"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
@@ -31,19 +46,19 @@
                 <ColumnDefinition Width="25"/>
                 <ColumnDefinition Width="25"/>
             </Grid.ColumnDefinitions>
-            <Label Content="Witamy w Medicus" x:Name="lblBaner"
+            <Label Content="Witamy w Przychodni Medicus!" x:Name="lblBaner"
                    FontSize="20" FontWeight="Bold"
                HorizontalAlignment="Left"  VerticalAlignment="Top"
-               Width="190" 
+               Width="330" 
                Foreground="#FF0E273C" 
-               Grid.Column="0"/>
+               Grid.Column="0" Margin="10,4,0,0" Grid.ColumnSpan="3"/>
 
             <Button Content="Zaloguj się" x:Name="btnLogin"
                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
                 Width="250"
                 FontWeight="Medium" Foreground="black" 
                 
-                Grid.Column="3">
+                Grid.Column="3" Grid.ColumnSpan="2" Margin="90,12,60,15">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Cursor" Value="Hand"/>
@@ -70,7 +85,7 @@
                 HorizontalAlignment="Right" VerticalAlignment="Center"
                 Width="300" 
                 Foreground="#FF0E273C" FontWeight="Medium"
-                Grid.Column="4">
+                Grid.Column="3" Grid.ColumnSpan="4" Margin="0,12,-35,15">
 
                 <Button.Style>
                     <Style TargetType="Button">
@@ -125,9 +140,32 @@
                 </Button.Template>
             </Button>
         </Grid>
-       
-       
+        <Border CornerRadius="10" Background="#f8e0fc" Margin="29,29,10,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37">
+            <StackPanel x:Name="stk_1" Height="148" Margin="9,9,8,0" Grid.Row="1" VerticalAlignment="Top" Background="White">
+                <Label Content="Label1" Background="#f8e0fc"/>
+                <Label Content="Label2"/>
+            </StackPanel>
+        </Border>
+        <Border CornerRadius="10" Background="#FF90CAF9" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1">
+            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
+                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#FF90CAF9"/>
+                <Label Content="Label4"/>
+            </StackPanel>
+        </Border>
+        <Border CornerRadius="10" Background="#f8e0fc" Margin="20,29,19,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2">
+            <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
+                <Label Content="Label" Background="#f8e0fc"/>
+                <Label Content="Label4"/>
+            </StackPanel>
+        </Border>
+        <Border CornerRadius="10" Background="#FF90CAF9" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3">
+            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
+                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#FF90CAF9"/>
+                <Label Content="Label4"/>
+            </StackPanel>
+        </Border>
 
-     
+
+
     </Grid>
 </Window>
