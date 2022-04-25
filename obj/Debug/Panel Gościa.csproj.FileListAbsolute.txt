@@ -28,3 +28,20 @@ C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.exe
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.pdb
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Panel Gościa.exe.config
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Panel Gościa.exe
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Panel Gościa.pdb
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.AssemblyReference.cache
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Login.g.cs
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\MainWindow.g.cs
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\App.g.cs
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa_MarkupCompile.cache
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa_MarkupCompile.lref
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\MainWindow.baml
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Login.baml
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.g.resources
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel_Gościa.Properties.Resources.resources
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.GenerateResource.cache
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.exe
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.pdb

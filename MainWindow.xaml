@@ -58,7 +58,7 @@
                 Width="250"
                 FontWeight="Medium" Foreground="black" 
                 
-                Grid.Column="3" Grid.ColumnSpan="2" Margin="90,12,60,15">
+                Grid.Column="3" Grid.ColumnSpan="2" Margin="90,12,60,15" Click="btnLogin_Click">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Cursor" Value="Hand"/>

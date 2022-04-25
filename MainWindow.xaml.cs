@@ -20,6 +20,8 @@ namespace Panel_Gościa
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +37,35 @@ namespace Panel_Gościa
             if (e.LeftButton==MouseButtonState.Pressed)
             {
                 DragMove();
+            }
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Login();
+            window.ShowDialog();
+
+            if (window.Git)
+            {
+                MessageBox.Show("Logowanie udane!");
+
+            } else 
+            {
+                MessageBox.Show("Logowanie nieudane");
+            }
+
+
+            //jeśli window
+
+            //zaloguj(window.Loginstr, window.Hasłostr);
+
+            if(window.txtLogin.Text != string.Empty || window.txtPassword.Text != string.Empty)
+            {
+                //przeszukaj baze danych - czy jest taki użytkownik i czy dobre hasło
+                //jeśli user i hasło git to idz do panelu {użytkownika}
+                //jeśli user git hasło nie to powiedz że złe hasło
+                //jeśli user źle to powiedz że user zły :D
+
             }
         }
     }
