@@ -31,7 +31,10 @@ namespace Panel_Gościa
         {
             this.Close();
         }
-
+        private void btnMinimalize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton==MouseButtonState.Pressed)
@@ -68,5 +71,7 @@ namespace Panel_Gościa
 
             }
         }
+
+
     }
 }

@@ -139,29 +139,57 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+            <Button Content="_" x:Name="btnMinimalize" 
+                VerticalAlignment="Top" Height="22"
+                FontSize="16" 
+                Foreground="black" FontWeight="Bold"
+                
+                Click="btnMinimalize_Click" 
+                Grid.Column="5" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Setter Property="Background" Value="#49a7cc"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background"  Value="#b5ffff"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                                
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </Grid>
         <Border CornerRadius="10" Background="#49a7cc" Margin="29,29,10,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37">
             <StackPanel x:Name="stk_1" Height="148" Margin="9,9,8,0" Grid.Row="1" VerticalAlignment="Top" Background="White">
-                <Label Content="Label1" Background="#49a7cc"/>
-                <Label Content="Label2"/>
+                <Label Content="Badanie Ogólne" Background="#49a7cc"/>
+                    <Label Content="50zł"/>
             </StackPanel>
         </Border>
         <Border CornerRadius="10" Background="#80d8ff" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1">
             <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
-                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#80d8ff"/>
-                <Label Content="Label4"/>
+                <Label Content="Badanie Serca" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#80d8ff"/>
+                <Label Content="70zł"/>
             </StackPanel>
         </Border>
         <Border CornerRadius="10" Background="#49a7cc" Margin="20,29,19,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2">
             <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
-                <Label Content="Label" Background="#49a7cc"/>
-                <Label Content="Label4"/>
+                <Label Content="Badania Wątroby" Background="#49a7cc"/>
+                <Label Content="45zł"/>
             </StackPanel>
         </Border>
         <Border CornerRadius="10" Background="#80d8ff" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3">
             <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
-                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#80d8ff"/>
-                <Label Content="Label4"/>
+                <Label Content="Badania Szczegółowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#80d8ff"/>
+                <Label Content="75zł"/>
             </StackPanel>
         </Border>
 
