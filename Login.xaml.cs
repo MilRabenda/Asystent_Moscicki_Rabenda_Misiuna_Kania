@@ -47,8 +47,8 @@ namespace Panel_Gościa
                     this.Close();
 
                 }
-                //jeśli nie to
-                MessageBox.Show("Błędny login lub hasło - spróbuj ponownie", "Błąd");
+                else MessageBox.Show("Błędny login lub hasło - spróbuj ponownie", "Błąd");
+
 
             }
             else
