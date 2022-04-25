@@ -140,27 +140,27 @@
                 </Button.Template>
             </Button>
         </Grid>
-        <Border CornerRadius="10" Background="#f8e0fc" Margin="29,29,10,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37">
+        <Border CornerRadius="10" Background="#49a7cc" Margin="29,29,10,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37">
             <StackPanel x:Name="stk_1" Height="148" Margin="9,9,8,0" Grid.Row="1" VerticalAlignment="Top" Background="White">
-                <Label Content="Label1" Background="#f8e0fc"/>
+                <Label Content="Label1" Background="#49a7cc"/>
                 <Label Content="Label2"/>
             </StackPanel>
         </Border>
-        <Border CornerRadius="10" Background="#FF90CAF9" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1">
+        <Border CornerRadius="10" Background="#80d8ff" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1">
             <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
-                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#FF90CAF9"/>
+                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#80d8ff"/>
                 <Label Content="Label4"/>
             </StackPanel>
         </Border>
-        <Border CornerRadius="10" Background="#f8e0fc" Margin="20,29,19,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2">
+        <Border CornerRadius="10" Background="#49a7cc" Margin="20,29,19,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2">
             <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
-                <Label Content="Label" Background="#f8e0fc"/>
+                <Label Content="Label" Background="#49a7cc"/>
                 <Label Content="Label4"/>
             </StackPanel>
         </Border>
-        <Border CornerRadius="10" Background="#FF90CAF9" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3">
+        <Border CornerRadius="10" Background="#80d8ff" Margin="19,29,20,203" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3">
             <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Background="White">
-                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#FF90CAF9"/>
+                <Label Content="Label3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="141" Background="#80d8ff"/>
                 <Label Content="Label4"/>
             </StackPanel>
         </Border>

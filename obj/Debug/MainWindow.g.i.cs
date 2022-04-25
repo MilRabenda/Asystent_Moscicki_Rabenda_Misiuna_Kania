@@ -65,7 +65,7 @@ namespace Panel_Gościa {
         #line hidden
         
         
-        #line 112 "..\..\MainWindow.xaml"
+        #line 102 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btnClose;
         
@@ -73,7 +73,7 @@ namespace Panel_Gościa {
         #line hidden
         
         
-        #line 144 "..\..\MainWindow.xaml"
+        #line 134 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.StackPanel stk_1;
         
@@ -130,7 +130,7 @@ namespace Panel_Gościa {
             case 5:
             this.btnClose = ((System.Windows.Controls.Button)(target));
             
-            #line 119 "..\..\MainWindow.xaml"
+            #line 109 "..\..\MainWindow.xaml"
             this.btnClose.Click += new System.Windows.RoutedEventHandler(this.btnClose_Click);
             
             #line default
