@@ -4,17 +4,78 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panel_Gościa"
-        mc:Ignorable="d"
-        Title="Login" Height="250" Width="200">
+        mc:Ignorable="d" BorderThickness="5" BorderBrush="#e1f5fe"
+        Title="Login" Height="250" Width="200" 
+        WindowStyle="None">
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-        </Grid.ColumnDefinitions>
-        <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="23" Margin="10,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="10,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lblLogin" Content="Podaj login:" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Width="85"/>
-        <Label x:Name="lblHaslo" Content="Podaj hasło:" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Height="28" Width="85"/>
-        <Button x:Name="btnLogin" Content="Zaloguj" HorizontalAlignment="Left" Margin="10,179,0,0" Width="75" Click="btnLogin_Click" Height="21" VerticalAlignment="Top"/>
-        <Button x:Name="btnAnuluj" Content="Anuluj" HorizontalAlignment="Left" Margin="108,180,0,0" VerticalAlignment="Top" Width="75" Click="btnAnuluj_Click"/>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Background="#e1f5fe"
+            MouseDown="Grid_MouseDown" 
+           />
+        <Label x:Name="lblLogin" Content="Podaj login:"
+               HorizontalAlignment="Left"  VerticalAlignment="Center"
+               Width="85"
+               Grid.Row="1"/>
+        <TextBox x:Name="txtLogin" 
+                 HorizontalAlignment="Left" Height="23" 
+                 VerticalAlignment="Center" Width="120" 
+                 Margin="5"
+                 Grid.Row="2"/>
+        <Label x:Name="lblHaslo" Content="Podaj hasło:"
+               HorizontalAlignment="Left"  VerticalAlignment="Center"
+               Height="28" Width="85"
+               Grid.Row="3"/>
+        <PasswordBox x:Name="txtPassword" 
+                 HorizontalAlignment="Left" 
+                 Height="23"  
+                 VerticalAlignment="Center" 
+                 Width="120" Margin="5"
+                 Grid.Row="4"/>
+        
+        <Button x:Name="btnLogin" Content="Zaloguj"
+                Width="75" 
+                Click="btnLogin_Click" 
+                Height="21" 
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                Grid.Row="5"/>
+       
+        <Button Content="X" x:Name="btnClose"
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Top"
+                Width="25" Height="22"
+                FontSize="16" 
+                Foreground="black" FontWeight="Bold"
+                
+                Click="btnClose_Click" 
+                Grid.Column="0" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" >
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Background" Value="#49a7cc"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border 
+                                
+                                Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>

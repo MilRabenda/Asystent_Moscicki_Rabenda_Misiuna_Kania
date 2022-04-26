@@ -17,10 +17,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition>
-
             </ColumnDefinition>
             <ColumnDefinition>
-
             </ColumnDefinition>
             <ColumnDefinition/>
 
@@ -33,7 +31,7 @@
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-0.149"/>
+                    <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>

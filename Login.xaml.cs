@@ -36,20 +36,18 @@ namespace Panel_Gościa
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if(this.txtLogin.Text != string.Empty || this.txtPassword.Text != string.Empty)
+            if(this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
             {
                 //sprawdź z bazą danych czy login i hasło się zgadzają
                 //jeśli tak to 
-                if(this.txtLogin.Text == DobryLogin && this.txtPassword.Text == DobreHasło)
+                if(this.txtLogin.Text == DobryLogin && this.txtPassword.Password == DobreHasło)
                 {
-                    setUser(this.txtLogin.Text, this.txtPassword.Text);
+                    setUser(this.txtLogin.Text, this.txtPassword.Password);
 
                     this.Close();
 
                 }
                 else MessageBox.Show("Błędny login lub hasło - spróbuj ponownie", "Błąd");
-
-
             }
             else
             {
@@ -57,7 +55,15 @@ namespace Panel_Gościa
             }
         }
 
-        private void btnAnuluj_Click(object sender, RoutedEventArgs e)
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

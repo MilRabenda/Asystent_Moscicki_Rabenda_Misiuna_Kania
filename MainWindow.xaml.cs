@@ -62,7 +62,7 @@ namespace Panel_Gościa
 
             //zaloguj(window.Loginstr, window.Hasłostr);
 
-            if(window.txtLogin.Text != string.Empty || window.txtPassword.Text != string.Empty)
+            if(window.txtLogin.Text != string.Empty || window.txtPassword.Password != string.Empty)
             {
                 //przeszukaj baze danych - czy jest taki użytkownik i czy dobre hasło
                 //jeśli user i hasło git to idz do panelu {użytkownika}
