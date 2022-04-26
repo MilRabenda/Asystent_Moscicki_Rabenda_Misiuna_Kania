@@ -53,7 +53,7 @@
 
             <Button Content="Zaloguj się" x:Name="btnLogin"
                 HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                Width="250"
+                Width="250" Height="100"
                 FontWeight="Medium" Foreground="black" 
                 
                 Grid.Column="3" Grid.ColumnSpan="2" Margin="90,12,60,15" Click="btnLogin_Click">
@@ -81,7 +81,7 @@
 
             <Button Content="Zarejestruj się" x:Name="btnRegister"
                 HorizontalAlignment="Right" VerticalAlignment="Center"
-                Width="300" 
+                Width="300"  Height="100"
                 Foreground="#FF0E273C" FontWeight="Medium"
                 Grid.Column="3" Grid.ColumnSpan="4" Margin="0,12,-35,15">
 

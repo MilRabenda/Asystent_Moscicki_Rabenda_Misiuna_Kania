@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Panel_Gościa"
         mc:Ignorable="d" BorderThickness="5" BorderBrush="#e1f5fe"
         Title="Login" Height="250" Width="200" 
-        WindowStyle="None">
+        WindowStyle="None" ResizeMode="NoResize"
+        >
     
     <Grid>
         <Grid.RowDefinitions>
@@ -41,12 +42,33 @@
                  Grid.Row="4"/>
         
         <Button x:Name="btnLogin" Content="Zaloguj"
-                Width="75" 
+                Width="100" 
                 Click="btnLogin_Click" 
-                Height="21" 
+                Height="30" 
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Grid.Row="5"/>
-       
+                Grid.Row="5">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Background" Value="#49a7cc"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="#b5ffff"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="100" Height="25"
+                                CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
         <Button Content="X" x:Name="btnClose"
                 HorizontalAlignment="Right" 
                 VerticalAlignment="Top"
