@@ -62,3 +62,20 @@ C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.exe
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.pdb
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\bin\Debug\Panel Gościa.exe.config
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\bin\Debug\Panel Gościa.exe
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\bin\Debug\Panel Gościa.pdb
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.csproj.AssemblyReference.cache
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Login.g.cs
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\MainWindow.g.cs
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\App.g.cs
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa_MarkupCompile.cache
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa_MarkupCompile.lref
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Login.baml
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\MainWindow.baml
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.g.resources
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel_Gościa.Properties.Resources.resources
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.csproj.GenerateResource.cache
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.exe
+D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.pdb
