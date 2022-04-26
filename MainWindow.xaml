@@ -13,6 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -44,7 +45,7 @@
                 <ColumnDefinition Width="25"/>
                 <ColumnDefinition Width="25"/>
             </Grid.ColumnDefinitions>
-            <Label Content="Witamy w Przychodni Medicus!" x:Name="lblBaner"
+            <Label Content="Witamy w Laboratorium Medicus!" x:Name="lblBaner"
                    FontSize="20" FontWeight="Bold"
                HorizontalAlignment="Left"  VerticalAlignment="Top"
                Width="330" 
