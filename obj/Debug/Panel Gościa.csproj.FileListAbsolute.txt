@@ -79,3 +79,20 @@ D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kani
 D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
 D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.exe
 D:\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kaniaa\obj\Debug\Panel Gościa.pdb
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\bin\Debug\Panel Gościa.exe.config
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\bin\Debug\Panel Gościa.exe
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\bin\Debug\Panel Gościa.pdb
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa.csproj.AssemblyReference.cache
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Login.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\MainWindow.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\App.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa_MarkupCompile.cache
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa_MarkupCompile.lref
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Login.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\MainWindow.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa.g.resources
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel_Gościa.Properties.Resources.resources
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa.csproj.GenerateResource.cache
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa.exe
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent 07.05\obj\Debug\Panel Gościa.pdb
