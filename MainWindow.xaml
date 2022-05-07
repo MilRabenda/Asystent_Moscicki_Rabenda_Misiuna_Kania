@@ -84,7 +84,7 @@
                 HorizontalAlignment="Right" VerticalAlignment="Center"
                 Width="300"  Height="100"
                 Foreground="#FF0E273C" FontWeight="Medium"
-                Grid.Column="3" Grid.ColumnSpan="4" Margin="0,12,-35,15">
+                Grid.Column="3" Grid.ColumnSpan="4" Margin="0,12,-35,15" Click="btnRegister_Click">
 
                 <Button.Style>
                     <Style TargetType="Button">

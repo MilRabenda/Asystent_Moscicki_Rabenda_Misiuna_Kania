@@ -72,6 +72,11 @@ namespace Panel_Gościa
             }
         }
 
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new RegisterWindow();
+            window.ShowDialog();
 
+        }
     }
 }
