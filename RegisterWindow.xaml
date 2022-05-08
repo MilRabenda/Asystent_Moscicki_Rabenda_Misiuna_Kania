@@ -25,21 +25,13 @@
             MouseDown="Grid_MouseDown" Grid.ColumnSpan="2" 
            />
         <TextBox x:Name="txtAdres" 
-                 HorizontalAlignment="Left" Height="23" 
-                 VerticalAlignment="Center" Width="120" 
-                 Margin="28,30,0,22" Text="Adres"
-                 Grid.Row="2"/>
-        <TextBox x:Name="txtMail" 
-                 HorizontalAlignment="Left" 
-                 Height="23"  Text="Mail"
-                 VerticalAlignment="Center" 
-                 Width="120" Margin="28,25,0,27"
-                 Grid.Row="3"/>
+                 Margin="28,31,52,24" Text="Adres"
+                 Grid.Row="2" MouseDoubleClick="txtAdres_MouseDoubleClick"/>
+        <TextBox x:Name="txtMail"  Text="Mail" Margin="28,27,52,29"
+                 Grid.Row="3" MouseDoubleClick="txtMail_MouseDoubleClick"/>
 
         <Button x:Name="btnLogin" Content="Zarejestruj się"
-                Width="100" Height="30" 
-                VerticalAlignment="Center" HorizontalAlignment="Center"
-                Grid.Row="6" Grid.ColumnSpan="2" >
+                Grid.Row="6" Grid.ColumnSpan="2" Margin="0,25,150,24" HorizontalAlignment="Right" Width="100" >
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"/>
@@ -91,26 +83,16 @@
             </Button.Template>
         </Button>
         <TextBox x:Name="txtName" 
-            HorizontalAlignment="Left" Height="23" 
-            VerticalAlignment="Center" Width="120" 
-            Margin="28,22,0,30" Text="Imię"
-            Grid.Row="1"/>
+            Margin="28,24,52,31" Text="Imię"
+            Grid.Row="1" MouseDoubleClick="txtName_MouseDoubleClick"  />
         <TextBox x:Name="txtSurname" 
-            HorizontalAlignment="Left" Height="23" 
-            VerticalAlignment="Center" Width="120" 
-            Margin="35,22,0,30" Text="Nazwisko"
-            Grid.Row="1" Grid.Column="1"/>
+            Margin="35,24,45,31" Text="Nazwisko"
+            Grid.Row="1" Grid.Column="1" MouseDoubleClick="txtSurname_MouseDoubleClick"/>
         <TextBox x:Name="txtPesel" 
-            HorizontalAlignment="Left" Height="23" 
-            VerticalAlignment="Center" Width="120" 
-            Margin="35,30,0,22" Text="Pesel"
-            Grid.Row="2" Grid.Column="1"/>
-        <TextBox x:Name="txtTelefon" 
-            HorizontalAlignment="Left" 
-            Height="23"  Text="Telefon"
-            VerticalAlignment="Center" 
-            Width="120" Margin="35,25,0,27"
-            Grid.Row="3" Grid.Column="1"/>
+            Margin="35,31,45,24" Text="Pesel"
+            Grid.Row="2" Grid.Column="1" MouseDoubleClick="txtPesel_MouseDoubleClick"/>
+        <TextBox x:Name="txtTelefon"  Text="Telefon" Margin="35,27,45,29"
+            Grid.Row="3" Grid.Column="1" MouseDoubleClick="txtTelefon_MouseDoubleClick"/>
         <PasswordBox x:Name="PasswordBox"
                      Grid.Row="4" Grid.ColumnSpan="2"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
@@ -119,5 +101,6 @@
                      Grid.Row="5" Grid.ColumnSpan="2"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
                      Width="248" />
+        <Label x:Name="lblZar" Content="Label" HorizontalAlignment="Left" Margin="122,0,0,53" Grid.Row="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Width="172"/>
     </Grid>
 </Window>

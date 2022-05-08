@@ -7,13 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         WindowStyle="None"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize"
+        MinHeight="500"
+        MinWidth="800"
+        >
 
-    <Grid Background="#F1F6F9" AutomationProperties.IsOffscreenBehavior="Onscreen">
+    <Grid Background="#F1F6F9" AutomationProperties.IsOffscreenBehavior="Onscreen" MinHeight="400" MinWidth="500">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
-            
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -27,7 +30,7 @@
 
         <Grid Background="#e1f5fe"
             Grid.ColumnSpan="4"
-            MouseDown="Grid_MouseDown" Margin="0,0,0,399" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            MouseDown="Grid_MouseDown" RenderTransformOrigin="0.5,0.5" Height="43" VerticalAlignment="Top">
             <Grid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -46,18 +49,16 @@
                 <ColumnDefinition Width="25"/>
             </Grid.ColumnDefinitions>
             <Label Content="Witamy w Laboratorium Medicus!" x:Name="lblBaner"
-                   FontSize="20" FontWeight="Bold"
-               HorizontalAlignment="Left"  VerticalAlignment="Top"
-               Width="330" 
+                   FontSize="20" FontWeight="Bold" 
                Foreground="#FF0E273C" 
-               Grid.Column="0" Margin="10,4,0,0" Grid.ColumnSpan="3"/>
+               Grid.Column="0" Margin="10,4,2,0" Grid.ColumnSpan="3" Height="37" VerticalAlignment="Top"/>
 
             <Button Content="Zaloguj się" x:Name="btnLogin"
-                HorizontalAlignment="Stretch" VerticalAlignment="Center"
-                Width="250" Height="100"
+                HorizontalAlignment="Right"
+                Width="250"
                 FontWeight="Medium" Foreground="black" 
                 
-                Grid.Column="3" Grid.ColumnSpan="2" Margin="90,12,60,15" Click="btnLogin_Click">
+                Grid.Column="3" Grid.ColumnSpan="2" Margin="0,-30,60,-27" Click="btnLogin_Click">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Cursor" Value="Hand"/>
@@ -81,10 +82,8 @@
             </Button>
 
             <Button Content="Zarejestruj się" x:Name="btnRegister"
-                HorizontalAlignment="Right" VerticalAlignment="Center"
-                Width="300"  Height="100"
                 Foreground="#FF0E273C" FontWeight="Medium"
-                Grid.Column="3" Grid.ColumnSpan="4" Margin="0,12,-35,15" Click="btnRegister_Click">
+                Grid.Column="3" Grid.ColumnSpan="4" Margin="185,-30,-35,-27" Click="btnRegister_Click">
 
                 <Button.Style>
                     <Style TargetType="Button">
@@ -108,10 +107,8 @@
                 </Button.Template>
             </Button>
 
-            <Button Content="X" x:Name="btnClose"
-                HorizontalAlignment="Right" 
-                VerticalAlignment="Top"
-                Width="25" Height="22"
+            <Button Content="X" x:Name="btnClose" 
+                VerticalAlignment="Top" Height="22"
                 FontSize="16" 
                 Foreground="black" FontWeight="Bold"
                 
@@ -138,13 +135,12 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-            <Button Content="_" x:Name="btnMinimalize" 
-                VerticalAlignment="Top" Height="22"
+            <Button Content="_" x:Name="btnMinimalize"
                 FontSize="16" 
                 Foreground="black" FontWeight="Bold"
                 
                 Click="btnMinimalize_Click" 
-                Grid.Column="5" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" >
+                Grid.Column="5" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Height="22" VerticalAlignment="Top" >
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Cursor" Value="Hand"/>
@@ -167,26 +163,26 @@
                 </Button.Template>
             </Button>
         </Grid>
-        <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,15,40" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="0">
-            <StackPanel x:Name="stk_1" Height="150" Width="150" Margin="9,9,8,0" Grid.Row="1" VerticalAlignment="Top" Background="White">
+        <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="0" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
+            <StackPanel x:Name="stk_1" Margin="9,9,7,1" Grid.Row="1" Background="White">
                 <Label Content="Badanie Ogólne" Background="#49a7cc"/>
-                    <Label Content="50zł"/>
+                <Label Content="50zł"/>
             </StackPanel>
         </Border>
-        <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,15,180" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1">
-            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Width="150" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Background="White">
-                <Label Content="Badanie Serca" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Background="#80d8ff"/>
+        <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
+            <StackPanel Grid.Column="1" Margin="9,9,7,3" Grid.Row="1" Background="White">
+                <Label Content="Badanie Serca" VerticalAlignment="Top" Background="#80d8ff"/>
                 <Label Content="70zł"/>
             </StackPanel>
         </Border>
-        <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,15,40" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2">
-            <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="148"  Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Background="White">
+        <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
+            <StackPanel Grid.Column="2"  Margin="9,9,7,3" Grid.Row="1" Background="White">
                 <Label Content="Badania Wątroby" Background="#49a7cc"/>
                 <Label Content="45zł"/>
             </StackPanel>
         </Border>
-        <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,15,180" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3">
-            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="148" Margin="9,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Background="White">
+        <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
+            <StackPanel Grid.Column="1" Margin="9,9,7,3" Grid.Row="1" Background="White">
                 <Label Content="Badania Szczegółowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Background="#80d8ff"/>
                 <Label Content="75zł"/>
             </StackPanel>

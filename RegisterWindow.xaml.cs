@@ -23,6 +23,8 @@ namespace Panel_Gościa
         public RegisterWindow()
         {
             InitializeComponent();
+            lblZar.Content = "Załóż konto M-Pacjenta";
+            
         }
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -35,6 +37,36 @@ namespace Panel_Gościa
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void txtName_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txtName.Clear();
+        }
+
+        private void txtSurname_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txtSurname.Clear();
+        }
+
+        private void txtAdres_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txtAdres.Clear();
+        }
+
+        private void txtPesel_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txtPesel.Clear();
+        }
+
+        private void txtMail_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txtMail.Clear();
+        }
+
+        private void txtTelefon_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            txtTelefon.Clear();
         }
     }
 
