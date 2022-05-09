@@ -1,0 +1,20 @@
+﻿<Window x:Class="Panel_Gościa.PanelPacjenta"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Panel_Gościa"
+        mc:Ignorable="d"
+        Title="PanelPacjenta" Height="500" Width="410" ResizeMode="NoResize" >
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="392" Background="#e1f5fe">
+            <Label x:Name="lbl_Witaj" Content="Label" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
+        </Grid>
+        <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
+            <Button x:Name="btn_ZapiszWizytę" Content="ZAPISZ SIĘ&#xA;NA WIZYTĘ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100"/>
+            <Button x:Name="btn_Konto" Content="KONTO" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
+            <Button x:Name="btn_idk" Content="brakuje mi &#xA;czwartego &#xA;przycisku" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
+            <Button x:Name="btn_Wizyty" Content="TWOJE WIZYTY" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
+        </Grid>
+    </Grid>
+</Window>

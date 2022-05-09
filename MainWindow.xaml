@@ -188,6 +188,7 @@
             </StackPanel>
         </Border>
         <Label Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Left" Margin="75,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="115" Foreground="#49a7cc" FontWeight="Bold"/>
+        <Button x:Name="btn_test" Content="Button" Grid.Column="3" HorizontalAlignment="Left" Margin="56,284,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_test_Click"/>
 
 
 

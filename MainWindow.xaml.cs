@@ -78,5 +78,11 @@ namespace Panel_Gościa
             window.ShowDialog();
 
         }
+
+        private void btn_test_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new PanelPacjenta();
+            window.ShowDialog();
+        }
     }
 }
