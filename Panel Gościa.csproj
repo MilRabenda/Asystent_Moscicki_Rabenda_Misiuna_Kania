@@ -55,12 +55,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Guest1.xaml.cs">
+      <DependentUpon>Guest1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guest2.xaml.cs">
+      <DependentUpon>Guest2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PanelPacjenta.xaml.cs">
       <DependentUpon>PanelPacjenta.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Guest1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guest2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

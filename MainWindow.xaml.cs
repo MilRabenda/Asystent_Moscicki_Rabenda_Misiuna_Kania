@@ -25,6 +25,7 @@ namespace Panel_Gościa
         public MainWindow()
         {
             InitializeComponent();
+            Guest.Content=new Guest1();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -84,11 +85,6 @@ namespace Panel_Gościa
             //test
         }
 
-        private void btn_test_Click(object sender, RoutedEventArgs e)
-        {
-            var window = new PanelPacjenta();
-            window.ShowDialog();
-        }
 
         private bool isPesel(string str)
         {
@@ -96,6 +92,11 @@ namespace Panel_Gościa
             return str.Length == 11 && isNumeric;
             
             
+        }
+
+        private void btnWiecej_Click(object sender, RoutedEventArgs e)
+        {
+            Guest.Content = new Guest2();
         }
     }
 }

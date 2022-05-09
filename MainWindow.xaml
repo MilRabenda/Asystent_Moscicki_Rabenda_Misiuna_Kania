@@ -14,8 +14,8 @@
 
     <Grid Background="#F1F6F9" AutomationProperties.IsOffscreenBehavior="Onscreen" MinHeight="400" MinWidth="500">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -163,34 +163,9 @@
                 </Button.Template>
             </Button>
         </Grid>
-        <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="0" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
-            <StackPanel x:Name="stk_1" Margin="9,9,7,1" Grid.Row="1" Background="White">
-                <Label Content="Badanie Ogólne" Background="#49a7cc"/>
-                <Label Content="50zł"/>
-            </StackPanel>
-        </Border>
-        <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="1" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
-            <StackPanel Grid.Column="1" Margin="9,9,7,3" Grid.Row="1" Background="White">
-                <Label Content="Badanie Serca" VerticalAlignment="Top" Background="#80d8ff"/>
-                <Label Content="70zł"/>
-            </StackPanel>
-        </Border>
-        <Border CornerRadius="10" Background="#49a7cc" Margin="15,190,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="2" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
-            <StackPanel Grid.Column="2"  Margin="9,9,7,3" Grid.Row="1" Background="White">
-                <Label Content="Badania Wątroby" Background="#49a7cc"/>
-                <Label Content="45zł"/>
-            </StackPanel>
-        </Border>
-        <Border CornerRadius="10" Background="#80d8ff" Margin="15,50,0,0" Grid.Row="1" BorderThickness="1" RenderTransformOrigin="0.485,0.37" Grid.Column="3" HorizontalAlignment="Left" Width="168" Height="162" VerticalAlignment="Top">
-            <StackPanel Grid.Column="1" Margin="9,9,7,3" Grid.Row="1" Background="White">
-                <Label Content="Badania Szczegółowe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Background="#80d8ff"/>
-                <Label Content="75zł"/>
-            </StackPanel>
-        </Border>
-        <Label Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Left" Margin="75,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="115" Foreground="#49a7cc" FontWeight="Bold"/>
-        <Button x:Name="btn_test" Content="Button" Grid.Column="3" HorizontalAlignment="Left" Margin="56,284,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_test_Click"/>
+        <Frame x:Name="Guest" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="4"/>
 
-
+        <Button x:Name="btnWiecej" Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Left" Margin="75,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="115" Foreground="#49a7cc" FontWeight="Bold" Background="{x:Null}" BorderThickness="0" Click="btnWiecej_Click"/>
 
     </Grid>
 </Window>

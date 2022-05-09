@@ -129,3 +129,7 @@ C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Reg
 C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\LoginWindow.baml
 C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\PanelPacjenta.baml
 C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\RegisterWindow.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest1.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest2.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest1.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest2.baml

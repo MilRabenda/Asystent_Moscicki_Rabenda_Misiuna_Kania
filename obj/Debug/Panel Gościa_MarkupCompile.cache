@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\
 Panel_Gościa
 none
 false
 DEBUG;TRACE
-C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\App.xaml
-41983222247
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\App.xaml
+61394162393
 
-8-1576341580
+102093481276
 13-1505183044
-LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;RegisterWindow.xaml;
+Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;RegisterWindow.xaml;
 
 False
 
