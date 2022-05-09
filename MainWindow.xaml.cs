@@ -77,6 +77,7 @@ namespace Panel_Gościa
             var window = new RegisterWindow();
             window.ShowDialog();
 
+            //test
         }
 
         private void btn_test_Click(object sender, RoutedEventArgs e)
