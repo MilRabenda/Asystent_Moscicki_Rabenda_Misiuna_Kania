@@ -23,8 +23,10 @@ namespace Panel_Gościa
 
         public static int i = 0;
 
-            //image list
-            List<BitmapImage> bitMapList = new List<BitmapImage>();
+        //BitmapImage list
+        List<BitmapImage> bitMapList = new List<BitmapImage>();
+        //Tab string
+        string[] baners= {"Badanie na Anemię 30zł","Badanie serca 55zł","Badanie ogólne 40zł"};
 
         public Guest1()
         {
@@ -38,27 +40,25 @@ namespace Panel_Gościa
             bitmapImage1.UriSource = new Uri(@"C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\anemia.jpg");
             bitmapImage1.DecodePixelWidth = 200;
             bitmapImage1.EndInit();
-            i1.Source = bitmapImage1;
+
 
             Image i2 = new Image();
             BitmapImage bitmapImage2 = new BitmapImage(); bitmapImage2.BeginInit();
             bitmapImage2.UriSource = new Uri(@"C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\serce.jpg");
             bitmapImage2.DecodePixelWidth = 200;
             bitmapImage2.EndInit();
-            i2.Source = bitmapImage2;
 
             Image i3 = new Image();
             BitmapImage bitmapImage3 = new BitmapImage(); bitmapImage3.BeginInit();
             bitmapImage3.UriSource = new Uri(@"C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\podstawa.jpg");
             bitmapImage3.DecodePixelWidth = 200;
             bitmapImage3.EndInit();
-            i3.Source = bitmapImage3;
             bitMapList.Add(bitmapImage1);
             bitMapList.Add(bitmapImage2);
             bitMapList.Add(bitmapImage3);
             //image in widget
             ImageBaner.Source= bitMapList[i];
-
+            lblBaner.Content = baners[i];
         }
         private void btn_test_Click(object sender, RoutedEventArgs e)
         {
@@ -71,6 +71,7 @@ namespace Panel_Gościa
             i--;
             if (i < 0) i = 2;
             ImageBaner.Source = bitMapList[i];
+            lblBaner.Content=baners[i];
         }
 
         private void btnRight_Click(object sender, RoutedEventArgs e)
@@ -78,6 +79,7 @@ namespace Panel_Gościa
             i++;
             if (i > 2) i =0;
             ImageBaner.Source = bitMapList[i];
+            lblBaner.Content = baners[i];
         }
     }
 
