@@ -20,8 +20,8 @@ namespace Panel_Gościa
     /// </summary>
     public partial class MainWindow : Window
     {
-        
 
+        static public bool clicked = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -96,7 +96,16 @@ namespace Panel_Gościa
 
         private void btnWiecej_Click(object sender, RoutedEventArgs e)
         {
-            Guest.Content = new Guest2();
+            
+            clicked = !clicked;
+            if (clicked)
+            {
+                Guest.Content = new Guest2(); btnWiecej.Content = "Mniej badań";
+            }
+            else
+            {
+                Guest.Content = new Guest1(); btnWiecej.Content = "Więcej badań";
+            }
         }
     }
 }

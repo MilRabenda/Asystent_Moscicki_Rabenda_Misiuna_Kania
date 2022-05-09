@@ -164,7 +164,7 @@
         </Grid>
         <Frame x:Name="Guest" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="4"/>
 
-        <Button x:Name="btnWiecej" Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Right" Margin="5,10" Grid.Row="1" VerticalAlignment="Bottom"  Foreground="#49a7cc" FontWeight="Bold" Background="{x:Null}" BorderThickness="0" Click="btnWiecej_Click"/>
+        <Button x:Name="btnWiecej" Content="Więcej badań" Grid.Column="3" HorizontalAlignment="Right" Margin="5,10" Grid.Row="1" VerticalAlignment="Bottom"  Foreground="#49a7cc" FontWeight="Bold" Background="{x:Null}" BorderThickness="0" Click="btnWiecej_Click"/>
         
 
     </Grid>
