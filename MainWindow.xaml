@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panel_Gościa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" 
         WindowStyle="None"
         ResizeMode="CanResize"
-        MinHeight="500"
-        MinWidth="800"
+        Height="450" 
+        Width="800" 
+       
         >
 
     <Grid Background="#F1F6F9" AutomationProperties.IsOffscreenBehavior="Onscreen" MinHeight="400" MinWidth="500">
@@ -19,12 +20,10 @@
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition>
-            </ColumnDefinition>
-            <ColumnDefinition>
-            </ColumnDefinition>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
 
         </Grid.ColumnDefinitions>
 
@@ -40,13 +39,13 @@
                 </TransformGroup>
             </Grid.RenderTransform>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="25"/>
-                <ColumnDefinition Width="25"/>
+                <ColumnDefinition Width="12*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Label Content="Witamy w Laboratorium Medicus!" x:Name="lblBaner"
                    FontSize="20" FontWeight="Bold" 
@@ -55,10 +54,10 @@
 
             <Button Content="Zaloguj się" x:Name="btnLogin"
                 HorizontalAlignment="Right"
-                Width="250"
+
                 FontWeight="Medium" Foreground="black" 
                 
-                Grid.Column="3" Grid.ColumnSpan="2" Margin="0,-30,60,-27" Click="btnLogin_Click">
+                Grid.Column="3"  Click="btnLogin_Click">
                 <Button.Style>
                     <Style TargetType="Button">
                         <Setter Property="Cursor" Value="Hand"/>
@@ -83,7 +82,7 @@
 
             <Button Content="Zarejestruj się" x:Name="btnRegister"
                 Foreground="#FF0E273C" FontWeight="Medium"
-                Grid.Column="3" Grid.ColumnSpan="4" Margin="185,-30,-35,-27" Click="btnRegister_Click">
+                Grid.Column="4"   Click="btnRegister_Click">
 
                 <Button.Style>
                     <Style TargetType="Button">
@@ -165,7 +164,8 @@
         </Grid>
         <Frame x:Name="Guest" NavigationUIVisibility="Hidden" Grid.Row="1" Grid.ColumnSpan="4"/>
 
-        <Button x:Name="btnWiecej" Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Left" Margin="75,0,0,10" Grid.Row="1" VerticalAlignment="Bottom" Width="115" Foreground="#49a7cc" FontWeight="Bold" Background="{x:Null}" BorderThickness="0" Click="btnWiecej_Click"/>
+        <Button x:Name="btnWiecej" Content="Więcej badań..." Grid.Column="3" HorizontalAlignment="Right" Margin="5,10" Grid.Row="1" VerticalAlignment="Bottom"  Foreground="#49a7cc" FontWeight="Bold" Background="{x:Null}" BorderThickness="0" Click="btnWiecej_Click"/>
+        
 
     </Grid>
 </Window>
