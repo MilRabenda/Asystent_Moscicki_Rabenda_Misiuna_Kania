@@ -45,6 +45,8 @@ namespace Panel_Gościa
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+           
+
             var window = new Login();
             window.ShowDialog();
 
@@ -56,13 +58,15 @@ namespace Panel_Gościa
             {
                 MessageBox.Show("Logowanie nieudane");
             }
+            if (isPesel(window.txtLogin.Text)) MessageBox.Show("JEST PESEL", window.txtLogin.Text);
+            else MessageBox.Show("NIE JEST PESEL", window.txtLogin.Text);
 
 
             //jeśli window
 
             //zaloguj(window.Loginstr, window.Hasłostr);
 
-            if(window.txtLogin.Text != string.Empty || window.txtPassword.Password != string.Empty)
+            if (window.txtLogin.Text != string.Empty || window.txtPassword.Password != string.Empty)
             {
                 //przeszukaj baze danych - czy jest taki użytkownik i czy dobre hasło
                 //jeśli user i hasło git to idz do panelu {użytkownika}
@@ -76,7 +80,7 @@ namespace Panel_Gościa
         {
             var window = new RegisterWindow();
             window.ShowDialog();
-
+            
             //test
         }
 
@@ -84,6 +88,14 @@ namespace Panel_Gościa
         {
             var window = new PanelPacjenta();
             window.ShowDialog();
+        }
+
+        private bool isPesel(string str)
+        {
+            var isNumeric = long.TryParse(str, out long n);
+            return str.Length == 11 && isNumeric;
+            
+            
         }
     }
 }

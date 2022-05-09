@@ -36,23 +36,27 @@ namespace Panel_Gościa
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if(this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
-            {
-                //sprawdź z bazą danych czy login i hasło się zgadzają
-                //jeśli tak to 
-                if(this.txtLogin.Text == DobryLogin && this.txtPassword.Password == DobreHasło)
-                {
-                    setUser(this.txtLogin.Text, this.txtPassword.Password);
 
-                    this.Close();
+            this.Close();
+            //if(this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
+            //{
+            //    //sprawdź z bazą danych czy login i hasło się zgadzają
+            //    //jeśli tak to 
+            //    if(this.txtLogin.Text == DobryLogin && this.txtPassword.Password == DobreHasło)
+            //    {
+            //        setUser(this.txtLogin.Text, this.txtPassword.Password);
 
-                }
-                else MessageBox.Show("Błędny login lub hasło - spróbuj ponownie", "Błąd");
-            }
-            else
-            {
-                MessageBox.Show("Błąd");
-            }
+            //        this.Close();
+
+            //    }
+            //    else MessageBox.Show("Błędny login lub hasło - spróbuj ponownie", "Błąd");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Błąd");
+            //}
+
+
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
