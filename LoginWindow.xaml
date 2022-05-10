@@ -8,7 +8,7 @@
         Title="Login" Height="250" Width="200" 
         WindowStyle="None" ResizeMode="NoResize"
         >
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="22"/>
@@ -22,9 +22,9 @@
             MouseDown="Grid_MouseDown" 
            />
         <TextBox x:Name="txtLogin" 
-                 HorizontalAlignment="Left" Height="23" 
+                 HorizontalAlignment="Center" Height="24" 
                  VerticalAlignment="Center" Width="120" 
-                 Margin="5"
+                 Margin="37,10,33,10"
                  Grid.Row="2" TextChanged="txtLogin_TextChanged">
             <TextBox.Background>
                 <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\login.jpg" AlignmentX="Left" Stretch="None" />
@@ -34,13 +34,13 @@
                  HorizontalAlignment="Left" 
                  Height="23"  
                  VerticalAlignment="Center" 
-                 Width="120" Margin="5"
-                 Grid.Row="4" PasswordChanged="txtPassword_PasswordChanged">
+                 Width="120" Margin="37,10,0,11"
+                 Grid.Row="4" PasswordChanged="txtPassword_PasswordChanged" HorizontalContentAlignment="Center">
             <PasswordBox.Background>
                 <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg" AlignmentX="Left" Stretch="None" />
             </PasswordBox.Background>
         </PasswordBox>
-        
+
         <Button x:Name="btnLogin" Content="Zaloguj"
                 Width="100" 
                 Click="btnLogin_Click" 

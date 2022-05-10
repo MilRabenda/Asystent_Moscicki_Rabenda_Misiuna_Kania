@@ -31,7 +31,7 @@ namespace Panel_Gościa
         public Guest1()
         {
             InitializeComponent();
-            btn_test.Visibility = Visibility.Hidden;
+            btn_test.Visibility = Visibility.Visible;
 
             //photos:
 

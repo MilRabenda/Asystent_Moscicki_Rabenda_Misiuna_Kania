@@ -11,10 +11,26 @@
             <Label x:Name="lbl_Witaj" Content="Label" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
         </Grid>
         <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
-            <Button x:Name="btn_ZapiszWizytę" Content="ZAPISZ SIĘ&#xA;NA WIZYTĘ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100"/>
-            <Button x:Name="btn_Konto" Content="KONTO" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
-            <Button x:Name="btn_idk" Content="brakuje mi &#xA;czwartego &#xA;przycisku" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
-            <Button x:Name="btn_Wizyty" Content="TWOJE WIZYTY" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100"/>
+            <Button x:Name="btn_ZapiszWizytę"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100">
+                <Image Source="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\zapis.png">
+
+                </Image>
+            </Button>
+            <Button x:Name="btn_Konto" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
+                <Image Source="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\konto.png">
+                    
+                </Image>
+            </Button>
+            <Button x:Name="btn_idk" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
+                <Image Source="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\wylogowanie.png">
+
+                </Image>
+            </Button>
+            <Button x:Name="btn_Wizyty"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
+                <Image Source="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\wizyty.png">
+
+                </Image>
+            </Button>
         </Grid>
     </Grid>
 </Window>
