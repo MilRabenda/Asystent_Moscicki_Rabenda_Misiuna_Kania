@@ -21,25 +21,25 @@
         <Grid Background="#e1f5fe"
             MouseDown="Grid_MouseDown" 
            />
-        <Label x:Name="lblLogin" Content="Podaj login:"
-               HorizontalAlignment="Left"  VerticalAlignment="Center"
-               Width="85"
-               Grid.Row="1"/>
         <TextBox x:Name="txtLogin" 
                  HorizontalAlignment="Left" Height="23" 
                  VerticalAlignment="Center" Width="120" 
                  Margin="5"
-                 Grid.Row="2"/>
-        <Label x:Name="lblHaslo" Content="Podaj hasło:"
-               HorizontalAlignment="Left"  VerticalAlignment="Center"
-               Height="28" Width="85"
-               Grid.Row="3"/>
+                 Grid.Row="2" TextChanged="txtLogin_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\login.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
         <PasswordBox x:Name="txtPassword" 
                  HorizontalAlignment="Left" 
                  Height="23"  
                  VerticalAlignment="Center" 
                  Width="120" Margin="5"
-                 Grid.Row="4"/>
+                 Grid.Row="4" PasswordChanged="txtPassword_PasswordChanged">
+            <PasswordBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg" AlignmentX="Left" Stretch="None" />
+            </PasswordBox.Background>
+        </PasswordBox>
         
         <Button x:Name="btnLogin" Content="Zaloguj"
                 Width="100" 

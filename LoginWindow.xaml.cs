@@ -71,5 +71,49 @@ namespace Panel_Gościa
         {
             this.Close();
         }
+
+        private void txtLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtLogin.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\login.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtLogin.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtLogin.Background = null;
+            }
+        }
+
+        private void txtPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (txtPassword.Password == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtPassword.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtPassword.Background = null;
+            }
+        }
     }
 }

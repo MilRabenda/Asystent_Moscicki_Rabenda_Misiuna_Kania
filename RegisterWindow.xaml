@@ -25,10 +25,18 @@
             MouseDown="Grid_MouseDown" Grid.ColumnSpan="2" 
            />
         <TextBox x:Name="txtAdres" 
-                 Margin="28,31,52,24" Text="Adres"
-                 Grid.Row="2" MouseDoubleClick="txtAdres_MouseDoubleClick"/>
-        <TextBox x:Name="txtMail"  Text="Mail" Margin="28,27,52,29"
-                 Grid.Row="3" MouseDoubleClick="txtMail_MouseDoubleClick"/>
+                 Margin="28,31,52,24"
+                 Grid.Row="2" TextChanged="txtAdres_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\adres.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtMail" Margin="28,27,52,29"
+                 Grid.Row="3" TextChanged="txtMail_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\mail.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
 
         <Button x:Name="btnLogin" Content="Zarejestruj się"
                 Grid.Row="6" Grid.ColumnSpan="2" Margin="0,25,150,24" HorizontalAlignment="Right" Width="100" >
@@ -83,24 +91,48 @@
             </Button.Template>
         </Button>
         <TextBox x:Name="txtName" 
-            Margin="28,24,52,31" Text="Imię"
-            Grid.Row="1" MouseDoubleClick="txtName_MouseDoubleClick"  />
+            Margin="28,24,52,31"
+            Grid.Row="1" IsUndoEnabled="True" TextChanged="txtName_TextChanged" >
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\imie.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
         <TextBox x:Name="txtSurname" 
-            Margin="35,24,45,31" Text="Nazwisko"
-            Grid.Row="1" Grid.Column="1" MouseDoubleClick="txtSurname_MouseDoubleClick"/>
+            Margin="35,24,45,31"
+            Grid.Row="1" Grid.Column="1" TextChanged="txtSurname_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\nazwisko.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
         <TextBox x:Name="txtPesel" 
-            Margin="35,31,45,24" Text="Pesel"
-            Grid.Row="2" Grid.Column="1" MouseDoubleClick="txtPesel_MouseDoubleClick"/>
-        <TextBox x:Name="txtTelefon"  Text="Telefon" Margin="35,27,45,29"
-            Grid.Row="3" Grid.Column="1" MouseDoubleClick="txtTelefon_MouseDoubleClick"/>
+            Margin="35,31,45,24"
+            Grid.Row="2" Grid.Column="1" TextChanged="txtPesel_TextChanged">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\pesel.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
+        <TextBox x:Name="txtTelefon"  Margin="35,27,45,29"
+            Grid.Row="3" Grid.Column="1" TextChanged="txtTelefon_TextChanged" >
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\telefon.jpg" AlignmentX="Left" Stretch="None" />
+            </TextBox.Background>
+        </TextBox>
         <PasswordBox x:Name="PasswordBox"
                      Grid.Row="4" Grid.ColumnSpan="2"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
-                     Width="248" />
+                     Width="248" PasswordChanged="PasswordBox_PasswordChanged">
+            <PasswordBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg" AlignmentX="Left" Stretch="None" />
+            </PasswordBox.Background>
+        </PasswordBox>
         <PasswordBox x:Name="PasswordCopyBox"
                      Grid.Row="5" Grid.ColumnSpan="2"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
-                     Width="248" />
+                     Width="248" PasswordChanged="PasswordCopyBox_PasswordChanged">
+            <PasswordBox.Background>
+                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\powtorzhaslo.jpg" AlignmentX="Left" Stretch="None" />
+            </PasswordBox.Background>
+        </PasswordBox>
         <Label x:Name="lblZar" Content="Label" HorizontalAlignment="Left" Margin="122,0,0,53" Grid.Row="1" VerticalAlignment="Bottom" Grid.ColumnSpan="2" Width="172"/>
     </Grid>
 </Window>

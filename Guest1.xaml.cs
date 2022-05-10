@@ -37,20 +37,20 @@ namespace Panel_Gościa
 
             Image i1 = new Image();
             BitmapImage bitmapImage1 = new BitmapImage(); bitmapImage1.BeginInit();
-            bitmapImage1.UriSource = new Uri(@"C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\anemia.jpg");
+            bitmapImage1.UriSource = new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\anemia.jpg");
             bitmapImage1.DecodePixelWidth = 200;
             bitmapImage1.EndInit();
 
 
             Image i2 = new Image();
             BitmapImage bitmapImage2 = new BitmapImage(); bitmapImage2.BeginInit();
-            bitmapImage2.UriSource = new Uri(@"C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\serce.jpg");
+            bitmapImage2.UriSource = new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\serce.jpg");
             bitmapImage2.DecodePixelWidth = 200;
             bitmapImage2.EndInit();
 
             Image i3 = new Image();
             BitmapImage bitmapImage3 = new BitmapImage(); bitmapImage3.BeginInit();
-            bitmapImage3.UriSource = new Uri(@"C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\podstawa.jpg");
+            bitmapImage3.UriSource = new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\podstawa.jpg");
             bitmapImage3.DecodePixelWidth = 200;
             bitmapImage3.EndInit();
             bitMapList.Add(bitmapImage1);

@@ -39,34 +39,185 @@ namespace Panel_Gościa
             this.Close();
         }
 
-        private void txtName_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtName.Clear();
+            if (txtName.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\imie.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtName.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtName.Background = null;
+            }
         }
 
-        private void txtSurname_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtSurname_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtSurname.Clear();
+            if (txtSurname.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\nazwisko.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtSurname.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtSurname.Background = null;
+            }
         }
 
-        private void txtAdres_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtAdres_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtAdres.Clear();
+            if (txtAdres.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\adres.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtAdres.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtAdres.Background = null;
+            }
+
         }
 
-        private void txtPesel_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtPesel_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtPesel.Clear();
+            if (txtPesel.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\pesel.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtPesel.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtPesel.Background = null;
+            }
+
         }
 
-        private void txtMail_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtMail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtMail.Clear();
+            if (txtMail.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\mail.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtMail.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtMail.Background = null;
+            }
+
         }
 
-        private void txtTelefon_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void txtTelefon_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtTelefon.Clear();
+            if (txtTelefon.Text == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\telefon.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                txtTelefon.Background = textImageBrush;
+            }
+            else
+            {
+
+                txtTelefon.Background = null;
+            }
+        }
+
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (PasswordBox.Password == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                PasswordBox.Background = textImageBrush;
+            }
+            else
+            {
+
+                PasswordBox.Background = null;
+            }
+
+        }
+
+        private void PasswordCopyBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (PasswordCopyBox.Password == "")
+            {
+                // Create an ImageBrush.
+                ImageBrush textImageBrush = new ImageBrush();
+                textImageBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\powtorzhaslo.jpg", UriKind.Relative)
+                    );
+                textImageBrush.AlignmentX = AlignmentX.Left;
+                textImageBrush.Stretch = Stretch.None;
+                // Use the brush to paint the button's background.
+                PasswordCopyBox.Background = textImageBrush;
+            }
+            else
+            {
+
+                PasswordCopyBox.Background = null;
+            }
+
         }
     }
 
