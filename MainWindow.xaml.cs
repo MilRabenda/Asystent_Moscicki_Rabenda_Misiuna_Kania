@@ -51,16 +51,16 @@ namespace Panel_Gościa
             var window = new Login();
             window.ShowDialog();
 
-            if (window.Git)
-            {
-                MessageBox.Show("Logowanie udane!");
+            //if (window.Git)
+            //{
+            //    MessageBox.Show("Logowanie udane!");
 
-            } else 
-            {
-                MessageBox.Show("Logowanie nieudane");
-            }
-            if (isPesel(window.txtLogin.Text)) MessageBox.Show("JEST PESEL", window.txtLogin.Text);
-            else MessageBox.Show("NIE JEST PESEL", window.txtLogin.Text);
+            //} else 
+            //{
+            //    MessageBox.Show("Logowanie nieudane");
+            //}
+            //if (isPesel(window.txtLogin.Text)) MessageBox.Show("JEST PESEL", window.txtLogin.Text);
+            //else MessageBox.Show("NIE JEST PESEL", window.txtLogin.Text);
 
 
             //jeśli window

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Panel_Gościa
 {
@@ -27,6 +29,7 @@ namespace Panel_Gościa
         public Login()
         {
             InitializeComponent();
+ 
         }
         void setUser(string l, string h)
         {
@@ -38,10 +41,60 @@ namespace Panel_Gościa
         {
 
             this.Close();
-            //if(this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
-            //{
-            //    //sprawdź z bazą danych czy login i hasło się zgadzają
-            //    //jeśli tak to 
+            if (this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
+            {
+                using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium"))
+                {
+                 
+                    MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where haslo ='{ txtPassword.Password }'", połączenie);
+                    połączenie.Open();
+                    MySqlDataReader poprawne_log = log.ExecuteReader();
+                    bool ok1;
+                    bool ok2;
+                    if (poprawne_log.HasRows==true)
+                    {
+                        ok1 = true;
+                        
+                    }
+                    else
+                    {
+                        ok1 = false;
+                    }
+
+                    poprawne_log.Close();
+                    MySqlDataReader poprawne_has = has.ExecuteReader();
+
+                    if (poprawne_has.HasRows == true)
+                    {
+                        ok2 = true;
+
+                    }
+                    else
+                    {
+                        ok2 = false;
+                    }
+
+                    poprawne_has.Close();
+                    if(ok1 && ok2==true)
+                    {
+                        var window = new PanelPacjenta();
+                        window.ShowDialog();
+                    }
+
+                    połączenie.Close();
+
+
+                    //połączenie.Open();
+                    //MySqlDataReader czytnik = polecenie.ExecuteReader();
+                    //czytnik.Close();
+                    //połączenie.Close();
+                }
+
+
+            }
+            //sprawdź z bazą danych czy login i hasło się zgadzają
+            //jeśli tak to 
             //    if(this.txtLogin.Text == DobryLogin && this.txtPassword.Password == DobreHasło)
             //    {
             //        setUser(this.txtLogin.Text, this.txtPassword.Password);
