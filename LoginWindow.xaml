@@ -27,7 +27,7 @@
                  Margin="37,10,33,10"
                  Grid.Row="2" TextChanged="txtLogin_TextChanged">
             <TextBox.Background>
-                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\login.jpg" AlignmentX="Left" Stretch="None" />
+                <ImageBrush ImageSource="images\login.jpg" AlignmentX="Left" Stretch="None" />
             </TextBox.Background>
         </TextBox>
         <PasswordBox x:Name="txtPassword" 
@@ -37,7 +37,7 @@
                  Width="120" Margin="37,10,0,11"
                  Grid.Row="4" PasswordChanged="txtPassword_PasswordChanged" HorizontalContentAlignment="Center">
             <PasswordBox.Background>
-                <ImageBrush ImageSource="C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg" AlignmentX="Left" Stretch="None" />
+                <ImageBrush ImageSource="images/haslo.jpg" AlignmentX="Left" Stretch="None" />
             </PasswordBox.Background>
         </PasswordBox>
 

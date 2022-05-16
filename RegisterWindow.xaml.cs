@@ -47,7 +47,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\imie.jpg", UriKind.Relative)
+                        new Uri("images/imie.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -69,7 +69,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\nazwisko.jpg", UriKind.Relative)
+                        new Uri("images/nazwisko.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -91,7 +91,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\adres.jpg", UriKind.Relative)
+                        new Uri("images/adres.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -114,7 +114,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\pesel.jpg", UriKind.Relative)
+                        new Uri("images/pesel.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -137,7 +137,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\mail.jpg", UriKind.Relative)
+                        new Uri("images/mail.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -160,7 +160,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\telefon.jpg", UriKind.Relative)
+                        new Uri("images/telefon.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -182,7 +182,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg", UriKind.Relative)
+                        new Uri("images/haslo.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -205,7 +205,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\powtorzhaslo.jpg", UriKind.Relative)
+                        new Uri("images/powtorzhaslo.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;

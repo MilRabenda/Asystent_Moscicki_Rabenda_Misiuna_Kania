@@ -133,7 +133,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\login.jpg", UriKind.Relative)
+                        new Uri("images/login.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -155,7 +155,7 @@ namespace Panel_Gościa
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\haslo.jpg", UriKind.Relative)
+                        new Uri("images/haslo.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
