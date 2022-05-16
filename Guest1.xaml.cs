@@ -37,7 +37,7 @@ namespace Panel_Gościa
 
             Image i1 = new Image();
             BitmapImage bitmapImage1 = new BitmapImage(); bitmapImage1.BeginInit();
-            bitmapImage1.UriSource = new Uri(@"C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\images\anemia.jpg");
+            bitmapImage1.UriSource = new Uri("images/anemia.jpg", UriKind.Relative);
             bitmapImage1.DecodePixelWidth = 200;
             bitmapImage1.EndInit();
 
