@@ -28,7 +28,15 @@ namespace Panel_Gościa
         public bool Git { get; set; } = false;
         public Login()
         {
-            InitializeComponent();
+            
+            try
+            {
+                InitializeComponent();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
  
         }
         void setUser(string l, string h)
@@ -127,13 +135,13 @@ namespace Panel_Gościa
 
         private void txtLogin_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtLogin.Text == "")
+           /* if (txtLogin.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri("images/login.jpg", UriKind.Relative)
+                        new Uri("../images/login.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -145,11 +153,12 @@ namespace Panel_Gościa
 
                 txtLogin.Background = null;
             }
+           */
         }
 
         private void txtPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (txtPassword.Password == "")
+           /* if (txtPassword.Password == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
@@ -167,6 +176,9 @@ namespace Panel_Gościa
 
                 txtPassword.Background = null;
             }
+           */
         }
+           
+           
     }
 }

@@ -41,13 +41,13 @@ namespace Panel_Gościa
 
         private void txtName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtName.Text == "")
+           /* if (txtName.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
                 textImageBrush.ImageSource =
                     new BitmapImage(
-                        new Uri("images/imie.jpg", UriKind.Relative)
+                        new Uri(".../images/imie.jpg", UriKind.Relative)
                     );
                 textImageBrush.AlignmentX = AlignmentX.Left;
                 textImageBrush.Stretch = Stretch.None;
@@ -59,11 +59,12 @@ namespace Panel_Gościa
 
                 txtName.Background = null;
             }
+           */
         }
 
         private void txtSurname_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtSurname.Text == "")
+           /* if (txtSurname.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
@@ -81,11 +82,12 @@ namespace Panel_Gościa
 
                 txtSurname.Background = null;
             }
+           */
         }
 
         private void txtAdres_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtAdres.Text == "")
+           /* if (txtAdres.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
@@ -103,12 +105,13 @@ namespace Panel_Gościa
 
                 txtAdres.Background = null;
             }
+           */
 
         }
 
         private void txtPesel_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtPesel.Text == "")
+            /*if (txtPesel.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
@@ -126,12 +129,13 @@ namespace Panel_Gościa
 
                 txtPesel.Background = null;
             }
+            */
 
         }
 
         private void txtMail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtMail.Text == "")
+           /* if (txtMail.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
@@ -149,12 +153,13 @@ namespace Panel_Gościa
 
                 txtMail.Background = null;
             }
+           */
 
         }
 
         private void txtTelefon_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (txtTelefon.Text == "")
+            /*if (txtTelefon.Text == "")
             {
                 // Create an ImageBrush.
                 ImageBrush textImageBrush = new ImageBrush();
@@ -172,10 +177,12 @@ namespace Panel_Gościa
 
                 txtTelefon.Background = null;
             }
+            */
         }
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            /*
             if (PasswordBox.Password == "")
             {
                 // Create an ImageBrush.
@@ -194,11 +201,13 @@ namespace Panel_Gościa
 
                 PasswordBox.Background = null;
             }
+            */
 
         }
 
         private void PasswordCopyBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            /*
             if (PasswordCopyBox.Password == "")
             {
                 // Create an ImageBrush.
@@ -217,6 +226,7 @@ namespace Panel_Gościa
 
                 PasswordCopyBox.Background = null;
             }
+            */
 
         }
     }

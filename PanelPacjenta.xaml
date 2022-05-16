@@ -12,24 +12,16 @@
         </Grid>
         <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
             <Button x:Name="btn_ZapiszWizytę"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100">
-                <Image Source="images/zapis.png">
-
-                </Image>
+                
             </Button>
             <Button x:Name="btn_Konto" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
-                <Image Source="images/konto.png">
-                    
-                </Image>
+                
             </Button>
             <Button x:Name="btn_idk" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
-                <Image Source="images/wylogowanie.png">
-
-                </Image>
+              
             </Button>
             <Button x:Name="btn_Wizyty"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
-                <Image Source="images/wizyty.png">
-
-                </Image>
+              
             </Button>
         </Grid>
     </Grid>
