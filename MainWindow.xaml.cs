@@ -107,5 +107,17 @@ namespace Panel_Gościa
                 Guest.Content = new Guest1(); btnWiecej.Content = "Więcej badań";
             }
         }
+
+        private void btnAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            admin a = new admin();
+            a.Show();
+        }
+
+        private void btnPielegniarka_Click(object sender, RoutedEventArgs e)
+        {
+            pielegniarka p = new pielegniarka();
+            p.Show();
+        }
     }
 }

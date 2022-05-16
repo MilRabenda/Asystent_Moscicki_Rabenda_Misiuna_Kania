@@ -96,6 +96,22 @@ namespace Panel_Gościa {
         #line default
         #line hidden
         
+        
+        #line 170 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnAdmin;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 171 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btnPielegniarka;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -181,6 +197,24 @@ namespace Panel_Gościa {
             
             #line 169 "..\..\MainWindow.xaml"
             this.btnWiecej.Click += new System.Windows.RoutedEventHandler(this.btnWiecej_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 9:
+            this.btnAdmin = ((System.Windows.Controls.Button)(target));
+            
+            #line 170 "..\..\MainWindow.xaml"
+            this.btnAdmin.Click += new System.Windows.RoutedEventHandler(this.btnAdmin_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 10:
+            this.btnPielegniarka = ((System.Windows.Controls.Button)(target));
+            
+            #line 171 "..\..\MainWindow.xaml"
+            this.btnPielegniarka.Click += new System.Windows.RoutedEventHandler(this.btnPielegniarka_Click);
             
             #line default
             #line hidden
