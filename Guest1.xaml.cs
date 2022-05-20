@@ -21,18 +21,16 @@ namespace Panel_Gościa
     /// </summary>
     public partial class Guest1 : Page
     {
-
         public static int i = 0;
-        public static int indx=1;
 
         //BitmapImage list
         
         //Tab string
         string[] baners= {"xBadanie na Anemię 30zł","xBadanie serca 55zł","xBadanie ogólne 40zł"};
-
+        List<string> sourceList;
         public Guest1()
         {
-            List<Image> imageList = new List<Image>();
+            sourceList = new List<string>();
             InitializeComponent();
             btn_test.Visibility = Visibility.Visible;
 
@@ -41,47 +39,19 @@ namespace Panel_Gościa
             //myImage.Source = new BitmapImage(new Uri(zdj, UriKind.Relative));
 
             using (
-            MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
-
-                
-                foreach (var img in imageList)
+                MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
+                MySqlCommand command = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", połączenie);
+                połączenie.Open();
+                int size = Convert.ToInt32(command.ExecuteScalar());
+                for (i = 1; i <= size; i++)
                 {
-                    
-                    MySqlCommand image = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={indx}", połączenie);
-                    String source = Convert.ToString(image.ExecuteScalar());
-                    img.Source = new BitmapImage(new Uri(source, UriKind.Relative));
-                    imageList[i] =img;
+                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={i}", połączenie);
+                    string imageSource = "/images/content/" + Convert.ToString(source.ExecuteScalar());
+                    sourceList.Add(imageSource);
                 }
-                lblImage.Content = imageList[0];
+                połączenie.Close(); 
+                ImageFrame.Source = new BitmapImage(new Uri(sourceList[0], UriKind.Relative));
             }
-           
-            //imgFrame = imageList[0];
-                //photos:
-
-            //    Image i1 = new Image();
-            //BitmapImage bitmapImage1 = new BitmapImage(); bitmapImage1.BeginInit();
-            //bitmapImage1.UriSource = new Uri("images/anemia.jpg", UriKind.Relative);
-            //bitmapImage1.DecodePixelWidth = 200;
-            //bitmapImage1.EndInit();
-
-
-            //Image i2 = new Image();
-            //BitmapImage bitmapImage2 = new BitmapImage(); bitmapImage2.BeginInit();
-            //bitmapImage2.UriSource = new Uri("images/serce.jpg", UriKind.Relative);
-            //bitmapImage2.DecodePixelWidth = 200;
-            //bitmapImage2.EndInit();
-
-            //Image i3 = new Image();
-            //BitmapImage bitmapImage3 = new BitmapImage(); bitmapImage3.BeginInit();
-            //bitmapImage3.UriSource = new Uri("images/podstawa.jpg", UriKind.Relative);
-            //bitmapImage3.DecodePixelWidth = 200;
-            //bitmapImage3.EndInit();
-            //bitMapList.Add(bitmapImage1);
-            //bitMapList.Add(bitmapImage2);
-            //bitMapList.Add(bitmapImage3);
-            ////image in widget
-            //ImageBaner.Source= bitMapList[i];
-            //lblBaner.Content = baners[i];
         }
         private void btn_test_Click(object sender, RoutedEventArgs e)
         {
@@ -93,7 +63,7 @@ namespace Panel_Gościa
         {
             i--;
             if (i < 0) i = 2;
-           // ImageBaner.Source = bitMapList[i];
+            //ImageFrame = imageList[i];
             lblBaner.Content=baners[i];
         }
 
@@ -101,7 +71,7 @@ namespace Panel_Gościa
         {
             i++;
             if (i > 2) i =0;
-            //ImageBaner.Source = bitMapList[i];
+            //ImageFrame = imageList[i];
             lblBaner.Content = baners[i];
         }
         private void btnAdmin_Click(object sender, RoutedEventArgs e)

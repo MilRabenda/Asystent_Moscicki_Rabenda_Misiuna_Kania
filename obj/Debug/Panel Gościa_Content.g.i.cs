@@ -8,24 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/adres.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/alergia.jpeg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cukrzyca.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/haslo.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/imie.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/konto.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/login.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/mail.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/nazwisko.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/nerki.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/pesel.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/powtorzhaslo.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/reumatyzm.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tarczyca.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/telefon.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/watroba.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/wizyty.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/wylogowanie.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/zapis.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("alergia.jpeg")]
 
 

@@ -214,25 +214,39 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\controls\adres.jpg" />
-    <Resource Include="images\content\alergia.jpeg" />
-    <Resource Include="images\content\cukrzyca.jpg" />
+    <Resource Include="images\content\alergia.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\content\cukrzyca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\controls\haslo.jpg" />
     <Resource Include="images\controls\imie.jpg" />
     <Resource Include="images\controls\konto.png" />
     <Resource Include="images\controls\login.jpg" />
     <Resource Include="images\controls\mail.jpg" />
     <Resource Include="images\controls\nazwisko.jpg" />
-    <Resource Include="images\content\nerki.jpg" />
+    <Resource Include="images\content\nerki.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\controls\pesel.jpg" />
     <Resource Include="images\controls\powtorzhaslo.jpg" />
-    <Resource Include="images\content\reumatyzm.jpg" />
-    <Resource Include="images\content\tarczyca.jpg" />
+    <Resource Include="images\content\reumatyzm.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\content\tarczyca.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\controls\telefon.jpg" />
-    <Resource Include="images\content\watroba.jpg" />
+    <Resource Include="images\content\watroba.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\controls\wizyty.png" />
     <Resource Include="images\controls\wylogowanie.png" />
     <Resource Include="images\controls\zapis.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="alergia.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
