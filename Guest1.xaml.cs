@@ -63,15 +63,15 @@ namespace Panel_Gościa
         {
             i--;
             if (i < 0) i = 2;
-            //ImageFrame = imageList[i];
+            ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
             lblBaner.Content=baners[i];
         }
 
         private void btnRight_Click(object sender, RoutedEventArgs e)
         {
             i++;
-            if (i > 2) i =0;
-            //ImageFrame = imageList[i];
+            if (i > 2) { i = 0; }
+            ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
             lblBaner.Content = baners[i];
         }
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
