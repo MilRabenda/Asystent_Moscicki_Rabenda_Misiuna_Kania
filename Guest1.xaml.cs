@@ -43,14 +43,15 @@ namespace Panel_Gościa
                 MySqlCommand command = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", połączenie);
                 połączenie.Open();
                 int size = Convert.ToInt32(command.ExecuteScalar());
-                for (i = 1; i <= size; i++)
+                for (int j = 1; j <= size; j++)
                 {
-                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={i}", połączenie);
+                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={j}", połączenie);
                     string imageSource = "/images/content/" + Convert.ToString(source.ExecuteScalar());
                     sourceList.Add(imageSource);
+                    
                 }
                 połączenie.Close(); 
-                ImageFrame.Source = new BitmapImage(new Uri(sourceList[0], UriKind.Relative));
+                ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
             }
         }
         private void btn_test_Click(object sender, RoutedEventArgs e)
@@ -62,17 +63,17 @@ namespace Panel_Gościa
         private void btnLeft_Click(object sender, RoutedEventArgs e)
         {
             i--;
-            if (i < 0) i = 2;
+            if (i < 0) i = 6;
             ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
-            lblBaner.Content=baners[i];
+            //lblBaner.Content=baners[i];
         }
 
         private void btnRight_Click(object sender, RoutedEventArgs e)
         {
             i++;
-            if (i > 2) { i = 0; }
+            if (i > 6) i = 0; 
             ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
-            lblBaner.Content = baners[i];
+            //lblBaner.Content = baners[i];
         }
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
