@@ -25,14 +25,16 @@
         </Grid.ColumnDefinitions>
 
         <Image x:Name="ImageBaner" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="0,0"/>
-        <Button x:Name="btn_test" Content="Button" Grid.Column="3" HorizontalAlignment="Left" Margin="56,284,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_test_Click"/>
+        <Button x:Name="btn_test" Content="Pacjent" Grid.Column="3" HorizontalAlignment="Left" Margin="56,284,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_test_Click"/>
         <Button x:Name="btnRight" HorizontalAlignment="Left" Margin="0,150" Grid.Row="1" VerticalAlignment="Top"  Grid.Column="3" Background="{x:Null}" BorderThickness="0" Click="btnRight_Click">
-            <Image Source="images/right-arrow.png"></Image>
+            <Image Source="images/controls/right-arrow.png"></Image>
         </Button>
         <Button x:Name="btnLeft" HorizontalAlignment="Right" Margin="0,150" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" Background="{x:Null}" BorderThickness="0" Click="btnLeft_Click">
-            <Image Source="images/left-arrow.png"></Image>
+            <Image Source="images/controls/left-arrow.png"></Image>
         </Button>
         <Label x:Name="lblBaner" Content=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center"   VerticalAlignment="Bottom" FontFamily="Calibri Light" FontSize="15" FontStyle="Oblique" />
+        <Button x:Name="btnPielegniarka" Content="Pielęgniarka" Grid.Column="3" HorizontalAlignment="Left" Margin="56,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnPielegniarka_Click"/>
+        <Button x:Name="btnAdmin" Content="Admin" Grid.Column="3" HorizontalAlignment="Left" Margin="56,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
 
     </Grid>
 </Page>

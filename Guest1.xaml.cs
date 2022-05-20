@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Drawing;
+using MySql.Data.MySqlClient;
 
 namespace Panel_Gościa
 {
@@ -26,16 +27,24 @@ namespace Panel_Gościa
         //BitmapImage list
         List<BitmapImage> bitMapList = new List<BitmapImage>();
         //Tab string
-        string[] baners= {"Badanie na Anemię 30zł","Badanie serca 55zł","Badanie ogólne 40zł"};
+        string[] baners= {"xBadanie na Anemię 30zł","xBadanie serca 55zł","xBadanie ogólne 40zł"};
 
         public Guest1()
         {
             InitializeComponent();
             btn_test.Visibility = Visibility.Visible;
 
-            //photos:
+            //    MySqlCommand ZdjAutka = new MySqlCommand($"SELECT zdjecie from pojazdy WHERE IdPojazdy = {i};", con);
+            //String zdj = Convert.ToString(ZdjAutka.ExecuteScalar());
+            //myImage.Source = new BitmapImage(new Uri(zdj, UriKind.Relative));
 
-            Image i1 = new Image();
+            using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
+            MySqlCommand image = new MySqlCommand($@"SELECT ", połączenie);
+            }
+
+                //photos:
+
+                Image i1 = new Image();
             BitmapImage bitmapImage1 = new BitmapImage(); bitmapImage1.BeginInit();
             bitmapImage1.UriSource = new Uri("images/anemia.jpg", UriKind.Relative);
             bitmapImage1.DecodePixelWidth = 200;
@@ -81,6 +90,20 @@ namespace Panel_Gościa
             ImageBaner.Source = bitMapList[i];
             lblBaner.Content = baners[i];
         }
+        private void btnAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            admin a = new admin();
+            a.Show();
+        }
+
+        private void btnPielegniarka_Click(object sender, RoutedEventArgs e)
+        {
+            pielegniarka p = new pielegniarka();
+            p.Show();
+        }
+
+
+
     }
 
 }

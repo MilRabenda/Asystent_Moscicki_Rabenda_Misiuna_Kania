@@ -108,16 +108,6 @@ namespace Panel_Gościa
             }
         }
 
-        private void btnAdmin_Click(object sender, RoutedEventArgs e)
-        {
-            admin a = new admin();
-            a.Show();
-        }
 
-        private void btnPielegniarka_Click(object sender, RoutedEventArgs e)
-        {
-            pielegniarka p = new pielegniarka();
-            p.Show();
-        }
     }
 }

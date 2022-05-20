@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\App.xaml
-61394162393
+81751449331
 
-111251121909
+121294355241
 321908934508
-Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;RegisterWindow.xaml;
+admin.xaml;Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;pielegniarka.xaml;RegisterWindow.xaml;
 
-True
+False
 

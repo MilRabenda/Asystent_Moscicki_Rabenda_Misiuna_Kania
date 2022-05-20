@@ -98,6 +98,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="admin.xaml.cs">
+      <DependentUpon>admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Guest1.xaml.cs">
       <DependentUpon>Guest1.xaml</DependentUpon>
     </Compile>
@@ -107,9 +110,16 @@
     <Compile Include="PanelPacjenta.xaml.cs">
       <DependentUpon>PanelPacjenta.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pielegniarka.xaml.cs">
+      <DependentUpon>pielegniarka.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="admin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Guest1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,6 +150,10 @@
     <Page Include="PanelPacjenta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pielegniarka.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="RegisterWindow.xaml">
       <SubType>Designer</SubType>
@@ -174,29 +188,51 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\podstawa.jpg">
+    <Resource Include="images\content\podstawa.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\right-arrow.png">
+    <Resource Include="images\controls\right-arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\left-arrow.png">
+    <Resource Include="images\controls\left-arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\anemia.jpg">
+    <Resource Include="images\content\anemia.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\serce.jpg">
+    <Resource Include="images\content\serce.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\controls\adres.jpg" />
+    <Resource Include="images\content\alergia.jpeg" />
+    <Resource Include="images\content\cukrzyca.jpg" />
+    <Resource Include="images\controls\haslo.jpg" />
+    <Resource Include="images\controls\imie.jpg" />
+    <Resource Include="images\controls\konto.png" />
+    <Resource Include="images\controls\login.jpg" />
+    <Resource Include="images\controls\mail.jpg" />
+    <Resource Include="images\controls\nazwisko.jpg" />
+    <Resource Include="images\content\nerki.jpg" />
+    <Resource Include="images\controls\pesel.jpg" />
+    <Resource Include="images\controls\powtorzhaslo.jpg" />
+    <Resource Include="images\content\reumatyzm.jpg" />
+    <Resource Include="images\content\tarczyca.jpg" />
+    <Resource Include="images\controls\telefon.jpg" />
+    <Resource Include="images\content\watroba.jpg" />
+    <Resource Include="images\controls\wizyty.png" />
+    <Resource Include="images\controls\wylogowanie.png" />
+    <Resource Include="images\controls\zapis.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
