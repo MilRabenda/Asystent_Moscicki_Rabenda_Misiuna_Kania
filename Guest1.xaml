@@ -35,6 +35,10 @@
         <Label x:Name="lblBaner" Content=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center"   VerticalAlignment="Bottom" FontFamily="Calibri Light" FontSize="15" FontStyle="Oblique" />
         <Button x:Name="btnPielegniarka" Content="Pielęgniarka" Grid.Column="3" HorizontalAlignment="Left" Margin="56,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnPielegniarka_Click"/>
         <Button x:Name="btnAdmin" Content="Admin" Grid.Column="3" HorizontalAlignment="Left" Margin="56,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
+        <DataGrid Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="10,335.333,0,-30" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+        <Label Grid.Column="1" HorizontalAlignment="Left" Margin="44,202.333,0,0" Grid.Row="1" VerticalAlignment="Top">
+        <Label x:Name="lblImage" Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" Height="200" Width="300" /> </Label>
+
 
     </Grid>
 </Page>
