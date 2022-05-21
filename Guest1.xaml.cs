@@ -28,6 +28,7 @@ namespace Panel_Gościa
         public static int i = 0;
         List<string> namesList;
         List<string> sourceList;
+        DispatcherTimer dispatcherTimer = new DispatcherTimer(); //next image per 3s
         public Guest1()
         {
             
@@ -42,8 +43,7 @@ namespace Panel_Gościa
                 {
                     MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={j}", connect);
                     string imageSource = "/images/content/" + Convert.ToString(source.ExecuteScalar());
-                    sourceList.Add(imageSource);
-                    
+                    sourceList.Add(imageSource);   
                 } 
                 ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
 
@@ -57,8 +57,7 @@ namespace Panel_Gościa
                 lblName.Content = namesList[i];
                 connect.Close(); 
             }
-
-            DispatcherTimer dispatcherTimer = new DispatcherTimer(); //next image per 3s
+            
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
             dispatcherTimer.Start();
@@ -82,6 +81,8 @@ namespace Panel_Gościa
             if (i < 0) i = 6;
             ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
             lblName.Content= namesList[i];
+            dispatcherTimer.Stop();
+            dispatcherTimer.Start();
         }
 
         private void btnRight_Click(object sender, RoutedEventArgs e)
@@ -90,6 +91,8 @@ namespace Panel_Gościa
             if (i > 6) i = 0; 
             ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
             lblName.Content = namesList[i];
+            dispatcherTimer.Stop();
+            dispatcherTimer.Start();
         }
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
@@ -103,7 +106,11 @@ namespace Panel_Gościa
             p.Show();
         }
 
-
+        private void ImageFrame_Click(object sender, RoutedEventArgs e)
+        {
+            var window = new Login();
+            window.ShowDialog();
+        }
 
     }
 

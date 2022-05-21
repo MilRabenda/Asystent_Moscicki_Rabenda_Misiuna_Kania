@@ -9,6 +9,10 @@
       Title="Guest2">
 
     <Grid>
-        
+        <StackPanel x:Name="stack1" HorizontalAlignment="Left" Height="430" Margin="10,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <StackPanel x:Name="stack2" HorizontalAlignment="Left" Height="430" Margin="211,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <StackPanel x:Name="stack3" HorizontalAlignment="Left" Height="430" Margin="411,10,0,0" VerticalAlignment="Top" Width="200"/>
+        <StackPanel x:Name="stack4" HorizontalAlignment="Left" Height="430" Margin="600,10,0,0" VerticalAlignment="Top" Width="200"/>
+
     </Grid>
 </Page>
