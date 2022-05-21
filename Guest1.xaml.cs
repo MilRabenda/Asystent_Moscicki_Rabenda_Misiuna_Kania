@@ -13,47 +13,63 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Drawing;
 using MySql.Data.MySqlClient;
+using System.Windows.Threading;
 
 namespace Panel_Gościa
 {
+
+
+
     /// <summary>
     /// Logika interakcji dla klasy Guest1.xaml
     /// </summary>
     public partial class Guest1 : Page
     {
         public static int i = 0;
-
-        //BitmapImage list
-        
-        //Tab string
-        string[] baners= {"xBadanie na Anemię 30zł","xBadanie serca 55zł","xBadanie ogólne 40zł"};
+        List<string> namesList;
         List<string> sourceList;
         public Guest1()
         {
+            
             sourceList = new List<string>();
             InitializeComponent();
-            btn_test.Visibility = Visibility.Visible;
-
-            //MySqlCommand ZdjAutka = new MySqlCommand($"SELECT zdjecie from pojazdy WHERE IdPojazdy = {i};", con);
-            //String zdj = Convert.ToString(ZdjAutka.ExecuteScalar());
-            //myImage.Source = new BitmapImage(new Uri(zdj, UriKind.Relative));
-
             using (
-                MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
-                MySqlCommand command = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", połączenie);
-                połączenie.Open();
-                int size = Convert.ToInt32(command.ExecuteScalar());
-                for (int j = 1; j <= size; j++)
+                MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
+                MySqlCommand commandImages = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", connect);
+                connect.Open();
+                int size = Convert.ToInt32(commandImages.ExecuteScalar());
+                for (int j = 1; j <= size; j++) //images
                 {
-                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={j}", połączenie);
+                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={j}", connect);
                     string imageSource = "/images/content/" + Convert.ToString(source.ExecuteScalar());
                     sourceList.Add(imageSource);
                     
-                }
-                połączenie.Close(); 
+                } 
                 ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
+
+                namesList = new List<string>();//names
+                for (int j = 1; j <= size; j++)
+                {
+                    MySqlCommand commandName = new MySqlCommand($@"SELECT nazwabadania FROM badanie WHERE idbadania={j}", connect);
+                    string name = Convert.ToString(commandName.ExecuteScalar());
+                    namesList.Add(name);
+                }
+                lblName.Content = namesList[i];
+                connect.Close(); 
             }
+
+            DispatcherTimer dispatcherTimer = new DispatcherTimer(); //next image per 3s
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
+            dispatcherTimer.Start();
         }
+        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        {
+           i++; if (i > 6) i = 0;
+           lblName.Content = namesList[i];
+           ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
+        }
+
         private void btn_test_Click(object sender, RoutedEventArgs e)
         {
             var window = new PanelPacjenta();
@@ -65,7 +81,7 @@ namespace Panel_Gościa
             i--;
             if (i < 0) i = 6;
             ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
-            //lblBaner.Content=baners[i];
+            lblName.Content= namesList[i];
         }
 
         private void btnRight_Click(object sender, RoutedEventArgs e)
@@ -73,7 +89,7 @@ namespace Panel_Gościa
             i++;
             if (i > 6) i = 0; 
             ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
-            //lblBaner.Content = baners[i];
+            lblName.Content = namesList[i];
         }
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {

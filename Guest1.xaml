@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Panel_Gościa"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Guest1">
+      Title="Guest1" >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,29 +15,52 @@
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition>
-            </ColumnDefinition>
-            <ColumnDefinition>
-            </ColumnDefinition>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="50"/>
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
 
         <Image x:Name="ImageBaner" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="0,0"/>
         <Button x:Name="btn_test" Content="Pacjent" Grid.Column="3" HorizontalAlignment="Left" Margin="56,284,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_test_Click"/>
-        <Button x:Name="btnRight" HorizontalAlignment="Left" Margin="0,150" Grid.Row="1" VerticalAlignment="Top"  Grid.Column="3" Background="{x:Null}" BorderThickness="0" Click="btnRight_Click">
-            <Image Source="images/controls/right-arrow.png"></Image>
+        <Button x:Name="btnRight" HorizontalAlignment="Left" Margin="5,110,0,200" Grid.Row="1" VerticalAlignment="Top"  Grid.Column="2" Background="{x:Null}" BorderThickness="0" Click="btnRight_Click" Width="25" Height="30">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Opacity" Value="0.1"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Opacity" Value="1.0"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Image Source="images/controls/right-arrow.png"  Stretch="Fill"/>
         </Button>
-        <Button x:Name="btnLeft" HorizontalAlignment="Right" Margin="0,150" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" Background="{x:Null}" BorderThickness="0" Click="btnLeft_Click">
-            <Image Source="images/controls/left-arrow.png"></Image>
+        <Button x:Name="btnLeft" HorizontalAlignment="Right"  Margin="0,110,5,200" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" Background="{x:Null}" BorderThickness="0" Click="btnLeft_Click" Width="25" Height="30">
+                            <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Opacity" Value="0.1"/>
+                    <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Opacity" Value="1.0"/>
+                        </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            <Image Source="images/controls/left-arrow.png"  Stretch="Fill"/>
         </Button>
         <Label x:Name="lblBaner" Content=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center"   VerticalAlignment="Bottom" FontFamily="Calibri Light" FontSize="15" FontStyle="Oblique" />
         <Button x:Name="btnPielegniarka" Content="Pielęgniarka" Grid.Column="3" HorizontalAlignment="Left" Margin="56,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnPielegniarka_Click"/>
         <Button x:Name="btnAdmin" Content="Admin" Grid.Column="3" HorizontalAlignment="Left" Margin="56,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
-        <Label Grid.Column="1" HorizontalAlignment="Left" Margin="44,202.333,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Image x:Name="ImageFrame" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="200" Width="300" >
-        </Image>
+        <Image x:Name="ImageFrame" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"  Stretch="Fill" Height="250" Width="350" UseLayoutRounding="True"/>
+        
+        <Label x:Name="lblName" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Width="350" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,110" FontSize="18" FontWeight="Bold" Foreground="Black">
+            <Label.Background>
+                <SolidColorBrush Color="White" Opacity="0.6"></SolidColorBrush></Label.Background>
+        </Label>
 
 
     </Grid>
