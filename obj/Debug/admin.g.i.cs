@@ -40,6 +40,78 @@ namespace Panel_Gościa {
     /// </summary>
     public partial class admin : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
+        
+        #line 19 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label lbl_Witaj;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 22 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_ZapiszWizytę;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 24 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_Konto;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 26 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_idk;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 29 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_Wizyty;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 32 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_ZapiszWizytę_Copy;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 33 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_ZapiszWizytę_Copy1;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 34 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_ZapiszWizytę_Copy2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 35 "..\..\admin.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btn_ZapiszWizytę_Copy3;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -68,6 +140,36 @@ namespace Panel_Gościa {
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         void System.Windows.Markup.IComponentConnector.Connect(int connectionId, object target) {
+            switch (connectionId)
+            {
+            case 1:
+            this.lbl_Witaj = ((System.Windows.Controls.Label)(target));
+            return;
+            case 2:
+            this.btn_ZapiszWizytę = ((System.Windows.Controls.Button)(target));
+            return;
+            case 3:
+            this.btn_Konto = ((System.Windows.Controls.Button)(target));
+            return;
+            case 4:
+            this.btn_idk = ((System.Windows.Controls.Button)(target));
+            return;
+            case 5:
+            this.btn_Wizyty = ((System.Windows.Controls.Button)(target));
+            return;
+            case 6:
+            this.btn_ZapiszWizytę_Copy = ((System.Windows.Controls.Button)(target));
+            return;
+            case 7:
+            this.btn_ZapiszWizytę_Copy1 = ((System.Windows.Controls.Button)(target));
+            return;
+            case 8:
+            this.btn_ZapiszWizytę_Copy2 = ((System.Windows.Controls.Button)(target));
+            return;
+            case 9:
+            this.btn_ZapiszWizytę_Copy3 = ((System.Windows.Controls.Button)(target));
+            return;
+            }
             this._contentLoaded = true;
         }
     }
