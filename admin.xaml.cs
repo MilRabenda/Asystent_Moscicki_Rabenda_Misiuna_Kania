@@ -23,5 +23,10 @@ namespace Panel_Gościa
         {
             InitializeComponent();
         }
+
+        private void btn_idk_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
