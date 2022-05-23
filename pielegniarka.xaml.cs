@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
@@ -22,6 +23,29 @@ namespace Panel_Gościa
         public pielegniarka()
         {
             InitializeComponent();
+        }
+
+        private void btn_PokażWizyty_Click(object sender, RoutedEventArgs e)
+        {
+            lstBox.Items.Clear();
+
+            var x = Getters.getWizytyPielęgniarka(1);
+            x.Sort();
+            foreach (var item in x)
+            {
+                lstBox.Items.Add(item);
+            }
+        }
+
+        private void btn_DzisiejszeWizyty_Click(object sender, RoutedEventArgs e)
+        {
+            lstBox.Items.Clear();
+            var x = Getters.getWizytyPielęgniarkaDzisiaj(1);
+            x.Sort();
+            foreach (var item in x)
+            {
+                lstBox.Items.Add(item);
+            }
         }
     }
 }

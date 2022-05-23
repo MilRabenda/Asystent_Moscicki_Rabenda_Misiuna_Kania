@@ -51,14 +51,39 @@ namespace Panel_Gościa
             this.Close();
             if (this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
             {
-                using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium"))
+                using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=2137;database=laboratorium"))
                 {
-                    
-                 
-                    MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+
+                    /*
+                       MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                       MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                       połączenie.Open();
+                       MySqlDataReader poprawne_log = log.ExecuteReader();
+                       bool ok1;
+                       bool ok2;
+                       ok1 = poprawne_log.HasRows;
+                       poprawne_log.Close();
+                       MySqlDataReader poprawne_has = has.ExecuteReader();
+                       ok2 = poprawne_has.HasRows;
+                       poprawne_has.Close();
+                       if(ok1 && ok2)
+                       {
+                           var window = new PanelPacjenta();
+                           window.ShowDialog();
+                       }
+                       else
+                       {
+                           MessageBox.Show("błędny login lub hasło");
+                       }
+
+                       połączenie.Close();
+                    CHYBA GIT DLA PACJENTA
+                    TO NIŻEJ ROBIE DLA PIELĘGNIARKI
+                    */
+                    MySqlCommand mail = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
+                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where mail='{txtLogin.Text}'", połączenie);
                     połączenie.Open();
-                    MySqlDataReader poprawne_log = log.ExecuteReader();
+                    MySqlDataReader poprawne_log = mail.ExecuteReader();
                     bool ok1;
                     bool ok2;
                     ok1 = poprawne_log.HasRows;
@@ -66,9 +91,9 @@ namespace Panel_Gościa
                     MySqlDataReader poprawne_has = has.ExecuteReader();
                     ok2 = poprawne_has.HasRows;
                     poprawne_has.Close();
-                    if(ok1 && ok2)
+                    if (ok1 && ok2)
                     {
-                        var window = new PanelPacjenta();
+                        var window = new pielegniarka();
                         window.ShowDialog();
                     }
                     else
@@ -77,13 +102,11 @@ namespace Panel_Gościa
                     }
 
                     połączenie.Close();
-                    MySqlCommand pac = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
-
-
                 }
 
 
             }
+            //MySqlCommand pac = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
             //sprawdź z bazą danych czy login i hasło się zgadzają
             //jeśli tak to 
             //    if(this.txtLogin.Text == DobryLogin && this.txtPassword.Password == DobreHasło)
