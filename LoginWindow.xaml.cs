@@ -53,50 +53,33 @@ namespace Panel_Gościa
             {
                 using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium"))
                 {
+                    
                  
                     MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where haslo ='{ txtPassword.Password }'", połączenie);
+                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
                     połączenie.Open();
                     MySqlDataReader poprawne_log = log.ExecuteReader();
                     bool ok1;
                     bool ok2;
-                    if (poprawne_log.HasRows==true)
-                    {
-                        ok1 = true;
-                        
-                    }
-                    else
-                    {
-                        ok1 = false;
-                    }
-
+                    ok1 = poprawne_log.HasRows;
                     poprawne_log.Close();
                     MySqlDataReader poprawne_has = has.ExecuteReader();
-
-                    if (poprawne_has.HasRows == true)
-                    {
-                        ok2 = true;
-
-                    }
-                    else
-                    {
-                        ok2 = false;
-                    }
-
+                    ok2 = poprawne_has.HasRows;
                     poprawne_has.Close();
-                    if(ok1 && ok2==true)
+                    if(ok1 && ok2)
                     {
                         var window = new PanelPacjenta();
                         window.ShowDialog();
                     }
+                    else
+                    {
+                        MessageBox.Show("błędny login lub hasło");
+                    }
 
                     połączenie.Close();
+                    MySqlCommand pac = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
 
 
-                    //połączenie.Open();
-                    //MySqlDataReader czytnik = polecenie.ExecuteReader();
-                    //czytnik.Close();
-                    //połączenie.Close();
                 }
 
 
