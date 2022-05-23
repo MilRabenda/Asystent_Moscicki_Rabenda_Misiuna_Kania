@@ -266,3 +266,7 @@ C:\Users\marci\Desktop\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel G
 C:\Users\marci\Desktop\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CopyComplete
 C:\Users\marci\Desktop\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.exe
 C:\Users\marci\Desktop\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.pdb
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\admin.g.cs
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\pielegniarka.g.cs
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\admin.baml
+C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\pielegniarka.baml

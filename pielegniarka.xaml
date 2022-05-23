@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panel_Gościa"
         mc:Ignorable="d"
-        Title="pielegniarka" Height="450" Width="800">
+        Title="PanelPielęgniarki" Height="500" Width="410" ResizeMode="NoResize" >
     <Grid>
-        
+        <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="392" Background="#e1f5fe">
+            <Label x:Name="lbl_Witaj" Content="Label" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
+        </Grid>
+        <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
+            <Button x:Name="btn_PokażWizyty"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Content="Pokaż wszystkie wizyty"/>
+            <Button x:Name="btn_Wyloguj" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Wyloguj">
+
+            </Button>
+            <Button x:Name="btn_DzisiejszeWizyty" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Dzisiejsze Wizyty">
+
+            </Button>
+            <Button x:Name="btn_UstawieniaKonta"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Ustawienia konta">
+
+            </Button>
+        </Grid>
+        <ListBox HorizontalAlignment="Center" Height="100" Margin="85,132,0,0" VerticalAlignment="Top" Width="222"/>
     </Grid>
 </Window>
