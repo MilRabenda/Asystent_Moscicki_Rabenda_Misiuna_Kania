@@ -51,10 +51,10 @@ namespace Panel_Gościa
             this.Close();
             if (this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
             {
-                using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=2137;database=laboratorium"))
+                using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium"))
                 {
 
-                    /*
+                    
                        MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
                        MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
                        połączenie.Open();
@@ -70,16 +70,20 @@ namespace Panel_Gościa
                        {
                            var window = new PanelPacjenta();
                            window.ShowDialog();
-                       }
+                        MySqlCommand getIdos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                        int os = 0;
+                        os= (int)getIdos.ExecuteScalar();
+                        window.OK = os;
+
+                    }
                        else
                        {
                            MessageBox.Show("błędny login lub hasło");
                        }
 
                        połączenie.Close();
-                    CHYBA GIT DLA PACJENTA
-                    TO NIŻEJ ROBIE DLA PIELĘGNIARKI
-                    */
+                    /*
+                    
                     MySqlCommand mail = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
                     MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where mail='{txtLogin.Text}'", połączenie);
                     połączenie.Open();
@@ -102,7 +106,9 @@ namespace Panel_Gościa
                     }
 
                     połączenie.Close();
+                    */
                 }
+
 
 
             }

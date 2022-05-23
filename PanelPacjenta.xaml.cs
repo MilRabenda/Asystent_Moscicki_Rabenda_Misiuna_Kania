@@ -18,16 +18,33 @@ namespace Panel_Gościa
     /// Logika interakcji dla klasy PanelPacjenta.xaml
     /// </summary>
     public partial class PanelPacjenta : Window
+
     {
+        public int ok;
+        public int OK
+        {
+            set { this.ok = value; }
+            get {return ok; }
+        }
         public PanelPacjenta()
         {
             InitializeComponent();
-            lbl_Witaj.Content = "Witaj /imie/ !";
+       
         }
 
         private void btn_TwojeWizyty_Click(object sender, RoutedEventArgs e)
         {
+            wizFrame.Content = new WizytyPac();
+        }
 
+        private void btn_idk_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Czy na pewno chcesz się wylogować?", "Wylogowanie", MessageBoxButton.OKCancel);
+            if(result== MessageBoxResult.OK)
+            {
+                this.Close();
+            }
+          
         }
     }
 }

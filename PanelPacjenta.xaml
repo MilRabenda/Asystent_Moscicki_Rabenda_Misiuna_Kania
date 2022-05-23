@@ -8,21 +8,22 @@
         Title="PanelPacjenta" Height="500" Width="410" ResizeMode="NoResize" >
     <Grid>
         <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="392" Background="#e1f5fe">
-            <Label x:Name="lbl_Witaj" Content="Label" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
+            <Label x:Name="lbl_Witaj"  HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
         </Grid>
         <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
-            <Button x:Name="btn_ZapiszWizytę"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100">
+            <Button x:Name="btn_ZapiszWizytę" Content="zapisz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100">
                 
             </Button>
-            <Button x:Name="btn_Konto" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
+            <Button x:Name="btn_Konto"  Content="konto" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
                 
             </Button>
-            <Button x:Name="btn_idk" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
+            <Button x:Name="btn_idk" HorizontalAlignment="Left"  Content="wyloguj" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Click="btn_idk_Click">
               
             </Button>
-            <Button x:Name="btn_Wizyty"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
+            <Button x:Name="btn_Wizyty"  HorizontalAlignment="Left" Content="wizyty" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100">
               
             </Button>
         </Grid>
+        <Frame  x:Name="wizFrame"   NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="350" Margin="0,50,0,0" VerticalAlignment="Top" Width="410"/>
     </Grid>
 </Window>

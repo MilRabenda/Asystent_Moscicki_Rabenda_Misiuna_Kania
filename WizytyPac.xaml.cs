@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace Panel_Gościa
 {
     /// <summary>
-    /// Logika interakcji dla klasy WysWiz.xaml
+    /// Logika interakcji dla klasy WizytyPac.xaml
     /// </summary>
-    public partial class WysWiz : Page
+    public partial class WizytyPac : Page
     {
-        public WysWiz()
+        public int id;
+        public int ID
+        {
+            set { this.id = value; }
+            get { return id; }
+        }
+        public WizytyPac()
         {
             InitializeComponent();
+            lbxWizyty.Items.Add(":)");
         }
     }
 }
