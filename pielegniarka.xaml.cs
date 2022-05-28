@@ -47,5 +47,14 @@ namespace Panel_Gościa
                 lstBox.Items.Add(item);
             }
         }
+
+        private void btn_Wyloguj_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Czy na pewno chcesz się wylogować?", "Wylogowanie", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }

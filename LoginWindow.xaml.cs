@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
+using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
@@ -47,47 +48,17 @@ namespace Panel_Gościa
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
             this.Close();
             if (this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
             {
-                using (MySqlConnection połączenie = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium"))
+                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
                 {
 
-                    
-                       MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                       MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                       połączenie.Open();
-                       MySqlDataReader poprawne_log = log.ExecuteReader();
-                       bool ok1;
-                       bool ok2;
-                       ok1 = poprawne_log.HasRows;
-                       poprawne_log.Close();
-                       MySqlDataReader poprawne_has = has.ExecuteReader();
-                       ok2 = poprawne_has.HasRows;
-                       poprawne_has.Close();
-                       if(ok1 && ok2)
-                       {
-                           var window = new PanelPacjenta();
-                           window.ShowDialog();
-                        MySqlCommand getIdos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                        int os = 0;
-                        os= (int)getIdos.ExecuteScalar();
-                        window.OK = os;
 
-                    }
-                       else
-                       {
-                           MessageBox.Show("błędny login lub hasło");
-                       }
-
-                       połączenie.Close();
-                    /*
-                    
-                    MySqlCommand mail = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
-                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where mail='{txtLogin.Text}'", połączenie);
+                    MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
                     połączenie.Open();
-                    MySqlDataReader poprawne_log = mail.ExecuteReader();
+                    MySqlDataReader poprawne_log = log.ExecuteReader();
                     bool ok1;
                     bool ok2;
                     ok1 = poprawne_log.HasRows;
@@ -97,8 +68,13 @@ namespace Panel_Gościa
                     poprawne_has.Close();
                     if (ok1 && ok2)
                     {
-                        var window = new pielegniarka();
+                        var window = new PanelPacjenta();
                         window.ShowDialog();
+                        MySqlCommand getIdos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                        int os = 0;
+                        os = (int)getIdos.ExecuteScalar();
+                        window.OK = os;
+
                     }
                     else
                     {
@@ -106,30 +82,9 @@ namespace Panel_Gościa
                     }
 
                     połączenie.Close();
-                    */
+
                 }
-
-
-
             }
-            //MySqlCommand pac = new MySqlCommand($@"SELECT mail FROM osoba where mail='{txtLogin.Text}'", połączenie);
-            //sprawdź z bazą danych czy login i hasło się zgadzają
-            //jeśli tak to 
-            //    if(this.txtLogin.Text == DobryLogin && this.txtPassword.Password == DobreHasło)
-            //    {
-            //        setUser(this.txtLogin.Text, this.txtPassword.Password);
-
-            //        this.Close();
-
-            //    }
-            //    else MessageBox.Show("Błędny login lub hasło - spróbuj ponownie", "Błąd");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Błąd");
-            //}
-
-
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

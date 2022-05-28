@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Methods.cs" />
     <Compile Include="Getters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -86,14 +86,6 @@ namespace Panel_Gościa
         }
 
 
-        private bool isPesel(string str)
-        {
-            var isNumeric = long.TryParse(str, out long n);
-            return str.Length == 11 && isNumeric;
-            
-            
-        }
-
         private void btnWiecej_Click(object sender, RoutedEventArgs e)
         {
             

@@ -276,3 +276,60 @@ C:\Users\Maciek\Desktop\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Dat
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.dll
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.pdb
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.dll.config
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Panel Gościa.exe.config
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Panel Gościa.exe
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Panel Gościa.pdb
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Google.Protobuf.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\MySql.Data.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Buffers.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Memory.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\ZstdNet.dll
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.pdb
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.dll.config
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Google.Protobuf.pdb
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\Google.Protobuf.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\MySql.Data.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Buffers.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Memory.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.AssemblyReference.cache
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\admin.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest1.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest2.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\LoginWindow.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\MainWindow.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\PanelPacjenta.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\pielegniarka.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\RegisterWindow.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\App.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa_MarkupCompile.cache
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa_MarkupCompile.lref
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\admin.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest1.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Guest2.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\LoginWindow.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\MainWindow.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\PanelPacjenta.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\pielegniarka.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\RegisterWindow.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.g.resources
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel_Gościa.Properties.Resources.resources
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.GenerateResource.cache
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CoreCompileInputs.cache
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CopyComplete
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.exe
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.pdb

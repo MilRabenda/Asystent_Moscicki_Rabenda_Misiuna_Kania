@@ -36,8 +36,8 @@ namespace Panel_Gościa
             sourceList = new List<string>();
             InitializeComponent();
             using (
-                //MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=2137;database=laboratorium")) {
-                MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
+                MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=2137;database=laboratorium")) {
+                //MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
                
                 MySqlCommand commandImages = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", connect);
                 connect.Open();

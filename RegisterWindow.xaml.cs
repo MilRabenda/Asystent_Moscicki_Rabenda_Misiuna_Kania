@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DatabaseCommunication;
 
 
 namespace Panel_Gościa
@@ -227,6 +228,83 @@ namespace Panel_Gościa
                 PasswordCopyBox.Background = null;
             }
             */
+
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string imie = txtName.Text;
+            string nazwisko = txtSurname.Text;
+            string adres = txtAdres.Text;
+            string pesel = txtPesel.Text;
+            string mail = txtMail.Text;
+            string telefon = txtTelefon.Text;
+            string haslo1 = pbxHaslo1.Password;
+            string haslo2 = pbxHaslo2.Password;
+            if(imie == string.Empty)
+            {
+                MessageBox.Show("Podaj imię", "Błąd");
+                return;
+            }
+            if (nazwisko == string.Empty)
+            {
+                MessageBox.Show("Podaj nazwisko", "Błąd");
+                return;
+            }
+            if (adres == string.Empty)
+            {
+                MessageBox.Show("Podaj adres", "Błąd");
+                return;
+            }
+            if (pesel == string.Empty)
+            {
+                MessageBox.Show("Podaj pesel", "Błąd");
+                return;
+            }
+            else
+            {
+                if(!Methods.isPesel(pesel))
+                {
+                    MessageBox.Show("Niepoprawny pesel!", "Błąd");
+                    return;
+                }
+            }
+            if (mail == string.Empty)
+            {
+                MessageBox.Show("Podaj e-mail", "Błąd");
+                return;
+            }
+            else
+            {
+                if (!Methods.isEmail(mail))
+                {
+                    MessageBox.Show("Niepoprawny e-mail!", "Błąd");
+                    return;
+                }
+            }
+            if (telefon == string.Empty)
+            {
+                MessageBox.Show("Podaj telefon", "Błąd");
+                return;
+            }
+            if (haslo1 == string.Empty)
+            {
+                MessageBox.Show("Podaj hasło", "Błąd");
+                return;
+            }
+            if (haslo2 == string.Empty)
+            {
+                MessageBox.Show("Powtórz hasło", "Błąd");
+                return;
+            }
+            if(haslo1 != haslo2)
+            {
+                MessageBox.Show("Hasła się nie zgadzają");
+            }
+
+            MessageBox.Show("Utworzono nowe konto, teraz możesz się zalogować", "Żarcik");
+            //TO BE DONE
+            this.Close();
 
         }
     }

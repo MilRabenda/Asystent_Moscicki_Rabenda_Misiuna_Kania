@@ -12,7 +12,7 @@
         </Grid>
         <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
             <Button x:Name="btn_PokażWizyty"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Content="Pokaż wszystkie wizyty" Click="btn_PokażWizyty_Click"/>
-            <Button x:Name="btn_Wyloguj" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Wyloguj">
+            <Button x:Name="btn_Wyloguj" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Wyloguj" Click="btn_Wyloguj_Click">
 
             </Button>
             <Button x:Name="btn_DzisiejszeWizyty" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Dzisiejsze Wizyty" Click="btn_DzisiejszeWizyty_Click">

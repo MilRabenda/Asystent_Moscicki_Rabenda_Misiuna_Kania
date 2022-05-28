@@ -39,7 +39,7 @@
         </TextBox>
 
         <Button x:Name="btnLogin" Content="Zarejestruj się"
-                Grid.Row="6" Grid.ColumnSpan="2" Margin="0,25,150,24" HorizontalAlignment="Right" Width="100" >
+                Grid.Row="6" Grid.ColumnSpan="2" Margin="0,25,150,24" HorizontalAlignment="Right" Width="100" Click="btnLogin_Click" >
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"/>
@@ -117,7 +117,7 @@
                 <ImageBrush ImageSource="images/controls/telefon.jpg" AlignmentX="Left" Stretch="None" />
             </TextBox.Background>
         </TextBox>
-        <PasswordBox x:Name="PasswordBox"
+        <PasswordBox x:Name="pbxHaslo1"
                      Grid.Row="4" Grid.ColumnSpan="2"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
                      Width="248" PasswordChanged="PasswordBox_PasswordChanged">
@@ -125,7 +125,7 @@
                 <ImageBrush ImageSource="images/controls/haslo.jpg" AlignmentX="Left" Stretch="None" />
             </PasswordBox.Background>
         </PasswordBox>
-        <PasswordBox x:Name="PasswordCopyBox"
+        <PasswordBox x:Name="pbxHaslo2"
                      Grid.Row="5" Grid.ColumnSpan="2"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
                      Width="248" PasswordChanged="PasswordCopyBox_PasswordChanged">
