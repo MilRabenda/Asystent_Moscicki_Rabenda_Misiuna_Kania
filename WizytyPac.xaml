@@ -9,7 +9,7 @@
       Title="WizytyPac" Height="500" Width="410">
 
     <Grid>
-        <ListBox x:Name="lbxWizyty" HorizontalAlignment="Left" Height="350" Margin="0,50,0,0" VerticalAlignment="Top" Width="410"/>
+        <ListBox x:Name="lbxWizyty" HorizontalAlignment="Left" Height="350" Margin="0,0,0,0" VerticalAlignment="Top" Width="410" Background="#FFDC7070"/>
 
     </Grid>
 </Page>

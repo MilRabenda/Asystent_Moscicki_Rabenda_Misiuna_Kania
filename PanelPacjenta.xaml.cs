@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
@@ -20,23 +22,57 @@ namespace Panel_Gościa
     public partial class PanelPacjenta : Window
 
     {
-        public int ok;
-        public int OK
+        public int idosoby;
+        public int idpacjenta;
+        public string imie;
+
+        public int IdOsoby
         {
-            set { this.ok = value; }
-            get {return ok; }
+            get { return idosoby; }
+            set { this.idosoby = value; }
         }
+
+        public int IdPacjenta
+        {
+            get { return idpacjenta; }
+            set { this.idpacjenta = value; }
+        }
+
+        public string Imie
+        {
+            get { return imie; }
+            set { this.imie = value;}
+        }
+
         public PanelPacjenta()
-        {
+        { 
             InitializeComponent();
-       
+          
         }
 
-        private void btn_TwojeWizyty_Click(object sender, RoutedEventArgs e)
+
+        public void setter(int id)
         {
-            wizFrame.Content = new WizytyPac();
-        }
+            IdOsoby = id;
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand idpac = new MySqlCommand($@"SELECT idpacjenta FROM pacjenci where idosoby={IdOsoby}", połączenie);
+                połączenie.Open();
+                MySqlDataReader IdReader = idpac.ExecuteReader();
+                IdReader.Read();
+                IdPacjenta = Convert.ToInt32(IdReader.GetValue(0));
+                IdReader.Close();
+                MySqlCommand name = new MySqlCommand($@"SELECT imie FROM osoba where idosoby={IdOsoby}", połączenie);
+                MySqlDataReader ImieReader = name.ExecuteReader();
+                ImieReader.Read();
+                Imie = Convert.ToString(ImieReader.GetValue(0));
+                ImieReader.Close();
 
+            }
+            lbl_Witaj.Content = $@"Witaj {Imie}";
+            
+        }
+       
         private void btn_idk_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show("Czy na pewno chcesz się wylogować?", "Wylogowanie", MessageBoxButton.OKCancel);
@@ -45,6 +81,18 @@ namespace Panel_Gościa
                 this.Close();
             }
           
+        }
+
+        private void btn_Wizyty_Click(object sender, RoutedEventArgs e)
+        {
+
+            wizFrame.Content = new WizytyPac(IdPacjenta);
+        }
+
+        private void btn_ZapiszWizytę_Click(object sender, RoutedEventArgs e)
+        {
+
+            ZapisFrame.Content = new ZapisPac();
         }
     }
 }

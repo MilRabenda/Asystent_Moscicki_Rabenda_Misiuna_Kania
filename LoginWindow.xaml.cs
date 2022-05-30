@@ -69,12 +69,13 @@ namespace Panel_Gościa
                     if (ok1 && ok2)
                     {
                         var window = new PanelPacjenta();
+                        MySqlCommand idos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+                        MySqlDataReader IdReader = idos.ExecuteReader();
+                        IdReader.Read();
+                        window.setter(Convert.ToInt32(IdReader.GetValue(0)));
+                        IdReader.Close();
                         window.ShowDialog();
-                        MySqlCommand getIdos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                        int os = 0;
-                        os = (int)getIdos.ExecuteScalar();
-                        window.OK = os;
-
+                        
                     }
                     else
                     {

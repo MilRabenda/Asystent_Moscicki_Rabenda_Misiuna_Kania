@@ -22,7 +22,7 @@ namespace DatabaseCommunication
             { 8, "Badanie Tarczycy" },
             { 9, "Badanie Wątroby" }
         };
-        public static string connectionString = "server=localhost;user id=root; password=2137;database=laboratorium";
+        public static string connectionString = "server=localhost;user id=root; password=root;database=laboratorium";
         public static string getConnectionString()
         {
             FileStream fileStream = new FileStream(connectionString, FileMode.Open, FileAccess.Read);

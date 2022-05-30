@@ -333,3 +333,14 @@ C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debu
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.csproj.CopyComplete
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.exe
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Panel Gościa.pdb
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.dll
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.pdb
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\bin\Debug\DatabaseCommunication.dll.config
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\admin.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\pielegniarka.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\admin.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\pielegniarka.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.baml

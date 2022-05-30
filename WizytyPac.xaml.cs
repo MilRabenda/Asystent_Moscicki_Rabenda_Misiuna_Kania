@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
@@ -26,10 +28,19 @@ namespace Panel_Gościa
             set { this.id = value; }
             get { return id; }
         }
-        public WizytyPac()
+        public WizytyPac(int idpac)
         {
+            ID = idpac;
             InitializeComponent();
-            lbxWizyty.Items.Add(":)");
+            
+        }
+
+        public void WysWizyty()
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                //pomysł był taki żeby zrobić w tym miejscu wyciąganie wizyt do listy. Wizyta będzie klasą. Tbc:)
+            }
         }
     }
 }

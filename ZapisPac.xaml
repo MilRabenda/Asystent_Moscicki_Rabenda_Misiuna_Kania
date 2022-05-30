@@ -1,0 +1,21 @@
+﻿<Page x:Class="Panel_Gościa.ZapisPac"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Panel_Gościa"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ZapisPac" Height="500" Width="410">
+
+    <Grid>
+        <ComboBox x:Name="cbxBadanie" Margin="130,56,130,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="DataBadania" HorizontalAlignment="Left" Margin="130,175,0,0" VerticalAlignment="Top" Width="150"/>
+        <ComboBox HorizontalAlignment="Left" Margin="130,116,0,0" VerticalAlignment="Top" Width="150"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="167,223,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+        <Label Content="Wybierz badanie:" HorizontalAlignment="Left" Margin="130,30,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label Content="Wybierz pielęgniarnkę:" HorizontalAlignment="Left" Margin="130,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Wybierz datę:" HorizontalAlignment="Left" Margin="130,150,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>
