@@ -27,6 +27,8 @@ namespace Panel_Gościa
         public pielegniarka()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+
         }
         public pielegniarka(int idOsoby) : this()
         {

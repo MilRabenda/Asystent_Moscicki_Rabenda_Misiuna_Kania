@@ -26,6 +26,7 @@ namespace Panel_Gościa
         {
             InitializeComponent();
             Guest.Content=new Guest1();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)

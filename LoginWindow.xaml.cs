@@ -32,6 +32,7 @@ namespace Panel_Gościa
             try
             {
                 InitializeComponent();
+                this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             }
             catch(Exception ex)
             {
@@ -138,43 +139,6 @@ namespace Panel_Gościa
             //        MessageBox.Show("Wpisz login i hasło!");
             //    }
             //} while (ok == false);
-        }
-
-        public void tryToLogIn(string login, string password)
-        {
-
-            if (login == string.Empty) throw new Exception("Podaj login");
-            if (password == string.Empty) throw new Exception("Podaj hasło");
-            bool isPesel = Methods.isPesel(login);
-            bool isMail = Methods.isEmail(login);
-
-            if (isPesel)
-            {
-                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
-                {
-                    MySqlCommand idos = new MySqlCommand($@"SELECT idosoby,haslo FROM osoba where pesel='{login}'", połączenie);
-                    MySqlDataReader IdReader = idos.ExecuteReader();
-                    if (IdReader.HasRows)
-                    {
-                        IdReader.Read();
-                        int idOsoby = Convert.ToInt32(IdReader.GetValue(0));
-                        string correctPassword = Convert.ToString(IdReader.GetValue(1));
-                        IdReader.Close();
-                        połączenie.Close();
-                        this.Close();
-                        var pac = new PanelPacjenta();
-                        pac.Show();
-                        //return correctPassword == password;
-                    }
-                    IdReader.Close();
-                    połączenie.Close();
-
-                }
-            } else if (isMail)
-            {
-                
-            }
-            throw new Exception("Nie znaleziono użytkownika");
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
