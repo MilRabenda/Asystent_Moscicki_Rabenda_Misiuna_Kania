@@ -18,10 +18,11 @@
             <Button x:Name="btn_DzisiejszeWizyty" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Dzisiejsze Wizyty" Click="btn_DzisiejszeWizyty_Click">
 
             </Button>
-            <Button x:Name="btn_UstawieniaKonta"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Ustawienia konta">
+            <Button x:Name="btn_UstawieniaKonta"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Ustawienia konta" Click="btn_UstawieniaKonta_Click">
 
             </Button>
         </Grid>
-        <ListBox x:Name="lstBox" HorizontalAlignment="Center" Height="100" Margin="85,132,0,0" VerticalAlignment="Top" Width="222"/>
+        <ListBox x:Name="lstBox" Margin="0,60,0,100" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" BorderThickness="0" BorderBrush="{x:Null}" Background="#FFEAE5E5" MouseDoubleClick="lstBox_MouseDoubleClick"/>
+        <Frame x:Name="stronaWyswietlana" NavigationUIVisibility="Hidden" Margin="0,60,0,100" />
     </Grid>
 </Window>

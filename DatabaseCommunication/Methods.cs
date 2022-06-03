@@ -89,5 +89,52 @@ namespace DatabaseCommunication
             var isNumeric = long.TryParse(str, out long n);
             return str.Length == 11 && isNumeric;
         }
+        
+        public static string getUserType(int idOsoby)
+        {
+            string final = "";
+            if (isAnalityk(idOsoby)) final = "analityk";
+            if (isPersonelRecepcji(idOsoby)) final = "personel recepcji";
+            if (isPielegniarka(idOsoby)) final = "pielegniarka";
+
+            return final;
+        }
+        public static bool isAnalityk(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT idanalityka FROM analityk WHERE idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                bool ok = reader.HasRows;
+                połączenie.Close();
+                return ok;
+            }
+        }
+        public static bool isPersonelRecepcji(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT idrecepcjonistki FROM personelrecepcji WHERE idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                bool ok = reader.HasRows;
+                połączenie.Close();
+                return ok;
+            }
+        }
+        public static bool isPielegniarka(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT idpielegniarki FROM pielegniarki WHERE idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                bool ok = reader.HasRows;
+
+                połączenie.Close();
+                return ok;
+            }
+        }
     }
 }

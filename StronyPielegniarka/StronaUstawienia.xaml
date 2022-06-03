@@ -1,0 +1,16 @@
+﻿<Page x:Class="Panel_Gościa.StronyPielegniarka.StronaUstawienia"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Panel_Gościa.StronyPielegniarka"
+      mc:Ignorable="d" 
+      d:DesignHeight="340" d:DesignWidth="410"
+      Title="StronaUstawienia">
+
+    <Grid>
+        <Button x:Name="btnChangePassword" Content="Zmień hasło" HorizontalAlignment="Left" Margin="150,100" VerticalAlignment="Top" Height="40" Width="110" Click="btnChangePassword_Click"/>
+        <Button x:Name="btnDeactivate" Content="Dezaktywuj konto" HorizontalAlignment="Left" Margin="150,170,0,0" VerticalAlignment="Top" Height="40" Width="110" Click="btnDeactivate_Click"/>
+
+    </Grid>
+</Page>

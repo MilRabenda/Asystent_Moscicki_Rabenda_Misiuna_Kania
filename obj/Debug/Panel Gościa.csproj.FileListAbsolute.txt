@@ -344,3 +344,13 @@ C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.baml
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.g.cs
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaWizyty.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaWizyty.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaDzisiejszeWizyty.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaDzisiejszeWizyty.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaUstawienia.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaUstawienia.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaZmienHaslo.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaZmienHaslo.baml

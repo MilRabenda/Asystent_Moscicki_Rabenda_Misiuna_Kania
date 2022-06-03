@@ -49,7 +49,9 @@ namespace Panel_Gościa
            
 
             var window = new Login();
+            this.Hide();
             window.ShowDialog();
+            this.Show();
 
             //if (window.Git)
             //{

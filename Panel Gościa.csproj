@@ -116,6 +116,18 @@
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StronyPielegniarka\StronaDzisiejszeWizyty.xaml.cs">
+      <DependentUpon>StronaDzisiejszeWizyty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyPielegniarka\StronaUstawienia.xaml.cs">
+      <DependentUpon>StronaUstawienia.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyPielegniarka\StronaWizyty.xaml.cs">
+      <DependentUpon>StronaWizyty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyPielegniarka\StronaZmienHaslo.xaml.cs">
+      <DependentUpon>StronaZmienHaslo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WizytyPac.xaml.cs">
       <DependentUpon>WizytyPac.xaml</DependentUpon>
     </Compile>
@@ -162,6 +174,22 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyPielegniarka\StronaDzisiejszeWizyty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyPielegniarka\StronaUstawienia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyPielegniarka\StronaWizyty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyPielegniarka\StronaZmienHaslo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

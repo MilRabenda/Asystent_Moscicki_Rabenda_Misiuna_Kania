@@ -29,7 +29,6 @@ namespace Panel_Gościa
         public bool Git { get; set; } = false;
         public Login()
         {
-            
             try
             {
                 InitializeComponent();
@@ -48,44 +47,134 @@ namespace Panel_Gościa
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            if (this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
+            
+            try
+            {
+                var x = Getters.tryToLogIn(txtLogin.Text, txtPassword.Password);
+                switch (x)
+                {
+                    case null:
+                        MessageBox.Show("Logowanie nieudane");
+                        break;
+                    case true:
+                        {
+                            string type = Methods.getUserType(Getters.getIdOsoby(txtLogin.Text));
+                            switch (type)
+                            {
+                                case "analityk":
+                                    this.Close();
+                                    var f = new admin();
+                                    f.ShowDialog();
+                                    break;
+                                case "personel recepcji":
+                                    MessageBox.Show("Recepcja TBD");
+                                    break;
+                                case "pielegniarka":
+                                    this.Close();
+                                    int id = Getters.getIdOsoby(txtLogin.Text);
+                                    var g = new pielegniarka(id);
+                                    g.ShowDialog();
+                                    break;
+                            }
+
+                        }
+                        break;
+                    case false:
+                        this.Close();
+                        var v = new PanelPacjenta();
+                        v.ShowDialog();
+                        //MessageBox.Show("False");
+                        break;
+
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("wtf");
+            }
+            //this.Close();
+            //bool ok = false;
+            //do
+            //{
+            //    if (this.txtLogin.Text != string.Empty || this.txtPassword.Password != string.Empty)
+            //    {
+            //        using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            //        {
+
+
+            //            MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+            //            MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+            //            połączenie.Open();
+            //            MySqlDataReader poprawne_log = log.ExecuteReader();
+            //            bool ok1;
+            //            bool ok2;
+            //            ok1 = poprawne_log.HasRows;
+            //            poprawne_log.Close();
+            //            MySqlDataReader poprawne_has = has.ExecuteReader();
+            //            ok2 = poprawne_has.HasRows;
+            //            poprawne_has.Close();
+            //            if (ok1 && ok2)
+            //            {
+            //                var window = new PanelPacjenta();
+            //                MySqlCommand idos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
+            //                MySqlDataReader IdReader = idos.ExecuteReader();
+            //                IdReader.Read();
+            //                window.setter(Convert.ToInt32(IdReader.GetValue(0)));
+            //                IdReader.Close();
+            //                ok = true;
+            //                window.ShowDialog();
+
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("błędny login lub hasło");
+            //            }
+
+            //            połączenie.Close();
+
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Wpisz login i hasło!");
+            //    }
+            //} while (ok == false);
+        }
+
+        public void tryToLogIn(string login, string password)
+        {
+
+            if (login == string.Empty) throw new Exception("Podaj login");
+            if (password == string.Empty) throw new Exception("Podaj hasło");
+            bool isPesel = Methods.isPesel(login);
+            bool isMail = Methods.isEmail(login);
+
+            if (isPesel)
             {
                 using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
                 {
-
-
-                    MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                    połączenie.Open();
-                    MySqlDataReader poprawne_log = log.ExecuteReader();
-                    bool ok1;
-                    bool ok2;
-                    ok1 = poprawne_log.HasRows;
-                    poprawne_log.Close();
-                    MySqlDataReader poprawne_has = has.ExecuteReader();
-                    ok2 = poprawne_has.HasRows;
-                    poprawne_has.Close();
-                    if (ok1 && ok2)
+                    MySqlCommand idos = new MySqlCommand($@"SELECT idosoby,haslo FROM osoba where pesel='{login}'", połączenie);
+                    MySqlDataReader IdReader = idos.ExecuteReader();
+                    if (IdReader.HasRows)
                     {
-                        var window = new PanelPacjenta();
-                        MySqlCommand idos = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{txtLogin.Text}'", połączenie);
-                        MySqlDataReader IdReader = idos.ExecuteReader();
                         IdReader.Read();
-                        window.setter(Convert.ToInt32(IdReader.GetValue(0)));
+                        int idOsoby = Convert.ToInt32(IdReader.GetValue(0));
+                        string correctPassword = Convert.ToString(IdReader.GetValue(1));
                         IdReader.Close();
-                        window.ShowDialog();
-                        
+                        połączenie.Close();
+                        this.Close();
+                        var pac = new PanelPacjenta();
+                        pac.Show();
+                        //return correctPassword == password;
                     }
-                    else
-                    {
-                        MessageBox.Show("błędny login lub hasło");
-                    }
-
+                    IdReader.Close();
                     połączenie.Close();
 
                 }
+            } else if (isMail)
+            {
+                
             }
+            throw new Exception("Nie znaleziono użytkownika");
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)

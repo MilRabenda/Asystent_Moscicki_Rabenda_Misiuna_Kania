@@ -22,7 +22,7 @@ namespace DatabaseCommunication
             { 8, "Badanie Tarczycy" },
             { 9, "Badanie Wątroby" }
         };
-        public static string connectionString = "server=localhost;user id=root; password=root;database=laboratorium";
+        public static string connectionString = "server=localhost;user id=root; password=2137;database=laboratorium";
         public static string getConnectionString()
         {
             FileStream fileStream = new FileStream(connectionString, FileMode.Open, FileAccess.Read);
@@ -49,41 +49,40 @@ namespace DatabaseCommunication
             {
                 if (Methods.isPesel(login))
                 {
-                    MySqlCommand log = new MySqlCommand($@"SELECT pesel FROM osoba where pesel='{login}'", połączenie);
-                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{password}'", połączenie);
+                    MySqlCommand log = new MySqlCommand($@"SELECT haslo FROM osoba where pesel='{login}'", połączenie);
                     połączenie.Open();
-                    MySqlDataReader poprawne_log = log.ExecuteReader();
-                    bool ok1;
-                    bool ok2;
-                    ok1 = poprawne_log.HasRows;
-                    poprawne_log.Close();
-                    MySqlDataReader poprawne_has = has.ExecuteReader();
-                    ok2 = poprawne_has.HasRows;
-                    poprawne_has.Close();
-                    if (ok1 && ok2)
+                    MySqlDataReader reader = log.ExecuteReader();
+                    string correctPassword = "";
+                    if (reader.HasRows)
                     {
-                        połączenie.Close();
-                        return false;
+                        while (reader.Read())
+                        {
+                            correctPassword = reader.GetString(0);
+                        }
                     }
+                    reader.Close();
+                    połączenie.Close();
+
+                    if (correctPassword == password) return false;
+                    
                 }
                 else
                 {
-                    MySqlCommand mail = new MySqlCommand($@"SELECT mail FROM osoba where mail='{login}'", połączenie);
-                    MySqlCommand has = new MySqlCommand($@"SELECT haslo FROM osoba where mail='{password}'", połączenie);
+                    MySqlCommand log = new MySqlCommand($@"SELECT haslo FROM osoba where mail='{login}'", połączenie);
                     połączenie.Open();
-                    MySqlDataReader poprawne_log = mail.ExecuteReader();
-                    bool ok1;
-                    bool ok2;
-                    ok1 = poprawne_log.HasRows;
-                    poprawne_log.Close();
-                    MySqlDataReader poprawne_has = has.ExecuteReader();
-                    ok2 = poprawne_has.HasRows;
-                    poprawne_has.Close();
-                    if (ok1 && ok2)
+                    MySqlDataReader reader = log.ExecuteReader();
+                    string correctPassword = "";
+                    if (reader.HasRows)
                     {
-                        połączenie.Close();
-                        return true;
+                        while (reader.Read())
+                        {
+                            correctPassword = reader.GetString(0);
+                        }
                     }
+                    reader.Close();
+                    połączenie.Close();
+
+                    if (correctPassword == password) return true;
                 }
                 połączenie.Close();
                 return null;
@@ -167,6 +166,113 @@ namespace DatabaseCommunication
                 połączenie.Close();
                 return git;
             }
+        }
+        public static int getIdOsoby(string login)
+        {
+            int idOsoby = -1;
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                if (Methods.isPesel(login))
+                {
+                    MySqlCommand log = new MySqlCommand($@"SELECT idosoby FROM osoba where pesel='{login}'", połączenie);
+                    połączenie.Open();
+                    MySqlDataReader reader = log.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            idOsoby = reader.GetInt32(0);
+                        }
+                    }
+                    reader.Close();
+                    połączenie.Close();
+                }
+                else
+                {
+                    MySqlCommand log = new MySqlCommand($@"SELECT idosoby FROM osoba where mail='{login}'", połączenie);
+                    połączenie.Open();
+                    MySqlDataReader reader = log.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            idOsoby = reader.GetInt32(0);
+                        }
+                    }
+                    reader.Close();
+                    połączenie.Close();
+                }
+                połączenie.Close();
+            }
+            return idOsoby;
+        }
+        public static string getImie(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT imie FROM osoba where idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                string str = "błąd";
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        str = reader.GetString(0);
+                    }
+                }
+                reader.Close();
+                połączenie.Close();
+                return str;
+            }
+
+        }
+        public static int getIdPielegniarki(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT idpielegniarki FROM pielegniarki where idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                int licz = -1;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        licz = reader.GetInt32(0);
+                    }
+                }
+                reader.Close();
+                połączenie.Close();
+                return licz;
+            }
+        }
+        public static string getCurrentPassword(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT haslo FROM osoba where idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                string pwd = "";
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        pwd = reader.GetString(0);
+                    }
+                }
+                
+                reader.Close();
+                połączenie.Close();
+                if (pwd == string.Empty) throw new Exception($"FATAL ERROR, id {idOsoby}");
+                return pwd;
+            }
+        }
+        public static bool checkPassword(int idOsoby, string password)
+        {
+            var pwd = getCurrentPassword(idOsoby);
+            return pwd == password;
         }
     }
     

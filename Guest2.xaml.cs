@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
@@ -31,7 +32,7 @@ namespace Panel_Gościa
             InitializeComponent();
             
             using (
-            MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium"))
+            MySqlConnection connect = new MySqlConnection(Getters.connectionString))
             {
                 
                 int i = 0;

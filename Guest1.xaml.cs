@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Drawing;
 using MySql.Data.MySqlClient;
 using System.Windows.Threading;
+using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
@@ -36,7 +37,7 @@ namespace Panel_Gościa
             sourceList = new List<string>();
             InitializeComponent();
             using (
-                MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
+                MySqlConnection connect = new MySqlConnection(Getters.connectionString)) {
                 //MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
                
                 MySqlCommand commandImages = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", connect);
