@@ -70,21 +70,10 @@ namespace Panel_Gościa
         private void btn_Wyloguj_Click(object sender, RoutedEventArgs e)
         {
             ustawienia = false;
-
             var result = MessageBox.Show("Czy na pewno chcesz się wylogować?", "Wylogowanie", MessageBoxButton.OKCancel);
             if (result == MessageBoxResult.OK)
             {
                 this.Close();
-            }
-        }
-
-        private void lstBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (ustawienia)
-            {
-                int index = lstBox.SelectedIndex;
-                if (index == 0) MessageBox.Show("Zmień hasło");
-                if (index == 1) MessageBox.Show("Dezaktywuj");
             }
         }
 

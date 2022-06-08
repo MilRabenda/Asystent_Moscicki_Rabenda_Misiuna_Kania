@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\App.xaml
-14-197849700
+16-1018130552
 
-18169069271
+20-1132994604
 33-2053162980
-admin.xaml;Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;pielegniarka.xaml;RegisterWindow.xaml;StronyPielegniarka\StronaDzisiejszeWizyty.xaml;StronyPielegniarka\StronaUstawienia.xaml;StronyPielegniarka\StronaWizyty.xaml;StronyPielegniarka\StronaZmienHaslo.xaml;WizytyPac.xaml;ZapisPac.xaml;
+admin.xaml;Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;pielegniarka.xaml;Recepcja.xaml;RegisterWindow.xaml;StronyPielegniarka\StronaDzisiejszeWizyty.xaml;StronyPielegniarka\StronaUstawienia.xaml;StronyPielegniarka\StronaWizyty.xaml;StronyPielegniarka\StronaZmienHaslo.xaml;StronyRecepcja\StronaEditKonta.xaml;WizytyPac.xaml;ZapisPac.xaml;
 
 False
 

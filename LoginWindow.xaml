@@ -33,7 +33,7 @@
                  Height="23"  
                  VerticalAlignment="Center" 
                  Width="120" Margin="37,10,0,11"
-                 Grid.Row="4" PasswordChanged="txtPassword_PasswordChanged" HorizontalContentAlignment="Center">
+                 Grid.Row="4" PasswordChanged="txtPassword_PasswordChanged" HorizontalContentAlignment="Center" KeyDown="txtPassword_KeyDown">
             
         </PasswordBox>
 

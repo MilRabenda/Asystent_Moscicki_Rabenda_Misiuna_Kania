@@ -11,7 +11,9 @@
             <Label x:Name="lbl_Witaj" Content="Label" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
         </Grid>
         <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
-            <Button x:Name="btn_PokażWizyty"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Content="Pokaż wszystkie wizyty" Click="btn_PokażWizyty_Click"/>
+            <Button x:Name="btn_PokażWizyty"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Click="btn_PokażWizyty_Click">
+                <TextBlock Text="Pokaż wszystkie wizyty" TextAlignment="Center" TextWrapping="Wrap"/>
+            </Button>
             <Button x:Name="btn_Wyloguj" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Wyloguj" Click="btn_Wyloguj_Click">
 
             </Button>
@@ -22,7 +24,6 @@
 
             </Button>
         </Grid>
-        <ListBox x:Name="lstBox" Margin="0,60,0,100" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" BorderThickness="0" BorderBrush="{x:Null}" Background="#FFEAE5E5" MouseDoubleClick="lstBox_MouseDoubleClick"/>
         <Frame x:Name="stronaWyswietlana" NavigationUIVisibility="Hidden" Margin="0,60,0,100" />
     </Grid>
 </Window>

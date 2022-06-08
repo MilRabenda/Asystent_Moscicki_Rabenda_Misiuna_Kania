@@ -354,3 +354,7 @@ C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debu
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaUstawienia.baml
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaZmienHaslo.g.cs
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaZmienHaslo.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Recepcja.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Recepcja.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditKonta.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditKonta.baml
