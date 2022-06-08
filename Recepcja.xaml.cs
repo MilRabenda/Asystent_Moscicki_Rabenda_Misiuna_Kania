@@ -27,6 +27,7 @@ namespace Panel_Gościa
         public Recepcja()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
         public Recepcja(int idOsoby) : this()
         {
@@ -79,15 +80,14 @@ namespace Panel_Gościa
 
         private void btn_EditKonta_Click(object sender, RoutedEventArgs e)
         {
-            lstBox.Items.Clear();
-            var list = getLudzie();
-            foreach (Osoba o in list)
+            var strona = new StronyRecepcja.StronaEditKonta();
+            strona.DoubleClick = editWizyta;
+            foreach (var o in osobas)
             {
-                lstBox.Items.Add(o.ToString());
+                strona.lstBox.Items.Add(o.ToString());
             }
-            Osoba os = list.ElementAt(4);
-            if (os.idOsoby == 3) MessageBox.Show("Well d=Done");
-            MessageBox.Show($"{os.idOsoby}");
+            stronaWyswietlana.Content = strona;
+
             //stronaWyswietlana.Content = new StronaDzisiejszeWizyty(idOsoby);
 
             //lstBox.Focusable = false;
@@ -116,15 +116,16 @@ namespace Panel_Gościa
             //str.ClickPassword = this.zmienHaslo;
             //str.DeactivateMe = this.dezaktywujKonto;
             //stronaWyswietlana.Content = str;
-            var strona = new StronyRecepcja.StronaEditKonta();
-            strona.DoubleClick = editWizyta;
-            foreach(var o in osobas)
+           
+            lstBox.Items.Clear();
+            var list = getLudzie();
+            foreach (Osoba o in list)
             {
-                strona.lstBox.Items.Add(o.ToString());
+                lstBox.Items.Add(o.ToString());
             }
-            stronaWyswietlana.Content = strona;
-
-            
+            Osoba os = list.ElementAt(4);
+            if (os.idOsoby == 3) MessageBox.Show("Well d=Done");
+            MessageBox.Show($"{os.idOsoby}");
         }
         public void editWizyta(int ixWizyty)
         {

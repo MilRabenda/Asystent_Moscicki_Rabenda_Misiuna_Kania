@@ -165,5 +165,10 @@ namespace Panel_Gościa
         {
             if (e.Key == Key.Enter) login();
         }
+
+        private void txtLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) login();
+        }
     }
 }
