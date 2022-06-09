@@ -11,17 +11,6 @@ namespace DatabaseCommunication
 {
     public static class Getters
     {
-        public static Dictionary<int, string> mapaBadania = new Dictionary<int, string>() { 
-            { 1, "Badanie Podstawowe" },
-            { 2, "Badanie na Anemię" },
-            { 3, "Badanie Serca" },
-            { 4, "Badanie na Alergię" },
-            { 5, "Badanie na Cukrzycę" },
-            { 6, "Badanie nerek" },
-            { 7, "Badanie na Reumatyzm" },
-            { 8, "Badanie Tarczycy" },
-            { 9, "Badanie Wątroby" }
-        };
         public static string connectionString = "server=localhost;user id=root; password=2137;database=laboratorium";
         public static string getConnectionString()
         {
@@ -273,6 +262,28 @@ namespace DatabaseCommunication
         {
             var pwd = getCurrentPassword(idOsoby);
             return pwd == password;
+        }
+        public static string getNazwaBadania(int idBadania)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT nazwabadania FROM badanie where idbadania='{idBadania}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                string nazwa = "";
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        nazwa = reader.GetString(0);
+                    }
+                }
+
+                reader.Close();
+                połączenie.Close();
+                if (nazwa == string.Empty) throw new Exception($"Nie można wyciągnąć nazwy");
+                return nazwa;
+            }
         }
     }
     

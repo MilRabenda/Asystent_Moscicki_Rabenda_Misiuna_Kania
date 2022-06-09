@@ -21,6 +21,8 @@ namespace Panel_Gościa
     /// </summary>
     public partial class Recepcja : Window
     {
+        public delegate void updateStrona(List<Osoba> osobas);
+        public updateStrona updateStr;
         private int idOsoby { get; set; }
         private int idRecepcjonistki { get; set; }
 
@@ -81,11 +83,15 @@ namespace Panel_Gościa
         private void btn_EditKonta_Click(object sender, RoutedEventArgs e)
         {
             var strona = new StronyRecepcja.StronaEditKonta();
-            strona.DoubleClick = editWizyta;
-            foreach (var o in osobas)
-            {
-                strona.lstBox.Items.Add(o.ToString());
-            }
+            strona.DoubleClick = editKonto;
+            this.updateStr = strona.updateContent;
+
+            updateStr(osobas);
+
+            //foreach (var o in osobas)
+            //{
+            //    strona.lstBox.Items.Add(o.ToString());
+            //}
             stronaWyswietlana.Content = strona;
 
             //stronaWyswietlana.Content = new StronaDzisiejszeWizyty(idOsoby);
@@ -99,6 +105,14 @@ namespace Panel_Gościa
             //    lstBox.Items.Add(item);
             //}
             //if (x.Count == 0) lstBox.Items.Add("Brak wizyt");
+        }
+        public void editKonto(int idOs)
+        {
+            var s = new Osoba(idOs+1);
+            var window = new StronyRecepcja.EditKontoWindow(s);
+            window.ShowDialog();
+            updateOsobas();
+
         }
 
         private void btn_Wyloguj_Click(object sender, RoutedEventArgs e)
@@ -129,6 +143,7 @@ namespace Panel_Gościa
         }
         public void editWizyta(int ixWizyty)
         {
+            
             if (ixWizyty == -1) return;
             MessageBox.Show($"Well done mate {ixWizyty}\n{osobas[ixWizyty].ToString()}");
             //var strona = new StronyRecepcja.StronaEditKonta();
@@ -159,10 +174,10 @@ namespace Panel_Gościa
                         var m = reader.GetString(5);
                         var t = reader.GetString(6);
                         var h = reader.GetString(7);
-                        bool act = reader.GetBoolean(8);
+                        bool inAct = reader.GetBoolean(8);
 
 
-                        lista.Add(new Osoba(id,n,i,a,p,m,t,h,act));
+                        if (inAct==false) lista.Add(new Osoba(id,n,i,a,p,m,t,h,inAct));
                     }
                 }
                 reader.Close();
@@ -171,64 +186,13 @@ namespace Panel_Gościa
                 return lista;
             }
         }
-        public class Osoba
+        public void updateOsobas()
         {
-            public int idOsoby { get; set; }
-            string nazwisko { get; set; }
-            string imie { get; set; }
-            string adres { get; set; }
-            string pesel { get; set; }
-            string mail { get; set; }
-            string telefon { get; set; }
-            string hasło { get; set; }
-            bool aktywne { get; set; }
-            public Osoba(int idOsoby, string nazwisko, string imie, string adres, string pesel,string mail,string telefon,string haslo, bool aktywne)
-            {
-                this.idOsoby = idOsoby;
-                this.nazwisko = nazwisko;
-                this.imie = imie;
-                this.adres = adres;
-                this.pesel = pesel;
-                this.mail = mail;
-                this.telefon = telefon;
-                this.hasło = haslo;
-                this.aktywne = aktywne;
-            }
-            public Osoba(int idOsoby)
-            {
-                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
-                {
-                    MySqlCommand log = new MySqlCommand($@"select * from osoba where idosoby={idOsoby}", połączenie);
-                    połączenie.Open();
-                    MySqlDataReader reader = log.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            this.idOsoby = reader.GetInt32(0);
-                            this.nazwisko = reader.GetString(1);
-                            this.imie = reader.GetString(2);
-                            this.adres = reader.GetString(3);
-                            this.pesel = reader.GetString(4);
-                            this.mail = reader.GetString(5);
-                            this.telefon = reader.GetString(6);
-                            this.hasło = reader.GetString(7);
-                            this.aktywne = reader.GetBoolean(8);
-                        }
-                    }
-                    reader.Close();
-                    połączenie.Close();
-                }
-            }
-            public override string ToString()
-            {
-                return $"{imie} {nazwisko}, {pesel}, {mail}";
-            }
-            public void changeTel(string newTel)
-            {
-                this.telefon = newTel;
-            }
+            osobas = getLudzie();
+            updateStr(osobas);
         }
+
+        
 
     }
 }

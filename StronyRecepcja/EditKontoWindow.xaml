@@ -1,0 +1,30 @@
+﻿<Window x:Class="Panel_Gościa.StronyRecepcja.EditKontoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Panel_Gościa.StronyRecepcja"
+        mc:Ignorable="d"
+        Title="Zmień dane konta" Height="500" Width="410" Background="Beige">
+    <Grid>
+        <Button x:Name="btnChangeNames" HorizontalAlignment="Center" Margin="0,60,0,0" VerticalAlignment="Top" Width="200" Click="btnChangeNames_Click">
+            <TextBlock Text="Zmień imię i nazwisko" />
+        </Button>
+        <TextBox x:Name="txtImie" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="100,100,0,0" TextWrapping="Wrap" Text="Imię" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="txtNazwisko" TextAlignment="Center" HorizontalAlignment="Left" Height="23" Margin="210,100,0,0" TextWrapping="Wrap" Text="Nazwisko" VerticalAlignment="Top" Width="90"/>
+        <Button x:Name="btnChangeAddr" Content="Zmień adres" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Width="200" Click="btnChangeAddr_Click"/>
+        <TextBox x:Name="txtAddr" TextAlignment="Center" HorizontalAlignment="Center" Height="23" Margin="0,175,0,0" TextWrapping="Wrap" Text="Zmień adres" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="btnPesel" Content="Zmień pesel" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Width="200" Click="btnPesel_Click"/>
+        <Button x:Name="btnMail" Content="Zmień e-mail" HorizontalAlignment="Center" Margin="0,265,0,0" VerticalAlignment="Top" Width="200" Click="btnMail_Click"/>
+        <Button x:Name="btnTele" Content="Zmień telefon" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Width="200" Click="btnTele_Click"/>
+        <Button x:Name="btnHaslo" Content="Zmień hasło" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" Width="200" Click="btnHaslo_Click"/>
+        <TextBox x:Name="txtPesel" HorizontalAlignment="Center" TextAlignment="Center" Height="23" Margin="0,235,0,0" TextWrapping="Wrap" Text="Zmień pesel" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtMail" HorizontalAlignment="Center" TextAlignment="Center" Height="23" Margin="0,291,0,0" TextWrapping="Wrap" Text="Zmień e-mail" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTelefon" HorizontalAlignment="Center" TextAlignment="Center" Height="23" Margin="0,341,0,0" TextWrapping="Wrap" Text="Zmień telefon" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnDeactivate" Foreground="Red" Content="Dezaktywuj konto" HorizontalAlignment="Left" Margin="50,431,0,0" VerticalAlignment="Top" Width="100" Click="btnDeactivate_Click"/>
+        <Button x:Name="btnCancel" Content="Anuluj" HorizontalAlignment="Right" Margin="0,431,50,0" VerticalAlignment="Top" Width="100" Click="btnCancel_Click"/>
+
+
+
+    </Grid>
+</Window>

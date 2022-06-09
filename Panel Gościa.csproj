@@ -107,6 +107,7 @@
     <Compile Include="Guest2.xaml.cs">
       <DependentUpon>Guest2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Osoba.cs" />
     <Compile Include="PanelPacjenta.xaml.cs">
       <DependentUpon>PanelPacjenta.xaml</DependentUpon>
     </Compile>
@@ -131,6 +132,12 @@
     </Compile>
     <Compile Include="StronyPielegniarka\StronaZmienHaslo.xaml.cs">
       <DependentUpon>StronaZmienHaslo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyRecepcja\ChangePasswordWindow.xaml.cs">
+      <DependentUpon>ChangePasswordWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyRecepcja\EditKontoWindow.xaml.cs">
+      <DependentUpon>EditKontoWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="StronyRecepcja\StronaEditKonta.xaml.cs">
       <DependentUpon>StronaEditKonta.xaml</DependentUpon>
@@ -201,6 +208,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StronyPielegniarka\StronaZmienHaslo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyRecepcja\ChangePasswordWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyRecepcja\EditKontoWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

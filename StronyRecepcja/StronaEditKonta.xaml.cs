@@ -27,6 +27,14 @@ namespace Panel_Gościa.StronyRecepcja
         {
             InitializeComponent();
         }
+        public void updateContent(List<Osoba> lista)
+        {
+            lstBox.Items.Clear();
+            foreach(var os in lista)
+            {
+                lstBox.Items.Add(os);
+            }
+        }
 
         private void lstBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
