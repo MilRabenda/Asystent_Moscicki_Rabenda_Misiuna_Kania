@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DatabaseCommunication;
+using MySql.Data.MySqlClient;
 
 namespace Panel_Gościa.StronyRecepcja
 {
@@ -41,55 +42,93 @@ namespace Panel_Gościa.StronyRecepcja
 
         private void btnZmienIdPacjenta_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Czy na pewno chcesz zmienić id pacjenta?", "Zmiana", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                bool good = false;
+                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+                {
+                    MySqlCommand log = new MySqlCommand($@"update wizyta set idpacjenta = '{txtIdPacjenta.Text}' where idwizyty={this.wizyta.idWizyty}", połączenie);
+                    połączenie.Open();
+                    good = log.ExecuteNonQuery() == 1;
 
+                    połączenie.Close();
+                }
+                if (good) MessageBox.Show("Zmiana się powiodła", "Sukces");
+                else MessageBox.Show("Zmiana się nie powiodła", "Błąd");
+            }
+            wizyta.update();
+            updateDane();
         }
 
         private void btnZmienIdPielegniarki_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Czy na pewno chcesz zmienić id pielegniarki?", "Zmiana", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                bool good = false;
+                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+                {
+                    MySqlCommand log = new MySqlCommand($@"update wizyta set idpielegniarki = '{txtIdPielegniarki.Text}' where idwizyty={this.wizyta.idWizyty}", połączenie);
+                    połączenie.Open();
+                    good = log.ExecuteNonQuery() == 1;
 
+                    połączenie.Close();
+                }
+                if (good) MessageBox.Show("Zmiana się powiodła", "Sukces");
+                else MessageBox.Show("Zmiana się nie powiodła", "Błąd");
+            }
+            wizyta.update();
+            updateDane();
         }
 
         private void btnZmienDateWizyty_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Czy na pewno chcesz zmienić datę wizyty?", "Zmiana", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                bool good = false;
+                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+                {
+                    MySqlCommand log = new MySqlCommand($@"update wizyta set datawizyty = '{txtDataWizyty.Text}' where idwizyty={this.wizyta.idWizyty}", połączenie);
+                    połączenie.Open();
+                    good = log.ExecuteNonQuery() == 1;
 
+                    połączenie.Close();
+                }
+                if (good) MessageBox.Show("Zmiana się powiodła", "Sukces");
+                else MessageBox.Show("Zmiana się nie powiodła", "Błąd");
+            }
+            wizyta.update();
+            updateDane();
         }
 
         private void btnZmienIdBadania_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Czy na pewno chcesz zmienić id badania?", "Zmiana", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                bool good = false;
+                using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+                {
+                    MySqlCommand log = new MySqlCommand($@"update wizyta set idbadania = '{txtIdBadania.Text}' where idwizyty={this.wizyta.idWizyty}", połączenie);
+                    połączenie.Open();
+                    good = log.ExecuteNonQuery() == 1;
 
+                    połączenie.Close();
+                }
+                if (good) MessageBox.Show("Zmiana się powiodła", "Sukces");
+                else MessageBox.Show("Zmiana się nie powiodła", "Błąd");
+            }
+            wizyta.update();
+            updateDane();
         }
 
         private void btnUsunWizyte_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("NOT AVAILABLE YET");
         }
 
         private void btnKoniec_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-        public class Wizyta
-        {
-            public int idPacjenta { get; set; }
-            public int idPielegniarki { get; set; }
-            public int idWizyty { get; set; }
-            public DateTime data { get; set; }
-
-            public int idBadania { get; set; }
-            public Wizyta(int iPa, int iPi, int idW, DateTime time, int idB)
-            {
-                idPacjenta = iPa;
-                idPielegniarki = iPi;
-                idWizyty = idW;
-                data = time;
-                idBadania = idB;
-            }
-            public override string ToString()
-            {
-                return $"{Getters.getNazwaBadania(idBadania)}, {data}";
-            }
-
-
-        }
+        
     }
 }

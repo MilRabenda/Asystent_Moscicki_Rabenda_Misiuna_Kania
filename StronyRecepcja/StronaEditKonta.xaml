@@ -9,6 +9,6 @@
       Title="StronaEditKonta">
 
     <Grid>
-        <ListBox x:Name="lstBox" Margin="0,0" Height="340" Width="410" Background="Azure" MouseDoubleClick="lstBox_MouseDoubleClick"/>
+        <ListBox HorizontalContentAlignment="Center" x:Name="lstBox" Margin="0,0" Height="340" Width="410" Background="Azure" MouseDoubleClick="lstBox_MouseDoubleClick"/>
     </Grid>
 </Page>

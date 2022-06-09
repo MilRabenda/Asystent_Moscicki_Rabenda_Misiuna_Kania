@@ -148,6 +148,7 @@
     <Compile Include="StronyRecepcja\StronaEditWizyty.xaml.cs">
       <DependentUpon>StronaEditWizyty.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Wizyta.cs" />
     <Compile Include="WizytyPac.xaml.cs">
       <DependentUpon>WizytyPac.xaml</DependentUpon>
     </Compile>

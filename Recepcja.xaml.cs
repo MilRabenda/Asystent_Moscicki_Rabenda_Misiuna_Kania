@@ -23,6 +23,8 @@ namespace Panel_Gościa
     {
         public delegate void updateStrona(List<Osoba> osobas);
         public updateStrona updateStr;
+        public delegate void updateStronaWiz(List<Wizyta> wizytas);
+        public updateStronaWiz updateStrWiz;
         private int idOsoby { get; set; }
         private int idRecepcjonistki { get; set; }
 
@@ -38,7 +40,8 @@ namespace Panel_Gościa
             this.idRecepcjonistki = getIdRecepcjonistki(idOsoby);
             lbl_Witaj.Content = "Witaj, " + Getters.getImie(idOsoby);
             osobas = getLudzie();
-            MessageBox.Show(osobas.ElementAt(idOsoby - 1).ToString());
+            wizyty = getWizyty();
+            //MessageBox.Show(osobas.ElementAt(idOsoby - 1).ToString());
         }
         public static int getIdRecepcjonistki(int idOsoby)
         {
@@ -66,26 +69,10 @@ namespace Panel_Gościa
             var strona = new StronyRecepcja.StronaEditKonta();
             strona.DoubleClick = editKonto;
             this.updateStr = strona.updateContent;
-
             updateStr(osobas);
 
-            //foreach (var o in osobas)
-            //{
-            //    strona.lstBox.Items.Add(o.ToString());
-            //}
             stronaWyswietlana.Content = strona;
 
-            //stronaWyswietlana.Content = new StronaDzisiejszeWizyty(idOsoby);
-
-            //lstBox.Focusable = false;
-            //lstBox.Items.Clear();
-            //var x = Getters.getWizytyPielęgniarkaDzisiaj(idPielegniarki);
-            //x.Sort();
-            //foreach (var item in x)
-            //{
-            //    lstBox.Items.Add(item);
-            //}
-            //if (x.Count == 0) lstBox.Items.Add("Brak wizyt");
         }
         public void editKonto(int idOs)
         {
@@ -109,14 +96,23 @@ namespace Panel_Gościa
         {
             var window = new StronyRecepcja.StronaEditWizyty();
             window.DoubleClick = editWizyta;
+            this.updateStrWiz = window.updateContent;
+            updateStrWiz(wizyty);
+
             stronaWyswietlana.Content = window;
 
         }
         public void editWizyta(int ixWizyty)
         {
-            var window = new StronyRecepcja.EditWizytaWindow();
-            if (ixWizyty == -1) return;
-            MessageBox.Show($"Well done mate {ixWizyty}\n{osobas[ixWizyty]}");
+            var wiz = wizyty[ixWizyty];
+            var window = new StronyRecepcja.EditWizytaWindow(wiz);
+            window.ShowDialog();
+            updateWiz();
+        }
+        public void updateWiz()
+        {
+            wizyty = getWizyty();
+            updateStrWiz(wizyty);
         }
         private void lstBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -155,13 +151,69 @@ namespace Panel_Gościa
                 return lista;
             }
         }
+        public List<Wizyta> getWizyty()
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"select * from wizyta", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                List<Wizyta> lista = new List<Wizyta>();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        var f = reader.GetInt32(0);
+                        var g = reader.GetInt32(1);
+                        var h = reader.GetInt32(2);
+                        var i = reader.GetDateTime(3);
+                        var j = reader.GetInt32(4);
+
+                        Wizyta wiz = new Wizyta(f, g, h, i, j);
+                        lista.Add(wiz);
+                    }
+                }
+                reader.Close();
+                połączenie.Close();
+                return lista;
+            }
+        }
         public void updateOsobas()
         {
             osobas = getLudzie();
             updateStr(osobas);
         }
+        public List<Wizyta> wizyty;
+        public void updateWizyty()
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"select * from wizyta", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                List<Wizyta> lista = new List<Wizyta>();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        var f = reader.GetInt32(0);
+                        var g = reader.GetInt32(1);
+                        var h = reader.GetInt32(2);
+                        var i = reader.GetDateTime(3);
+                        var j = reader.GetInt32(4);
 
-        
+                        Wizyta wiz = new Wizyta(f, g, h, i, j);
+                        lista.Add(wiz);
+                    }
+                }
+                wizyty = lista;
+                reader.Close();
+                połączenie.Close();
+            }
+
+        }
+
+
 
     }
 }

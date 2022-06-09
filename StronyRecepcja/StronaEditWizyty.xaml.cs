@@ -27,64 +27,16 @@ namespace Panel_Gościa.StronyRecepcja
         public StronaEditWizyty()
         {
             InitializeComponent();
-            updateWizyty();
+            //updateContent();
         }
-        public void updateWizyty()
+        
+        public void updateContent(List<Wizyta> lista)
         {
-            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
-            {
-                MySqlCommand log = new MySqlCommand($@"select * from wizyta", połączenie);
-                połączenie.Open();
-                MySqlDataReader reader = log.ExecuteReader();
-                List<Wizyta> lista = new List<Wizyta>();
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        var f = reader.GetInt32(0);
-                        var g = reader.GetInt32(1);
-                        var h = reader.GetInt32(2);
-                        var i = reader.GetDateTime(3);
-                        var j = reader.GetInt32(4);
-
-                        Wizyta wiz = new Wizyta(f, g, h, i, j);
-                        lista.Add(wiz);
-                    }
-                }
-                wizyty = lista;
-                reader.Close();
-                połączenie.Close();
-            }
             lstBox.Items.Clear();
-            foreach(var w in wizyty)
+            foreach (var wiz in lista)
             {
-                lstBox.Items.Add(w);
+                lstBox.Items.Add(wiz);
             }
-
-        }
-        public static List<Wizyta> wizyty;
-        public class Wizyta
-        {
-            public int idPacjenta { get; set; }
-            public int idPielegniarki { get; set; }
-            public int idWizyty { get; set; }
-            public DateTime data { get; set; }
-
-            public int idBadania { get; set; }
-            public Wizyta(int iPa,int iPi,int idW, DateTime time, int idB)
-            {
-                idPacjenta = iPa;
-                idPielegniarki = iPi;
-                idWizyty = idW;
-                data = time;
-                idBadania = idB;
-            }
-            public override string ToString()
-            {
-                return $"{Getters.getNazwaBadania(idBadania)}, {data}";
-            }
-
-
         }
 
         private void lstBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)

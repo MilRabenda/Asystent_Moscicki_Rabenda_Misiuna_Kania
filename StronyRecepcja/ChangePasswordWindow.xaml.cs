@@ -32,17 +32,7 @@ namespace Panel_Gościa.StronyRecepcja
         }
         private void btnZmien_Click(object sender, RoutedEventArgs e)
         {
-            if (pwdCurrentPwd.Password == string.Empty)
-            {
-                MessageBox.Show("Wpisz ponownie aktualne hasło");
-                return;
-            }
             
-            if (!Getters.checkPassword(idOsoby, pwdCurrentPwd.Password))
-            {
-                MessageBox.Show("Podane hasło się nie zgadza");
-                return;
-            }
             if (pwdNewPwd1.Password == string.Empty || pwdNewPwd2.Password == string.Empty)
             {
                 MessageBox.Show("Wpisz ponownie nowe hasło");
