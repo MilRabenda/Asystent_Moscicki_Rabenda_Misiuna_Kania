@@ -114,8 +114,7 @@ namespace DatabaseCommunication
                     {
                         var data = reader.GetDateTime(0);
                         var idbadania = reader.GetInt32(1);
-                        mapaBadania.TryGetValue(idbadania, out string nazwa);
-                        lista.Add(nazwa + " " + data.ToString("dd.MM.yyyy"));
+                        lista.Add(getNazwaBadania(idbadania) + " " + data.ToString("dd.MM.yyyy"));
                     }
                 }
                 reader.Close();

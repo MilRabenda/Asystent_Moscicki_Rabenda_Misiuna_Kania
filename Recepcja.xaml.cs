@@ -60,26 +60,7 @@ namespace Panel_Gościa
                 return licz;
             }
         }
-        private void btn_PokażWizyty_Click(object sender, RoutedEventArgs e)
-        {
-            var os = new Osoba(4);
-            MessageBox.Show(os.ToString());
-            
-
-
-            //stronaWyswietlana.Content = new StronaWizyty(idOsoby);
-
-            //lstBox.Items.Clear();
-
-            //var x = Getters.getWizytyPielęgniarka(idPielegniarki);
-            //x.Sort();
-            //foreach (var item in x)
-            //{
-            //    lstBox.Items.Add(item);
-            //}
-        }
         
-
         private void btn_EditKonta_Click(object sender, RoutedEventArgs e)
         {
             var strona = new StronyRecepcja.StronaEditKonta();
@@ -126,28 +107,16 @@ namespace Panel_Gościa
         }
         private void btn_EditWizyty_Click(object sender, RoutedEventArgs e)
         {
-            //var str = new StronaUstawienia(idOsoby);
-            //str.ClickPassword = this.zmienHaslo;
-            //str.DeactivateMe = this.dezaktywujKonto;
-            //stronaWyswietlana.Content = str;
-           
-            lstBox.Items.Clear();
-            var list = getLudzie();
-            foreach (Osoba o in list)
-            {
-                lstBox.Items.Add(o.ToString());
-            }
-            Osoba os = list.ElementAt(4);
-            if (os.idOsoby == 3) MessageBox.Show("Well d=Done");
-            MessageBox.Show($"{os.idOsoby}");
+            var window = new StronyRecepcja.StronaEditWizyty();
+            window.DoubleClick = editWizyta;
+            stronaWyswietlana.Content = window;
+
         }
         public void editWizyta(int ixWizyty)
         {
-            
+            var window = new StronyRecepcja.EditWizytaWindow();
             if (ixWizyty == -1) return;
-            MessageBox.Show($"Well done mate {ixWizyty}\n{osobas[ixWizyty].ToString()}");
-            //var strona = new StronyRecepcja.StronaEditKonta();
-            //stronaWyswietlana.Content = strona;
+            MessageBox.Show($"Well done mate {ixWizyty}\n{osobas[ixWizyty]}");
         }
         private void lstBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

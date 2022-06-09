@@ -139,8 +139,14 @@
     <Compile Include="StronyRecepcja\EditKontoWindow.xaml.cs">
       <DependentUpon>EditKontoWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StronyRecepcja\EditWizytaWindow.xaml.cs">
+      <DependentUpon>EditWizytaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StronyRecepcja\StronaEditKonta.xaml.cs">
       <DependentUpon>StronaEditKonta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyRecepcja\StronaEditWizyty.xaml.cs">
+      <DependentUpon>StronaEditWizyty.xaml</DependentUpon>
     </Compile>
     <Compile Include="WizytyPac.xaml.cs">
       <DependentUpon>WizytyPac.xaml</DependentUpon>
@@ -219,7 +225,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="StronyRecepcja\EditWizytaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StronyRecepcja\StronaEditKonta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyRecepcja\StronaEditWizyty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

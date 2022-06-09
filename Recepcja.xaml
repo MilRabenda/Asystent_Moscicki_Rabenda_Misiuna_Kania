@@ -11,16 +11,13 @@
             <Label x:Name="lbl_Witaj" Content="Label" HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
         </Grid>
         <Grid Height="100" Margin="0,0,0,0" VerticalAlignment="Bottom">
-            <Button x:Name="btn_PokażWizyty"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Click="btn_PokażWizyty_Click">
-                <TextBlock Text="Pokaż wszystkie wizyty" TextAlignment="Center" TextWrapping="Wrap"/>
-            </Button>
-            <Button x:Name="btn_Wyloguj" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Wyloguj" Click="btn_Wyloguj_Click">
+            <Button x:Name="btn_Wyloguj" HorizontalAlignment="Left" Margin="272,0,0,0" VerticalAlignment="Top" Width="136" Height="100" Content="Wyloguj" Click="btn_Wyloguj_Click">
 
             </Button>
-            <Button x:Name="btn_EditKonta" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Edytuj konta" Click="btn_EditKonta_Click">
+            <Button x:Name="btn_EditKonta" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="136" Height="100" Content="Edytuj konta" Click="btn_EditKonta_Click">
 
             </Button>
-            <Button x:Name="btn_EditWizyty"  HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top" Width="100" Height="100" Content="Edytuj wizyty" Click="btn_EditWizyty_Click">
+            <Button x:Name="btn_EditWizyty"  HorizontalAlignment="Left" Margin="136,0,0,0" VerticalAlignment="Top" Width="136" Height="100" Content="Edytuj wizyty" Click="btn_EditWizyty_Click">
 
             </Button>
         </Grid>
