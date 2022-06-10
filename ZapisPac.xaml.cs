@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using DatabaseCommunication;
+using System.Globalization;
 
 namespace Panel_Gościa
 {
@@ -30,6 +31,7 @@ namespace Panel_Gościa
         public int id;
         public string data;
         public string czas;
+        public int potrzebne;
         
 
 
@@ -76,7 +78,16 @@ namespace Panel_Gościa
                     cbxGodzina.Items.Add($@"{i}:00");
                     cbxGodzina.Items.Add($@"{i}:30");
                 }
+
                
+                MySqlCommand idwiz = new MySqlCommand($@"SELECT COUNT(idwizyty) FROM wizyta", połączenie);
+                MySqlDataReader rid = idwiz.ExecuteReader();
+                while (rid.Read())
+                {
+                    potrzebne = Convert.ToInt32(rid.GetValue(0));
+                }
+                rid.Close();
+
             }
             
         }
@@ -99,8 +110,8 @@ namespace Panel_Gościa
 
         private void DataBadania_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-                data = DataBadania.SelectedDate.Value.ToString("yyyy'-'MM'-'dd");
-            MessageBox.Show(data);
+            data = DataBadania.SelectedDate.Value.ToString("yyyy-MM-dd");
+            MessageBox.Show(data + " " + czas);
           
         }
 
@@ -115,13 +126,13 @@ namespace Panel_Gościa
             
             using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
             {
+                
                 string jajebe = data + " " + czas;
-                //nie działa dodawanie bo wywala mi błąd z formatowaniem:))))))
-                DateTime ok = DateTime.ParseExact(jajebe, "yyyy'-'MM'-'dd' 'HH':'mm", null);
-                MySqlCommand idpac = new MySqlCommand($@"INSERT INTO wizyta VALUES({id}, {idpielegniarki}, ,{ok}, {idbadania})", połączenie);
+                DateTime ok = DateTime.Parse(jajebe);
+                MySqlCommand idpac = new MySqlCommand($@"INSERT INTO wizyta VALUES({id}, {idpielegniarki},{potrzebne+1}, '{ok.ToString("yyyy-MM-dd HH:mm:ss")}', {idbadania})", połączenie);
                 połączenie.Open();
                 idpac.ExecuteNonQuery();
-                MySqlCommand sprawdz = new MySqlCommand($@"SELECT * FROM wizyta where datawizyty={ok}", połączenie);
+                MySqlCommand sprawdz = new MySqlCommand($@"SELECT * FROM wizyta where datawizyty='{ok.ToString("yyyy-MM-dd HH:mm:ss")}'", połączenie);
                 MySqlDataReader reader = sprawdz.ExecuteReader();
                 if(reader.HasRows)
                 {

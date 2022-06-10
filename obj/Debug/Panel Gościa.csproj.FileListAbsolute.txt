@@ -422,3 +422,15 @@ C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.baml
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.baml
 C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaDodaj.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaEdycja.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaDodaj.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.g.cs
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaDodaj.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaEdycja.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaDodaj.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.baml
+C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.baml
