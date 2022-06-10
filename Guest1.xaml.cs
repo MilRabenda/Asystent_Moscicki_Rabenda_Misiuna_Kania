@@ -81,7 +81,7 @@ namespace Panel_Gościa
 
         private void btn_test_Click(object sender, RoutedEventArgs e)
         {
-            var window = new PanelPacjenta();
+            var window = new PanelPacjenta(2);
             window.ShowDialog();
         }
 

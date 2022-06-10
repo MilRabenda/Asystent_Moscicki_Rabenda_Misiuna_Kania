@@ -44,15 +44,9 @@ namespace Panel_Gościa
             set { this.imie = value;}
         }
 
-        public PanelPacjenta()
+        public PanelPacjenta(int id)
         { 
             InitializeComponent();
-          
-        }
-
-
-        public void setter(int id)
-        {
             IdOsoby = id;
             using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
             {
@@ -70,6 +64,31 @@ namespace Panel_Gościa
 
             }
             lbl_Witaj.Content = $@"Witaj {Imie}";
+
+        }
+
+
+        public void setter(int id)
+        {
+            /*
+            IdOsoby = id;
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand idpac = new MySqlCommand($@"SELECT idpacjenta FROM pacjenci where idosoby={IdOsoby}", połączenie);
+                połączenie.Open();
+                MySqlDataReader IdReader = idpac.ExecuteReader();
+                IdReader.Read();
+                IdPacjenta = Convert.ToInt32(IdReader.GetValue(0));
+                IdReader.Close();
+                MySqlCommand name = new MySqlCommand($@"SELECT imie FROM osoba where idosoby={IdOsoby}", połączenie);
+                MySqlDataReader ImieReader = name.ExecuteReader();
+                ImieReader.Read();
+                Imie = Convert.ToString(ImieReader.GetValue(0));
+                ImieReader.Close();
+
+            }
+            lbl_Witaj.Content = $@"Witaj {Imie}";
+            */
             
         }
        
@@ -92,7 +111,7 @@ namespace Panel_Gościa
         private void btn_ZapiszWizytę_Click(object sender, RoutedEventArgs e)
         {
 
-            ZapisFrame.Content = new ZapisPac();
+            ZapisFrame.Content = new ZapisPac(IdPacjenta);
         }
     }
 }

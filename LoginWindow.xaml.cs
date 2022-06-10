@@ -84,7 +84,8 @@ namespace Panel_Gościa
                         break;
                     case false:
                         this.Close();
-                        var v = new PanelPacjenta();
+                        int id5 = Getters.getIdOsoby(txtLogin.Text);
+                        var v = new PanelPacjenta(id5);
                         v.ShowDialog();
                         //MessageBox.Show("False");
                         break;
