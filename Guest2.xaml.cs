@@ -22,7 +22,7 @@ namespace Panel_Gościa
     /// </summary>
     public partial class Guest2 : Page
     {
-        List<string> infoList;
+        
         List<string> sourceList;
         public Guest2()
         {

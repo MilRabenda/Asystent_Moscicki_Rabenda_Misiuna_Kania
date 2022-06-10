@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\
 Panel_Gościa
 none
 false
 DEBUG;TRACE
-C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\App.xaml
-20-1863473986
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\App.xaml
+261818466961
 
-26-381356934
-33316656549
-admin.xaml;Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;pielegniarka.xaml;Recepcja.xaml;RegisterWindow.xaml;StronyPielegniarka\StronaDzisiejszeWizyty.xaml;StronyPielegniarka\StronaUstawienia.xaml;StronyPielegniarka\StronaWizyty.xaml;StronyPielegniarka\StronaZmienHaslo.xaml;StronyRecepcja\ChangePasswordWindow.xaml;StronyRecepcja\EditKontoWindow.xaml;StronyRecepcja\EditWizytaWindow.xaml;StronyRecepcja\StronaEditKonta.xaml;StronyRecepcja\StronaEditWizyty.xaml;WizytyPac.xaml;ZapisPac.xaml;
+32-1099133948
+33-904673039
+admin.xaml;Guest1.xaml;Guest2.xaml;LoginWindow.xaml;MainWindow.xaml;PanelPacjenta.xaml;pielegniarka.xaml;Recepcja.xaml;RegisterWindow.xaml;StronyAdmin\BadaniaDodaj.xaml;StronyAdmin\BadaniaEdycja.xaml;StronyAdmin\OsobaDodaj.xaml;StronyAdmin\OsobaEdycja.xaml;StronyAdmin\Projekcja.xaml;StronyAdmin\ZmienSwojeDane.xaml;StronyPielegniarka\StronaDzisiejszeWizyty.xaml;StronyPielegniarka\StronaUstawienia.xaml;StronyPielegniarka\StronaWizyty.xaml;StronyPielegniarka\StronaZmienHaslo.xaml;StronyRecepcja\ChangePasswordWindow.xaml;StronyRecepcja\EditKontoWindow.xaml;StronyRecepcja\EditWizytaWindow.xaml;StronyRecepcja\StronaEditKonta.xaml;StronyRecepcja\StronaEditWizyty.xaml;WizytyPac.xaml;ZapisPac.xaml;
 
 False
 

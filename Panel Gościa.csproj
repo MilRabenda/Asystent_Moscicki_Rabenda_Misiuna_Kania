@@ -121,6 +121,24 @@
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StronyAdmin\BadaniaDodaj.xaml.cs">
+      <DependentUpon>BadaniaDodaj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyAdmin\BadaniaEdycja.xaml.cs">
+      <DependentUpon>BadaniaEdycja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyAdmin\OsobaDodaj.xaml.cs">
+      <DependentUpon>OsobaDodaj.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyAdmin\OsobaEdycja.xaml.cs">
+      <DependentUpon>OsobaEdycja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyAdmin\Projekcja.xaml.cs">
+      <DependentUpon>Projekcja.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StronyAdmin\ZmienSwojeDane.xaml.cs">
+      <DependentUpon>ZmienSwojeDane.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StronyPielegniarka\StronaDzisiejszeWizyty.xaml.cs">
       <DependentUpon>StronaDzisiejszeWizyty.xaml</DependentUpon>
     </Compile>
@@ -199,6 +217,30 @@
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\BadaniaDodaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\BadaniaEdycja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\OsobaDodaj.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\OsobaEdycja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\Projekcja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\ZmienSwojeDane.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -331,9 +373,6 @@
     <Resource Include="images\controls\wizyty.png" />
     <Resource Include="images\controls\wylogowanie.png" />
     <Resource Include="images\controls\zapis.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="alergia.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="DatabaseCommunication\DatabaseCommunication.csproj">

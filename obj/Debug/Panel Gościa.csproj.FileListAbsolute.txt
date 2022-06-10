@@ -386,3 +386,39 @@ C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\EditWizytaWindow.baml
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditKonta.baml
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditWizyty.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Recepcja.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaDzisiejszeWizyty.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaUstawienia.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaWizyty.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaZmienHaslo.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\ChangePasswordWindow.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\EditKontoWindow.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\EditWizytaWindow.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditKonta.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditWizyty.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\Recepcja.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaDzisiejszeWizyty.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaUstawienia.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaWizyty.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyPielegniarka\StronaZmienHaslo.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\ChangePasswordWindow.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\EditKontoWindow.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\EditWizytaWindow.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditKonta.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyRecepcja\StronaEditWizyty.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\WizytyPac.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\ZapisPac.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaDodaj.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaEdycja.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaDodaj.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.g.cs
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaDodaj.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaEdycja.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaDodaj.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.baml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.baml

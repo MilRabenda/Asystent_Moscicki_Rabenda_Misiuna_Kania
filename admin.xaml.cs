@@ -22,11 +22,46 @@ namespace Panel_Gościa
         public admin()
         {
             InitializeComponent();
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
-        private void btn_idk_Click(object sender, RoutedEventArgs e)
+        private void btnProjekcja_Click(object sender, RoutedEventArgs e)
         {
+            AdminContent.Content = new StronyAdmin.Projekcja();
+            lbl_Witaj.Content = "Projekcja Strony Głównej";
+            
+        }
 
+        private void btnDodajBadanie_Click(object sender, RoutedEventArgs e)
+        {
+            AdminContent.Content = new StronyAdmin.BadaniaDodaj();
+            lbl_Witaj.Content = "Dodaj Nowe Badanie";
+        }
+
+        private void btnEdytujBadanie_Click(object sender, RoutedEventArgs e)
+        {
+            AdminContent.Content = new StronyAdmin.BadaniaEdycja();
+            lbl_Witaj.Content = "Edytuj Badanie";
+        }
+
+        private void btnDodajOsobe_Click(object sender, RoutedEventArgs e)
+        {
+            AdminContent.Content = new StronyAdmin.OsobaDodaj();
+            lbl_Witaj.Content = "Dodaj Nową Osobę";
+        }
+
+        private void btnEdytujOsobe_Click(object sender, RoutedEventArgs e)
+        {
+            
+            var window = new StronyRecepcja.EditKontoWindow();
+            window.ShowDialog();
+            //updateOsobas();
+        }
+
+        private void btnKonto_Click(object sender, RoutedEventArgs e)
+        {
+            AdminContent.Content = new StronyAdmin.ZmienSwojeDane();
+            lbl_Witaj.Content = "Edycja Konta";
         }
     }
 }
