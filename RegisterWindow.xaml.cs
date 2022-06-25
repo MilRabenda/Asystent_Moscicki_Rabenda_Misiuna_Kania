@@ -24,6 +24,7 @@ namespace Panel_Gościa
         public RegisterWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             lblZar.Content = "Załóż konto M-Pacjenta";
             
         }

@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< Updated upstream
 FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\admin.xaml;;
 FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\Guest1.xaml;;
 FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\Guest2.xaml;;
@@ -26,4 +27,26 @@ FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\St
 FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyRecepcja\StronaEditWizyty.xaml;;
 FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\WizytyPac.xaml;;
 FC:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\ZapisPac.xaml;;
+=======
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\admin.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\Guest1.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\Guest2.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\LoginWindow.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\MainWindow.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\PanelPacjenta.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\pielegniarka.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\Recepcja.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\RegisterWindow.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyPielegniarka\StronaDzisiejszeWizyty.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyPielegniarka\StronaUstawienia.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyPielegniarka\StronaWizyty.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyPielegniarka\StronaZmienHaslo.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyRecepcja\ChangePasswordWindow.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyRecepcja\EditKontoWindow.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyRecepcja\EditWizytaWindow.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyRecepcja\StronaEditKonta.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\StronyRecepcja\StronaEditWizyty.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\WizytyPac.xaml;;
+FC:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\ZapisPac.xaml;;
+>>>>>>> Stashed changes
 

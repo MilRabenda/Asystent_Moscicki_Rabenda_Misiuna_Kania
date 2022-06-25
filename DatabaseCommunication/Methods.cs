@@ -21,6 +21,8 @@ namespace DatabaseCommunication
 
                 połączenie.Open();
                 MySqlDataReader reader = log.ExecuteReader();
+                //log.ExecuteNonQuery
+                
 
                 połączenie.Close();
 
