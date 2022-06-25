@@ -25,6 +25,7 @@ namespace Panel_Gościa
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
             Guest.Content=new Guest1();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }

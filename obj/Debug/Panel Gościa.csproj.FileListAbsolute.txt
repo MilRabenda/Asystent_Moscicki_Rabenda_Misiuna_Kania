@@ -434,3 +434,15 @@ C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.baml
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.baml
 C:\Users\milen\Documents\GitHub\5555\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaDodaj.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaEdycja.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaDodaj.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.g.cs
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaDodaj.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\BadaniaEdycja.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaDodaj.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\OsobaEdycja.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\Projekcja.baml
+C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\obj\Debug\StronyAdmin\ZmienSwojeDane.baml
