@@ -90,3 +90,24 @@ C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\Database
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.csproj.CopyComplete
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.dll
 C:\Users\Maciek\Desktop\code\C#\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.pdb
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\DatabaseCommunication.dll.config
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\DatabaseCommunication.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\DatabaseCommunication.pdb
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\System.Buffers.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\System.Memory.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\ZstdNet.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\Google.Protobuf.pdb
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\Google.Protobuf.xml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\bin\Debug\MySql.Data.xml
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.csproj.AssemblyReference.cache
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.csproj.CoreCompileInputs.cache
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.csproj.CopyComplete
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.dll
+C:\Users\marci\OneDrive - Politechnika Śląska\Repos\Asystent_Moscicki_Rabenda_Misiuna_Kania\Asystent_Moscicki_Rabenda_Misiuna_Kania\DatabaseCommunication\obj\Debug\DatabaseCommunication.pdb

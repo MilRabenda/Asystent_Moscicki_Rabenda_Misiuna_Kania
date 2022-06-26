@@ -31,45 +31,40 @@ namespace Panel_Gościa
         List<string> namesList; 
         List<string> prizeList;
         DispatcherTimer dispatcherTimer = new DispatcherTimer(); //next image per 3s
-        public Guest1()
+        public void WypProjekcje()
         {
-            
-            sourceList = new List<string>();
-            InitializeComponent();
-            using (
-                MySqlConnection connect = new MySqlConnection(Getters.connectionString)) {
-                //MySqlConnection connect = new MySqlConnection(@"server=localhost;user id=root; password=root;database=laboratorium")) {
-               
-                MySqlCommand commandImages = new MySqlCommand($@"SELECT count(zdjecie) FROM badanie", connect);
-                connect.Open();
-                int size = Convert.ToInt32(commandImages.ExecuteScalar());
-                for (int j = 1; j <= size; j++) //images
-                {
-                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE idbadania={j}", connect);
-                    string imageSource = "/images/content/" + Convert.ToString(source.ExecuteScalar());
-                    sourceList.Add(imageSource);   
-                } 
-                ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
 
-                namesList = new List<string>();//names
-                prizeList = new List<string>();//prizes
-                for (int j = 1; j <= size; j++)
+            using (MySqlConnection connect = new MySqlConnection(Getters.connectionString)) {
+                connect.Open();              
+
+                    MySqlCommand source = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE wyóżnione = 1", connect);
+                    MySqlCommand commandName = new MySqlCommand($@"SELECT nazwabadania FROM badanie WHERE wyóżnione = 1", connect);
+                    MySqlCommand commandPrize = new MySqlCommand($@"SELECT cennik FROM badanie WHERE wyóżnione = 1", connect);
+                    sourceList = new List<string>();
+                    namesList = new List<string>();//names
+                    prizeList = new List<string>();//prizes
+                foreach (var item in sourceList)
                 {
-                    MySqlCommand commandName = new MySqlCommand($@"SELECT nazwabadania FROM badanie WHERE idbadania={j}", connect);
-                    MySqlCommand commandPrize = new MySqlCommand($@"SELECT cennik FROM badanie WHERE idbadania={j}", connect);
+                    string imageSource = "/images/content/" + Convert.ToString(source.ExecuteScalar());
+                    sourceList.Add(imageSource);
                     string name = Convert.ToString(commandName.ExecuteScalar());
-                    string prize = Convert.ToString(commandPrize.ExecuteScalar() +" zł");
+                    string prize = Convert.ToString(commandPrize.ExecuteScalar() + " zł");
                     namesList.Add(name);
                     prizeList.Add(prize);
+                    lblName.Content = namesList[i];
+                    lblPrize.Content = prizeList[i];
+                    ImageFrame.Source = new BitmapImage(new Uri(sourceList[i], UriKind.Relative));
+                    connect.Close();
+                    dispatcherTimer.Tick += dispatcherTimer_Tick;
+                    dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
+                    dispatcherTimer.Start();
                 }
-                lblName.Content = namesList[i];
-                lblPrize.Content = prizeList[i];
-                connect.Close(); 
             }
-            
-            dispatcherTimer.Tick += dispatcherTimer_Tick;
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 5);
-            dispatcherTimer.Start();
+        }
+        public Guest1()
+        {
+            InitializeComponent();
+            WypProjekcje();
         }
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
@@ -110,6 +105,7 @@ namespace Panel_Gościa
         {
             admin a = new admin();
             a.Show();
+
         }
 
         private void btnPielegniarka_Click(object sender, RoutedEventArgs e)

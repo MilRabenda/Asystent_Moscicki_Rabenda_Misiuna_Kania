@@ -8,7 +8,5 @@
       d:DesignHeight="340" d:DesignWidth="410"
       Title="OsobaEdycja">
 
-    <Grid>
-        
-    </Grid>
+    <Grid/>
 </Page>

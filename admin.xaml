@@ -16,19 +16,22 @@
             <Label x:Name="lbl_Witaj" Content="Witaj Adminie: " HorizontalAlignment="Center" VerticalAlignment="Center" Width="480" Height="30" Grid.Row="0"/>
         </Grid>
 
-        <Button x:Name="btnProjekcja" Content="Układ Startu" HorizontalAlignment="Left" Width="80" Grid.Row="2" Click="btnProjekcja_Click"/>
-        <Button x:Name="btnDodajBadanie"  Content="Dodaj Badanie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Margin="80,0,0,0" Click="btnDodajBadanie_Click" />
-        <Button x:Name="btnEdytujBadanie"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Margin="160,0,0,0" Click="btnEdytujBadanie_Click">
+        <Button x:Name="btnProjekcja" Content="Układ Startu" HorizontalAlignment="Left" Width="80" Height="80" Grid.Row="2" Click="btnProjekcja_Click" Margin="-5,0,0,0"/>
+        <Button x:Name="btnDodajBadanie"  Content="Dodaj Badanie" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Margin="75,0,0,0" Click="btnDodajBadanie_Click" />
+        <Button x:Name="btnEdytujBadanie"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Margin="155,0,0,0" Click="btnEdytujBadanie_Click">
             <Button.Content>
                 <TextBlock TextWrapping="Wrap" Text="Edytuj Badanie"/>
             </Button.Content>
         </Button>
-        <Button x:Name="btnDodajOsobe" Content="Dodaj Osobe" HorizontalAlignment="Left" Margin="240,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Click="btnDodajOsobe_Click"/>
-        <Button x:Name="btnEdytujOsobe" Content="Edytuj Osobe" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Click="btnEdytujOsobe_Click"/>
-        <Button x:Name="btnKonto" Content="Konto" HorizontalAlignment="Left" Margin="400,0,-6,0" VerticalAlignment="Bottom" Width="80" Height="80" Grid.Row="2" Click="btnKonto_Click"/>
-
-
-
-        <Frame x:Name="AdminContent"  HorizontalAlignment="Left" Height="461" Grid.Row="1" VerticalAlignment="Top" Width="474" NavigationUIVisibility="Hidden"/>
+        <Button x:Name="btnDodajOsobe" Content="Dodaj Osobe" HorizontalAlignment="Left" Margin="235,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Click="btnDodajOsobe_Click"/>
+        <Button x:Name="btnEdytujOsobe" HorizontalAlignment="Left" Margin="315,0,0,0" VerticalAlignment="Top" Width="80" Height="80" Grid.Row="2" Click="btnEdytujOsobe_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Edytuj Osobe"/>
+            </Button.Content>
+        </Button>
+        <Button x:Name="btnKonto" Content="Konto" HorizontalAlignment="Left" Margin="394,0,0,0" VerticalAlignment="Bottom" Width="80" Height="80" Grid.Row="2" Click="btnKonto_Click"/>
+        <Frame x:Name="AdminContent"  HorizontalAlignment="Left" Height="440" Grid.Row="1" VerticalAlignment="Top" Width="480
+               " NavigationUIVisibility="Hidden" Margin="0,0,-6,0"/>
+        <Button x:Name="btnWyloguj" Content="Wyloguj" HorizontalAlignment="Left" Margin="394,440,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="21"/>
     </Grid>
 </Window>

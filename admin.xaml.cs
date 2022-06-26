@@ -17,17 +17,26 @@ namespace Panel_Gościa
     /// <summary>
     /// Logika interakcji dla klasy admin.xaml
     /// </summary>
+    
     public partial class admin : Window
     {
+        public delegate void PassListToMain(List<string> lista);
+        public PassListToMain list;
         public admin()
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
+        public void Func(List<string> lists) 
+        {
+            MessageBox.Show("here");
+        }
         private void btnProjekcja_Click(object sender, RoutedEventArgs e)
         {
-            AdminContent.Content = new StronyAdmin.Projekcja();
+            var page= new StronyAdmin.Projekcja();
+            AdminContent.Content = page;
+            page.list=Func;
             lbl_Witaj.Content = "Projekcja Strony Głównej";
             
         }
