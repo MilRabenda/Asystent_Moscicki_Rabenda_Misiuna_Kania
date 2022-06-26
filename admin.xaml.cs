@@ -20,23 +20,26 @@ namespace Panel_Gościa
     
     public partial class admin : Window
     {
-        public delegate void PassListToMain(List<string> lista);
-        public PassListToMain list;
+        public delegate void Refresh();
+        public static Refresh odswiez;
+        int idosoby;
         public admin()
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
-
-        public void Func(List<string> lists) 
+        public admin(int idosoby): this()
         {
-            MessageBox.Show("here");
+            this.idosoby = idosoby;
+        }
+        ~admin()
+        {
+            odswiez();
         }
         private void btnProjekcja_Click(object sender, RoutedEventArgs e)
         {
             var page= new StronyAdmin.Projekcja();
             AdminContent.Content = page;
-            page.list=Func;
             lbl_Witaj.Content = "Projekcja Strony Głównej";
             
         }
@@ -61,16 +64,24 @@ namespace Panel_Gościa
 
         private void btnEdytujOsobe_Click(object sender, RoutedEventArgs e)
         {
-            
-            var window = new StronyRecepcja.EditKontoWindow();
-            window.ShowDialog();
-            //updateOsobas();
+
+            AdminContent.Content = new StronyAdmin.OsobaEdycja();
+            lbl_Witaj.Content = "Edycja Konta";
         }
 
         private void btnKonto_Click(object sender, RoutedEventArgs e)
         {
             AdminContent.Content = new StronyAdmin.ZmienSwojeDane();
-            lbl_Witaj.Content = "Edycja Konta";
+            lbl_Witaj.Content = "Ustawienia Konta";
+        }
+
+        private void btnWyloguj_Click(object sender, RoutedEventArgs e)
+        {
+                var result = MessageBox.Show("Czy na pewno chcesz się wylogować?", "Wylogowanie", MessageBoxButton.OKCancel);
+                if (result == MessageBoxResult.OK)
+                {
+                    this.Close();
+                }
         }
     }
 }

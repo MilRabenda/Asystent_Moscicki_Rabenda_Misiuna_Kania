@@ -41,7 +41,7 @@ namespace Panel_Gościa.StronyRecepcja
             txtPesel.Text = osoba.pesel;
             txtMail.Text = osoba.mail;
             txtTelefon.Text = osoba.telefon;
-            if (os.aktywne == false) btnDeactivate.Content = "Dezaktywuj konto";
+            if (!os.aktywne) btnDeactivate.Content = "Dezaktywuj konto";
             else btnDeactivate.Content = "Aktywuj konto";
         }
 

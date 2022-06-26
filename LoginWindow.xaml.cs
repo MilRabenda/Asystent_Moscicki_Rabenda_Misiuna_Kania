@@ -78,6 +78,13 @@ namespace Panel_Gościa
                                     var g = new pielegniarka(id);
                                     g.ShowDialog();
                                     break;
+                                case "admin":
+                                    this.Close();
+                                    int ida = Getters.getIdOsoby(txtLogin.Text);
+                                    var a = new admin(ida);
+                                    a.ShowDialog();
+                                    break;
+
                             }
 
                         }

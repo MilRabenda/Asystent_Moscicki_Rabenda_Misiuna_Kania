@@ -96,6 +96,8 @@ namespace DatabaseCommunication
             if (isAnalityk(idOsoby)) final = "analityk";
             if (isPersonelRecepcji(idOsoby)) final = "personel recepcji";
             if (isPielegniarka(idOsoby)) final = "pielegniarka";
+            if (isAdmin(idOsoby)) final="admin";
+
 
             return final;
         }
@@ -132,6 +134,19 @@ namespace DatabaseCommunication
                 MySqlDataReader reader = log.ExecuteReader();
                 bool ok = reader.HasRows;
 
+                połączenie.Close();
+                return ok;
+            }
+            
+        }
+        public static bool isAdmin(int idOsoby)
+        {
+            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+            {
+                MySqlCommand log = new MySqlCommand($@"SELECT idadmina FROM administracja WHERE idosoby='{idOsoby}'", połączenie);
+                połączenie.Open();
+                MySqlDataReader reader = log.ExecuteReader();
+                bool ok = reader.HasRows;
                 połączenie.Close();
                 return ok;
             }

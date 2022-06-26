@@ -21,10 +21,9 @@ namespace Panel_Gościa.StronyAdmin
     /// </summary>
     public partial class Projekcja : Page
     {
-
+        public delegate void Refresh();
+        public static Refresh odswiez;
         List<string> checkedBoxes = new List<string>();
-        public delegate void PassListToAdmin(List<string> lista);
-        public PassListToAdmin list;
         public Projekcja()
         {
 
@@ -38,7 +37,6 @@ namespace Panel_Gościa.StronyAdmin
 
                 for (int i = 1; i <= max; i++)
                 {
-
                     MySqlCommand commandName = new MySqlCommand($@"SELECT nazwabadania FROM badanie WHERE idbadania={i}", connect);
                     string s = Convert.ToString(commandName.ExecuteScalar());
                     CheckBox checkBox = new CheckBox();
@@ -47,7 +45,9 @@ namespace Panel_Gościa.StronyAdmin
                     checkBox.Checked += Checked;
                     checkBox.Unchecked += UnChecked;
                 }
+                connect.Close();
             }
+         
         }
         private void Checked(object sender, RoutedEventArgs e)
         {
@@ -62,14 +62,23 @@ namespace Panel_Gościa.StronyAdmin
         }
         private void btnZatwierdz_Click(object sender, RoutedEventArgs e)
         {
-            string s="";
-            foreach (var item in checkedBoxes)
+            using (
+            MySqlConnection connect = new MySqlConnection(Getters.connectionString))
             {
-                s += item;
+                connect.Open();
+                MySqlCommand command2 = new MySqlCommand($@"UPDATE badanie SET wyóżnione = 0 ", connect);
+                command2.ExecuteScalar();
+
+                if (!checkedBoxes.Any()) checkedBoxes.Add("Badanie Podstawowe");
+                foreach (var item in checkedBoxes)
+                {
+                    MySqlCommand command1 = new MySqlCommand($@"UPDATE badanie SET wyóżnione = 1 WHERE nazwabadania='{item}'", connect);
+                    command1.ExecuteScalar();
+                }
             }
-            MessageBox.Show(s);
-            list(checkedBoxes); 
+            odswiez();
         }
+
     }
 }
     
