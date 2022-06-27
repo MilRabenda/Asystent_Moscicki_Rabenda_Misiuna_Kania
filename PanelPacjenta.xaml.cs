@@ -67,31 +67,6 @@ namespace Panel_Gościa
 
         }
 
-
-        public void setter(int id)
-        {
-            /*
-            IdOsoby = id;
-            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
-            {
-                MySqlCommand idpac = new MySqlCommand($@"SELECT idpacjenta FROM pacjenci where idosoby={IdOsoby}", połączenie);
-                połączenie.Open();
-                MySqlDataReader IdReader = idpac.ExecuteReader();
-                IdReader.Read();
-                IdPacjenta = Convert.ToInt32(IdReader.GetValue(0));
-                IdReader.Close();
-                MySqlCommand name = new MySqlCommand($@"SELECT imie FROM osoba where idosoby={IdOsoby}", połączenie);
-                MySqlDataReader ImieReader = name.ExecuteReader();
-                ImieReader.Read();
-                Imie = Convert.ToString(ImieReader.GetValue(0));
-                ImieReader.Close();
-
-            }
-            lbl_Witaj.Content = $@"Witaj {Imie}";
-            */
-            
-        }
-       
         private void btn_idk_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show("Czy na pewno chcesz się wylogować?", "Wylogowanie", MessageBoxButton.OKCancel);
@@ -111,7 +86,20 @@ namespace Panel_Gościa
         private void btn_ZapiszWizytę_Click(object sender, RoutedEventArgs e)
         {
 
-            ZapisFrame.Content = new ZapisPac(IdPacjenta);
+            wizFrame.Content = new ZapisPac(IdPacjenta);
         }
+
+        private void btn_Konto_Click(object sender, RoutedEventArgs e)
+        {
+            wizFrame.Content = new StronyPielegniarka.StronaUstawienia(IdOsoby);
+
+        }
+        private void btn_UstawieniaKonta_Click(object sender, RoutedEventArgs e)
+        {
+            wizFrame.Content = new UstawieniaKontaPac(IdOsoby);
+
+        }
+       
+
     }
 }

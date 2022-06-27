@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: nowy
+-- Host: localhost    Database: laboratorium
 -- ------------------------------------------------------
--- Server version	8.0.28
+-- Server version	8.0.29
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -241,6 +241,7 @@ CREATE TABLE `wizyta` (
   `idwizyty` int NOT NULL AUTO_INCREMENT,
   `datawizyty` datetime DEFAULT NULL,
   `idbadania` int NOT NULL,
+  `cena` decimal(10,0) DEFAULT NULL,
   PRIMARY KEY (`idwizyty`),
   KEY `idpielegniarki` (`idpielegniarki`),
   KEY `idpacjenta` (`idpacjenta`),
@@ -259,7 +260,7 @@ CREATE TABLE `wizyta` (
 
 LOCK TABLES `wizyta` WRITE;
 /*!40000 ALTER TABLE `wizyta` DISABLE KEYS */;
-INSERT INTO `wizyta` VALUES (1,1,1,'2022-05-26 10:30:00',3),(1,2,2,'2022-05-31 10:30:00',5),(2,3,3,'2022-06-01 12:00:00',9),(4,3,4,'2022-06-01 12:30:00',9),(7,3,5,'2022-06-01 12:45:00',9),(8,3,6,'2022-06-01 13:00:00',9),(3,2,7,'2022-06-05 10:00:00',5),(4,2,8,'2022-06-05 10:15:00',5),(5,2,9,'2022-06-05 10:30:00',5),(6,2,10,'2022-06-05 10:45:00',5),(7,2,11,'2022-06-05 11:00:00',5),(9,1,12,'2022-05-26 11:00:00',3),(1,1,13,'2022-05-18 10:00:00',1),(2,1,14,'2022-05-18 10:15:00',1),(3,1,15,'2022-05-18 10:30:00',1),(4,1,16,'2022-05-18 10:45:00',1),(5,1,17,'2022-05-18 11:00:00',1);
+INSERT INTO `wizyta` VALUES (1,1,1,'2022-05-26 10:30:00',3,NULL),(1,2,2,'2022-05-31 10:30:00',5,NULL),(2,3,3,'2022-06-01 12:00:00',9,NULL),(4,3,4,'2022-06-01 12:30:00',9,NULL),(7,3,5,'2022-06-01 12:45:00',9,NULL),(8,3,6,'2022-06-01 13:00:00',9,NULL),(3,2,7,'2022-06-05 10:00:00',5,NULL),(4,2,8,'2022-06-05 10:15:00',5,NULL),(5,2,9,'2022-06-05 10:30:00',5,NULL),(6,2,10,'2022-06-05 10:45:00',5,NULL),(7,2,11,'2022-06-05 11:00:00',5,NULL),(9,1,12,'2022-05-26 11:00:00',3,NULL),(1,1,13,'2022-05-18 10:00:00',1,NULL),(2,1,14,'2022-05-18 10:15:00',1,NULL),(3,1,15,'2022-05-18 10:30:00',1,NULL),(4,1,16,'2022-05-18 10:45:00',1,NULL),(5,1,17,'2022-05-18 11:00:00',1,NULL);
 /*!40000 ALTER TABLE `wizyta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -276,8 +277,7 @@ CREATE TABLE `wykonaniabadania` (
   `idbadania` int NOT NULL,
   `data` datetime DEFAULT NULL,
   `wyniki` varchar(100) DEFAULT NULL,
-  `cenaaktualna` decimal(10,0) DEFAULT NULL,
-  PRIMARY KEY (`idbadania`),
+  PRIMARY KEY (`idwizyty`),
   KEY `idanalityka_idx` (`idanalityka`),
   KEY `idbadania_idx` (`idbadania`),
   KEY `idwizyty_idx` (`idwizyty`) /*!80000 INVISIBLE */,
@@ -305,4 +305,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-27 12:29:59
+-- Dump completed on 2022-06-27 22:24:20
