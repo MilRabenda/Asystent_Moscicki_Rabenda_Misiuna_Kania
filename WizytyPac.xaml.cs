@@ -17,6 +17,58 @@ using DatabaseCommunication;
 
 namespace Panel_Gościa
 {
+    /// <summary>
+    /// Logika interakcji dla klasy WizytyPac.xaml
+    /// </summary>
+    /// 
+    //public class Wizyta
+    //{
+    //    public DateTime data;
+    //    public int idpielęgniarki;
+    //    public int idbadania;
+
+    //    public DateTime Data
+    //    {
+    //        set { this.data = value; }
+    //        get { return data; }
+    //    }
+
+    //    public int IdPielęgniarki
+    //    {
+    //        set { this.idpielęgniarki = value; }
+    //        get { return idpielęgniarki; }
+    //    }
+
+    //    public int IdBadania
+    //    {
+    //        set { this.idbadania = value; }
+    //        get { return idbadania; }
+    //    }
+
+    //    public override string ToString()
+    //    {
+    //        using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+    //        {
+    //            MySqlCommand polecenie1  = new MySqlCommand($@"SELECT idosoby FROM pielegniarki where idpielegniarki={IdPielęgniarki}", połączenie);
+    //            połączenie.Open();
+    //            MySqlDataReader Czytaj = polecenie1.ExecuteReader();
+    //            Czytaj.Read();
+    //            int idp = Convert.ToInt32(Czytaj.GetValue(0));
+    //            Czytaj.Close();
+    //            MySqlCommand polecenie2 = new MySqlCommand($@"SELECT imie, nazwisko FROM osoba where idosoby={idp};", połączenie);
+    //            MySqlDataReader Czytaj2 = polecenie2.ExecuteReader();
+    //            Czytaj2.Read();
+    //            string imiepielegniarki=Convert.ToString(Czytaj2.GetValue(0)) + " " + Convert.ToString(Czytaj2.GetValue(1));
+    //            Czytaj2.Close();
+    //            MySqlCommand polecenie3 = new MySqlCommand($@"SELECT nazwabadania FROM badanie where idbadania={IdBadania};", połączenie);
+    //            MySqlDataReader Czytaj3 = polecenie3.ExecuteReader();
+    //            Czytaj3.Read();
+    //            string nazwabadania = Convert.ToString(Czytaj3.GetValue(0));
+    //            Czytaj3.Close();
+    //            return $@"{nazwabadania} | {Data} | {imiepielegniarki}";
+    //        }
+    //    }
+    //}
     public partial class WizytyPac : Page
     {
         public int id;
@@ -52,7 +104,6 @@ namespace Panel_Gościa
                         var h = reader.GetInt32(2);
                         var i = reader.GetDateTime(3);
                         var j = reader.GetInt32(4);
-                        var k = reader.GetDecimal(5);
 
                         Wizyta wiz = new Wizyta(f, g, h, i, j);
                         lista.Add(wiz);
