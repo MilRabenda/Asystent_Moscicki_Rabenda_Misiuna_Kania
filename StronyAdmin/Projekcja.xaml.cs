@@ -66,13 +66,13 @@ namespace Panel_Gościa.StronyAdmin
             MySqlConnection connect = new MySqlConnection(Getters.connectionString))
             {
                 connect.Open();
-                MySqlCommand command2 = new MySqlCommand($@"UPDATE badanie SET wyóżnione = 0 ", connect);
+                MySqlCommand command2 = new MySqlCommand($@"UPDATE badanie SET wyróżnione = 0 ", connect);
                 command2.ExecuteScalar();
 
                 if (!checkedBoxes.Any()) checkedBoxes.Add("Badanie Podstawowe");
                 foreach (var item in checkedBoxes)
                 {
-                    MySqlCommand command1 = new MySqlCommand($@"UPDATE badanie SET wyóżnione = 1 WHERE nazwabadania='{item}'", connect);
+                    MySqlCommand command1 = new MySqlCommand($@"UPDATE badanie SET wyróżnione = 1 WHERE nazwabadania='{item}'", connect);
                     command1.ExecuteScalar();
                 }
             }

@@ -39,12 +39,12 @@ namespace Panel_Gościa
             using (MySqlConnection connect = new MySqlConnection(Getters.connectionString)) {
                 connect.Open();
                 MySqlDataReader rdr;
-                MySqlCommand sizecommand = new MySqlCommand($@"SELECT count(*) FROM badanie WHERE wyóżnione = 1", connect);
+                MySqlCommand sizecommand = new MySqlCommand($@"SELECT count(*) FROM badanie WHERE wyróżnione = 1", connect);
                 size = Convert.ToInt32(sizecommand.ExecuteScalar());
                     sourceList = new List<string>();
                     namesList = new List<string>();//names
                     prizeList = new List<string>();//prizes
-                MySqlCommand source = new MySqlCommand($@"SELECT nazwabadania, cennik, zdjecie FROM badanie WHERE wyóżnione = 1", connect);
+                MySqlCommand source = new MySqlCommand($@"SELECT nazwabadania, cennik, zdjecie FROM badanie WHERE wyróżnione = 1", connect);
                 rdr = source.ExecuteReader();
                 while (rdr.Read())
                 {
