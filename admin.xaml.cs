@@ -34,7 +34,7 @@ namespace Panel_Gościa
         }
         ~admin()
         {
-            odswiez();
+            //odswiez();
         }
         private void btnProjekcja_Click(object sender, RoutedEventArgs e)
         {

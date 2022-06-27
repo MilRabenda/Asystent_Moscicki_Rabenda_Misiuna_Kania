@@ -72,6 +72,7 @@ namespace Panel_Gościa
             InitializeComponent();
             WypProjekcje();
             StronyAdmin.Projekcja.odswiez = WypProjekcje;
+            StronyAdmin.BadaniaEdycja.odswiez = WypProjekcje;
         }
 
 

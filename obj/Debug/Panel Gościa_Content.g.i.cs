@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("alergia.jpeg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/grpc.core.2.46.3/runtimes/win-x86/native/grpc_csharp_ext.x86.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/grpc.core.2.46.3/runtimes/win-x64/native/grpc_csharp_ext.x64.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/grpc.core.2.46.3/runtimes/linux-x64/native/libgrpc_csharp_ext.x64.so")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("packages/grpc.core.2.46.3/runtimes/osx-x64/native/libgrpc_csharp_ext.x64.dylib")]
 
 

@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.IO;
 namespace Panel_Gościa.StronyAdmin
 {
     /// <summary>
@@ -23,10 +23,15 @@ namespace Panel_Gościa.StronyAdmin
     /// </summary>
     public partial class BadaniaEdycja : Page
     {
+        public delegate void Refresh();
+        public static Refresh odswiez;
+        static string newSource;
+        static string oldSource;
         public BadaniaEdycja()
         {
             InitializeComponent();
             PrepareComponents();
+
         }
         
         public void PrepareComponents()
@@ -48,30 +53,23 @@ namespace Panel_Gościa.StronyAdmin
             }
             
         }
+
         private void btnWgrajZdjecie_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
-            op.Title = "Select a picture";
+            
+            op.Title = "Wybierz zdjęcie";
             op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
               "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
               "Portable Network Graphic (*.png)|*.png";
             if (op.ShowDialog() == true)
             {
+                newSource = System.IO.Path.GetFileName(op.FileName);
                 Image.Source = new BitmapImage(new Uri(op.FileName));
-                using (MySqlConnection connect = new MySqlConnection(Getters.connectionString))
-                {
-                    connect.Open();
-                    MySqlDataReader rdr;
-                    string s = cbBadania.SelectedItem.ToString();
-                    MySqlCommand names = new MySqlCommand($@"SELECT zdjecie FROM badanie WHERE nazwabadania='{s}'", connect);
-                    rdr = names.ExecuteReader();
-                    while (rdr.Read())
-                    {
-                        txtNazwa.Text = rdr.GetString(0);
-                    }
-                    connect.Close();
-                }
             }
+            else newSource =oldSource;
+
+
         }
 
         private void cbBadania_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -88,6 +86,7 @@ namespace Panel_Gościa.StronyAdmin
                 {
                     txtNazwa.Text=rdr.GetString(0);
                     txtCena.Text = rdr.GetString(1);
+                    oldSource = rdr.GetString(2);
                 }
                 connect.Close();
             }
@@ -102,11 +101,11 @@ namespace Panel_Gościa.StronyAdmin
                 string nazwa = txtNazwa.Text;
                 decimal cena = Convert.ToDecimal(txtCena.Text);
                 //string zdjecie = txtNazwa.Text;
-                MySqlCommand commnad = new MySqlCommand($@"UPDATE badanie SET nazwabadania='{nazwa}', cennik={cena} WHERE nazwabadania='{s}'", connect);
+                MySqlCommand commnad = new MySqlCommand($@"UPDATE badanie SET nazwabadania='{nazwa}', cennik={cena}, zdjecie='{newSource}' WHERE nazwabadania='{s}'", connect);
                 commnad.ExecuteScalar();
                 connect.Close();
             }
-
+            odswiez();
             PrepareComponents();
         }
     }
