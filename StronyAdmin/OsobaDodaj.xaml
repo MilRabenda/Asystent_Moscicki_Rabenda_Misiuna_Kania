@@ -9,15 +9,23 @@
       Title="OsobaDodaj">
 
     <Grid>
-        <TextBox x:Name="txtImie" HorizontalAlignment="Left" Height="23" Margin="49,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtNazwisko" HorizontalAlignment="Left" Height="23" Margin="245,38,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtAdres" HorizontalAlignment="Left" Height="23" Margin="49,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPesel" HorizontalAlignment="Left" Height="23" Margin="245,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtTelefon" HorizontalAlignment="Left" Height="23" Margin="49,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="245,170,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="106,237,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="195"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="146,280,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click"/>
-        <Label Content="Imi:" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtImie" HorizontalAlignment="Left" Height="23" Margin="49,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNazwisko" HorizontalAlignment="Left" Height="23" Margin="245,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAdres" HorizontalAlignment="Left" Height="23" Margin="49,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPesel" HorizontalAlignment="Left" Height="23" Margin="244,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtTelefon" HorizontalAlignment="Left" Height="23" Margin="245,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="49,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtHasło" HorizontalAlignment="Left" Height="23" Margin="16,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195"/>
+        <Button x:Name="btnDodajOsobe" Content="Dodaj nową osobę" HorizontalAlignment="Left" Margin="152,295,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click"/>
+        <Label Content="Imię:" HorizontalAlignment="Left" Margin="83,12,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Nazwisko:" HorizontalAlignment="Left" Margin="273,12,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Adres:" HorizontalAlignment="Left" Margin="83,66,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Pesel:" HorizontalAlignment="Left" Margin="272,61,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Telefon" HorizontalAlignment="Left" Margin="266,134,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Mail:" HorizontalAlignment="Left" Margin="83,139,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Hasło:" HorizontalAlignment="Left" Margin="83,209,0,0" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="cbRole" HorizontalAlignment="Left" Margin="245,235,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbRole_SelectionChanged"/>
+        <Label Content="Rola:" HorizontalAlignment="Left" Margin="284,209,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

@@ -69,8 +69,8 @@ namespace Panel_Gościa
             var strona = new StronyRecepcja.StronaEditKonta();
             strona.DoubleClick = editKonto;
             this.updateStr = strona.updateContent;
+            MessageBox.Show("I am here");
             updateStr(osobas);
-
             stronaWyswietlana.Content = strona;
 
         }
@@ -80,7 +80,6 @@ namespace Panel_Gościa
             var window = new StronyRecepcja.EditKontoWindow(s);
             window.ShowDialog();
             updateOsobas();
-
         }
 
         private void btn_Wyloguj_Click(object sender, RoutedEventArgs e)
@@ -142,7 +141,7 @@ namespace Panel_Gościa
                         bool inAct = reader.GetBoolean(8);
 
 
-                        if (inAct==false) lista.Add(new Osoba(id,n,i,a,p,m,t,h,inAct));
+                        if (inAct) lista.Add(new Osoba(id, n, i, a, p, m, t, h, inAct));
                     }
                 }
                 reader.Close();

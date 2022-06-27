@@ -20,6 +20,9 @@ namespace Panel_Gościa.StronyAdmin
     /// </summary>
     public partial class OsobaEdycja : Page
     {
+        public delegate void lbxDoubleClick(int ix);
+        public lbxDoubleClick DoubleClick;
+
         public OsobaEdycja()
         {
             InitializeComponent();
