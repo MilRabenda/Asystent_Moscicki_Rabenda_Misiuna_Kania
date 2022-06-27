@@ -9,15 +9,18 @@
       Title="BadaniaDodaj">
 
     <Grid>
-        <TextBox x:Name="txtNazwa" HorizontalAlignment="Left" Height="23" Margin="173,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtCena" HorizontalAlignment="Left" Height="23" Margin="330,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtNazwa" HorizontalAlignment="Left" Height="23" Margin="20,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtCena" HorizontalAlignment="Left" Height="23" Margin="211,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="56"/>
         <Button Content="Wgraj Zdjęcie" x:Name="btnWgrajZdjecie" HorizontalAlignment="Left" Margin="40,150,0,0" VerticalAlignment="Top" Width="89" Height="26" Click="btnWgrajZdjecie_Click"/>
         <Image x:Name="Image" HorizontalAlignment="Left" Height="138" Margin="173,84,0,0" VerticalAlignment="Top" Width="213"/>
-        <Label Content="Nowa Nazwa Badania:" HorizontalAlignment="Left" Margin="173,6,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Nowa cena:" HorizontalAlignment="Left" Margin="330,6,-40,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="zł" HorizontalAlignment="Left" Margin="391,32,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnEdytuj" Content="Edytuj" HorizontalAlignment="Left" Margin="163,310,0,0" VerticalAlignment="Top" Width="75" Click="btnEdytuj_Click"/>
-        <ComboBox x:Name="cbBadania" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="129" Height="23" SelectionChanged="cbBadania_SelectionChanged"/>
-        <Label Content="Wybierz Badanie" HorizontalAlignment="Left" Margin="24,6,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nazwa Badania:" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Cena:" HorizontalAlignment="Left" Margin="211,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="zł" HorizontalAlignment="Left" Margin="272,36,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnWstaw" Content="Wstaw Nowe Badanie" HorizontalAlignment="Left" Margin="112,74,0,0" VerticalAlignment="Top" Width="155"  Grid.Row="1" Click="btnWstaw_Click"/>
+        <CheckBox x:Name="checkbox" Content="Pokaż na stronie głównej" HorizontalAlignment="Left" Margin="115,27,0,0" VerticalAlignment="Top" Checked="checkbox_Checked" Grid.Row="1"/>
     </Grid>
 </Page>

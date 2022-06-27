@@ -39,30 +39,39 @@
             <Image Source="images/controls/right-arrow.png"  Stretch="Fill"/>
         </Button>
         <Button x:Name="btnLeft" HorizontalAlignment="Right"  Margin="0,110,5,200" Grid.Row="1" VerticalAlignment="Top" Grid.Column="0" Background="{x:Null}" BorderThickness="0" Click="btnLeft_Click" Width="25" Height="30">
-                            <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Cursor" Value="Hand"/>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"/>
                     <Setter Property="Opacity" Value="0.1"/>
                     <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
+                        <Trigger Property="IsMouseOver" Value="true">
                             <Setter Property="Opacity" Value="1.0"/>
                         </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
             <Image Source="images/controls/left-arrow.png"  Stretch="Fill"/>
         </Button>
         <Label x:Name="lblBaner" Content=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center"   VerticalAlignment="Bottom" FontFamily="Calibri Light" FontSize="15" FontStyle="Oblique" />
         <Button x:Name="btnPielegniarka" Content="Pielęgniarka" Grid.Column="3" HorizontalAlignment="Left" Margin="56,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnPielegniarka_Click"/>
         <Button x:Name="btnAdmin" Content="Admin" Grid.Column="3" HorizontalAlignment="Left" Margin="56,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
         <Image x:Name="ImageFrame" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"  Stretch="Fill" Height="250" Width="350" UseLayoutRounding="True" MouseLeftButtonDown="ImageFrame_Click"/>
-        
+
         <Label x:Name="lblName" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,110,0,110" FontSize="18" FontWeight="Bold" Foreground="Black">
             <Label.Background>
-                <SolidColorBrush Color="White" Opacity="0.7"></SolidColorBrush></Label.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"></SolidColorBrush>
+            </Label.Background>
         </Label>
 
-        <Label x:Name="lblPrize" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Width="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,110,50,110" FontSize="18" FontWeight="Bold" Foreground="Black">
+        <Label x:Name="lblPrize" Grid.Column="1" Grid.Row="1" Width="70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,0,110" FontSize="18" FontWeight="Bold" Foreground="Black" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.11"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
             <Label.Background>
                 <SolidColorBrush Color="White" Opacity="0.7"></SolidColorBrush>
             </Label.Background>
