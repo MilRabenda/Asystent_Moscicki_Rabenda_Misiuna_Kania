@@ -16,7 +16,6 @@ namespace Panel_Gościa
         public DateTime data { get; set; }
 
         public int idBadania { get; set; }
-        public decimal cena;
         public Wizyta(int iPa, int iPi, int idW, DateTime time, int idB)
         {
             idPacjenta = iPa;
@@ -25,16 +24,7 @@ namespace Panel_Gościa
             data = time;
             idBadania = idB;
         }
-        public Wizyta(int iPa, int iPi, int idW, DateTime time, int idB, decimal c)
-        {
-            idPacjenta = iPa;
-            idPielegniarki = iPi;
-            idWizyty = idW;
-            data = time;
-            idBadania = idB;
-            cena = c;
-        }
-
+        
         public override string ToString()
         {
             using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))

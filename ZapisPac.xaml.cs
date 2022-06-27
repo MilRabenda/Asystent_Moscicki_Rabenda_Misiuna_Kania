@@ -127,17 +127,10 @@ namespace Panel_Gościa
             using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
             {
                 
-                string dat = data + " " + czas;
-                DateTime ok = DateTime.Parse(dat);
-                MySqlCommand polecenie = new MySqlCommand($@"SELECT cena FROM badania where idbadania={idbadania} ", połączenie);
+                string jajebe = data + " " + czas;
+                DateTime ok = DateTime.Parse(jajebe);
+                MySqlCommand idpac = new MySqlCommand($@"INSERT INTO wizyta VALUES({id}, {idpielegniarki},{potrzebne+1}, '{ok.ToString("yyyy-MM-dd HH:mm:ss")}', {idbadania})", połączenie);
                 połączenie.Open();
-                MySqlDataReader okreader = polecenie.ExecuteReader();
-                decimal cen=0;
-                while(okreader.Read())
-                {
-                    cen = okreader.GetDecimal(0);
-                }
-                MySqlCommand idpac = new MySqlCommand($@"INSERT INTO wizyta VALUES({id}, {idpielegniarki},{potrzebne+1}, '{ok.ToString("yyyy-MM-dd HH:mm:ss")}', {idbadania}, {cen})", połączenie);
                 idpac.ExecuteNonQuery();
                 MySqlCommand sprawdz = new MySqlCommand($@"SELECT * FROM wizyta where datawizyty='{ok.ToString("yyyy-MM-dd HH:mm:ss")}'", połączenie);
                 MySqlDataReader reader = sprawdz.ExecuteReader();
