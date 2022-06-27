@@ -24,6 +24,7 @@ namespace Panel_Gościa.StronyAdmin
         public delegate void Refresh();
         public static Refresh odswiez;
         List<string> checkedBoxes = new List<string>();
+        List<int> listWyr = new List<int>();
         public Projekcja()
         {
 
@@ -38,12 +39,23 @@ namespace Panel_Gościa.StronyAdmin
                 for (int i = 1; i <= max; i++)
                 {
                     MySqlCommand commandName = new MySqlCommand($@"SELECT nazwabadania FROM badanie WHERE idbadania={i}", connect);
+                    MySqlCommand commandWyr = new MySqlCommand($@"SELECT wyróżnione FROM badanie WHERE idbadania={i}", connect);
+                    int w = Convert.ToInt32(commandWyr.ExecuteScalar());
+                    listWyr.Add(w);
                     string s = Convert.ToString(commandName.ExecuteScalar());
                     CheckBox checkBox = new CheckBox();
                     lbBadania.Items.Add(checkBox = new CheckBox());
                     checkBox.Content = s;
+                    if (listWyr[i-1]==1)
+                    {
+                        checkBox.IsChecked=true;
+                    }
                     checkBox.Checked += Checked;
                     checkBox.Unchecked += UnChecked;
+                    if (checkBox.IsChecked==true)
+                    {
+                        checkedBoxes.Add(s);
+                    }
                 }
                 connect.Close();
             }

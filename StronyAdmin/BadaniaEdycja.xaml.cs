@@ -25,18 +25,21 @@ namespace Panel_Gościa.StronyAdmin
     {
         public delegate void Refresh();
         public static Refresh odswiez;
-        static string newSource;
         static string oldSource;
+        static string newSource = oldSource;
+        static int i=0;
         public BadaniaEdycja()
         {
             InitializeComponent();
             PrepareComponents();
 
         }
-        
+        List<string> list;
         public void PrepareComponents()
         {
-            List<string> list;
+
+            //cbBadania.Items.Clear();
+          
             using (
            MySqlConnection connect = new MySqlConnection(Getters.connectionString))
             {
@@ -48,6 +51,7 @@ namespace Panel_Gościa.StronyAdmin
                 while (rdr.Read())
                 {
                     cbBadania.Items.Add(rdr.GetString(0));
+                    list.Add(rdr.GetString(0));
                 }
                 connect.Close();
             }
@@ -67,7 +71,7 @@ namespace Panel_Gościa.StronyAdmin
                 newSource = System.IO.Path.GetFileName(op.FileName);
                 Image.Source = new BitmapImage(new Uri(op.FileName));
             }
-            else newSource =oldSource;
+            else newSource = oldSource;
 
 
         }
@@ -79,6 +83,10 @@ namespace Panel_Gościa.StronyAdmin
             {
                 connect.Open();
                 MySqlDataReader rdr;
+                if (cbBadania.SelectedItem==null)
+                {
+                    cbBadania.SelectedItem=list[0];
+                }
                 string s=cbBadania.SelectedItem.ToString();
                 MySqlCommand names = new MySqlCommand($@"SELECT nazwabadania, cennik, zdjecie FROM badanie WHERE nazwabadania='{s}'", connect);
                 rdr = names.ExecuteReader();
@@ -91,7 +99,10 @@ namespace Panel_Gościa.StronyAdmin
                 connect.Close();
             }
         }
-
+        private void checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            i = 1;
+        }
         private void btnEdytuj_Click(object sender, RoutedEventArgs e)
         {
             using (MySqlConnection connect = new MySqlConnection(Getters.connectionString))
@@ -100,13 +111,41 @@ namespace Panel_Gościa.StronyAdmin
                 string s = cbBadania.SelectedItem.ToString();
                 string nazwa = txtNazwa.Text;
                 decimal cena = Convert.ToDecimal(txtCena.Text);
-                //string zdjecie = txtNazwa.Text;
-                MySqlCommand commnad = new MySqlCommand($@"UPDATE badanie SET nazwabadania='{nazwa}', cennik={cena}, zdjecie='{newSource}' WHERE nazwabadania='{s}'", connect);
+                if (newSource == null) newSource = oldSource;
+                MySqlCommand commnad = new MySqlCommand($@"UPDATE badanie SET nazwabadania='{nazwa}', cennik={cena}, zdjecie='{newSource}', wyróżnione={i} WHERE nazwabadania='{s}'", connect);
                 commnad.ExecuteScalar();
+                Image.Source = null;
+                checkbox.IsChecked = false;
+                oldSource = newSource;
+                newSource = null;
+                MySqlDataReader rdr;
+                MySqlCommand names = new MySqlCommand($@"SELECT nazwabadania, cennik, zdjecie FROM badanie WHERE nazwabadania='{s}'", connect);
+                rdr = names.ExecuteReader();
+                while (rdr.Read())
+                {
+                    oldSource = rdr.GetString(2);
+                }
                 connect.Close();
             }
             odswiez();
-            PrepareComponents();
+        }
+
+        private void btnUsuń_Click(object sender, RoutedEventArgs e)
+        {
+            using (MySqlConnection connect = new MySqlConnection(Getters.connectionString))
+            {
+                connect.Open();
+                string s = cbBadania.SelectedItem.ToString();
+                MySqlCommand commnad = new MySqlCommand($@"DELETE FROM badanie WHERE nazwabadania='{s}'", connect);
+                commnad.ExecuteScalar();
+                connect.Close();
+                txtCena.Text = "";
+                txtNazwa.Text = "";
+                checkbox.IsChecked = false;
+                Image.Source = null;
+                cbBadania.Items.Remove(s);
+            }
+            odswiez();
         }
     }
 }

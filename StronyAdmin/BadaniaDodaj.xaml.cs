@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DatabaseCommunication;
+using Microsoft.Win32;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,7 @@ namespace Panel_Gościa.StronyAdmin
     /// </summary>
     public partial class BadaniaDodaj : Page
     {
+        static int i = 0;
         public delegate void Refresh();
         public static Refresh odswiez;
         static string newSource;
@@ -28,41 +31,44 @@ namespace Panel_Gościa.StronyAdmin
         public BadaniaDodaj()
         {
             InitializeComponent();
-            PrepareComponents();
         }
-        public void PrepareComponents()
-        {
-           // List<string> list;
-           // using (
-           //MySqlConnection connect = new MySqlConnection(Getters.connectionString))
-           // {
-           //     connect.Open();
-           //     MySqlDataReader rdr;
-           //     list = new List<string>();
-           //     MySqlCommand names = new MySqlCommand($@"SELECT nazwabadania FROM badanie", connect);
-           //     rdr = names.ExecuteReader();
-           //     while (rdr.Read())
-           //     {
-           //         cbBadania.Items.Add(rdr.GetString(0));
-           //     }
-           //     connect.Close();
-           // }
 
-        }
 
         private void btnWgrajZdjecie_Click(object sender, RoutedEventArgs e)
         {
-
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Wybierz zdjęcie";
+            op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+              "Portable Network Graphic (*.png)|*.png";
+            if (op.ShowDialog() == true)
+            {
+                newSource = System.IO.Path.GetFileName(op.FileName);
+                Image.Source = new BitmapImage(new Uri(op.FileName));
+            }
+            else newSource = oldSource;
         }
 
-        private void btnEdytuj_Click(object sender, RoutedEventArgs e)
+        private void btnWstaw_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void cbBadania_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        using (MySqlConnection connect = new MySqlConnection(Getters.connectionString))
         {
-
+            connect.Open();
+  
+            string nazwa = txtNazwa.Text;
+            decimal cena = Convert.ToDecimal(txtCena.Text);
+            MySqlCommand commnad = new MySqlCommand($@"INSERT INTO badanie (nazwabadania, cennik, zdjecie, wyróżnione) VALUES ('{nazwa}', {cena}, '{newSource}', {i}) ", connect);
+            commnad.ExecuteScalar();
+            connect.Close();
         }
     }
+
+        private void checkbox_Checked(object sender, RoutedEventArgs e)
+        {
+            i = 1;
+        }
+    }
+
+
+    
 }

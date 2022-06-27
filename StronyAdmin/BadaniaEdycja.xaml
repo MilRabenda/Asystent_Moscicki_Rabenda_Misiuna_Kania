@@ -16,9 +16,11 @@
         <Label Content="Nowa Nazwa Badania:" HorizontalAlignment="Left" Margin="173,6,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Nowa cena:" HorizontalAlignment="Left" Margin="330,6,-40,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="zł" HorizontalAlignment="Left" Margin="391,32,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnEdytuj" Content="Edytuj" HorizontalAlignment="Left" Margin="163,310,0,0" VerticalAlignment="Top" Width="75" Click="btnEdytuj_Click"/>
+        <Button x:Name="btnEdytuj" Content="Zatwierdź Edycję" HorizontalAlignment="Left" Margin="247,304,0,0" VerticalAlignment="Top" Width="121" Click="btnEdytuj_Click"/>
         <ComboBox x:Name="cbBadania" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="129" Height="23" SelectionChanged="cbBadania_SelectionChanged"/>
         <Label Content="Wybierz Badanie" HorizontalAlignment="Left" Margin="24,6,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkbox" Content="Pokaż na stronie głównej" HorizontalAlignment="Left" Margin="127,235,0,0" VerticalAlignment="Top" Checked="checkbox_Checked"/>
+        <Button x:Name="btnUsuń" Content="Usuń badanie" HorizontalAlignment="Left" Margin="56,304,0,0" VerticalAlignment="Top" Width="104" Foreground="Red" FontWeight="Bold" Click="btnUsuń_Click"/>
 
     </Grid>
 </Page>
