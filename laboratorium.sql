@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: localhost    Database: laboratorium
+-- Host: 127.0.0.1    Database: nowy
 -- ------------------------------------------------------
--- Server version	8.0.29
+-- Server version	8.0.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,30 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `administracja`
+--
+
+DROP TABLE IF EXISTS `administracja`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `administracja` (
+  `idadmina` int unsigned NOT NULL AUTO_INCREMENT,
+  `idosoby` int NOT NULL,
+  PRIMARY KEY (`idadmina`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `administracja`
+--
+
+LOCK TABLES `administracja` WRITE;
+/*!40000 ALTER TABLE `administracja` DISABLE KEYS */;
+INSERT INTO `administracja` VALUES (1,21);
+/*!40000 ALTER TABLE `administracja` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `analityk`
@@ -53,8 +77,7 @@ CREATE TABLE `badanie` (
   `nazwabadania` varchar(100) DEFAULT NULL,
   `cennik` decimal(10,0) DEFAULT NULL,
   `zdjecie` varchar(45) DEFAULT NULL,
-  `wyóżnione` tinyint(1) DEFAULT NULL,
-  `badaniecol` varchar(45) DEFAULT NULL,
+  `wyróżnione` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`idbadania`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -65,7 +88,7 @@ CREATE TABLE `badanie` (
 
 LOCK TABLES `badanie` WRITE;
 /*!40000 ALTER TABLE `badanie` DISABLE KEYS */;
-INSERT INTO `badanie` VALUES (1,'Badanie Podstawowe',40,'podstawa.jpg',NULL,NULL),(2,'Badanie na Anemię',30,'anemia.jpg',NULL,NULL),(3,'Badanie Serca',60,'serce.jpg',NULL,NULL),(4,'Badanie na Alergię',44,'alergia.jpeg',NULL,NULL),(5,'Badanie na Cukrzycę',38,'cukrzyca.jpg',NULL,NULL),(6,'Badanie nerek',45,'nerki.jpg',NULL,NULL),(7,'Badanie na Reumatyzm',60,'reumatyzm.jpg',NULL,NULL),(8,'Badanie Tarczycy',68,'tarczyca.jpg',NULL,NULL),(9,'Badanie Wątroby',40,'watroba.jpg',NULL,NULL);
+INSERT INTO `badanie` VALUES (1,'Badanie Podstawowe',42,'podstawa.jpg',1),(2,'Badanie na Anemię',31,'anemia.jpg',1),(3,'Badanie Serca',45,'a2.jpg',1),(4,'Badanie na Alergię',33,'alergia.jpeg',0),(5,'Badanie na Cukrzycę',36,'cukrzyca.jpg',0),(6,'Badanie nerek',45,'nerki.jpg',0),(7,'Badanie na Reumatyzm',60,'reumatyzm.jpg',0),(8,'Badanie Tarczycy',68,'tarczyca.jpg',0),(9,'Badanie Wątroby',40,'watroba.jpg',0);
 /*!40000 ALTER TABLE `badanie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +110,7 @@ CREATE TABLE `osoba` (
   `haslo` varchar(200) DEFAULT NULL,
   `aktywne` tinyint(1) NOT NULL,
   PRIMARY KEY (`idosoby`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +119,7 @@ CREATE TABLE `osoba` (
 
 LOCK TABLES `osoba` WRITE;
 /*!40000 ALTER TABLE `osoba` DISABLE KEYS */;
-INSERT INTO `osoba` VALUES (1,'Kowalski','Michał','Słoneczna 58 Katowice','11111111111','michal@o2.pl','111111111','haslo',0),(2,'Nowak','Michał','Szeroka 3','12345678902','nowak123@gmail.com','222444888','nowak02',0),(3,'Wiśniewski ','Robert','Jagodowa 26','12345678903','wisniewskiRobert@wp.pl','333666999','wisniewski03',0),(4,'Wójcik ','Kajetan','Łokietka 11','12345678904','wojcik.official@gmail.com','444000111','wojcik04',0),(5,'Kowalczyk','Kamil','Katowicka 1','12345678905','kowalczyk.kam@wp.pl','333222111','kowalczyk05',0),(6,'Kamiński','Andrzej','Bytomska 13','12345678906','kaminski@o2.pl','999000222','kaminski06',0),(7,'Lewandowski','Lech','Warszawska 7','12345678907','lewy@wp.pl','555777333','lewandowski07',0),(8,'Zieliński ','Zenon','Głęboka 33','12345678908','zielinski@wp.pl','111000111','zielinski08',0),(9,'Szymański ','Szymon','Powstańców 5','12345678909','szymanski@gmail.com','222333000','szymanski09',0),(10,'Kubicki','Kuba','Kubowska 8','888000888','kubicki88@wp.pl','808888000','kubicki10',0),(11,'Dąbrowska ','Jolanta','Orkowa 32','12345678911','jd@wp.pl','131121111','dabrowska11',0),(12,'Scott','Micheal','Dunder Mifflin','12345678912','Scott@gmail.com','999999999','scott12',0),(13,'Lindemann','Till','TeilStraße','12345678913','Rammstein@gmail.com','669996969','lindemann13',0),(14,'Szcześniak','Filip','Marmurowa 515','12345678914','Taco@wp.pl','515202105','szczesniak14',0),(15,'Ketchum','Ash','Kanto 1','12345678915','CathThemAll@gmail.com','999999','ketchum15',0),(16,'Najman','Marcin','Częstochowska 0','12345678916','vip@o2.pl','10000100','najman16',0),(17,'Malinowski','Łukasz','Skramblowa 2','12345678917','Malin@gmail.com','251251251','malinowski17',0),(18,'Kwiatkowska ','Maria','Wiosenna','12345678918','Kwiatkowska@wp.pl','345345345','kwiatkowska18',0),(19,'Grabowska','Gabriela','Dworcowa','12345678919','Grabowska@gmail.com','223332211','grabowska19',0),(20,'Roche','Vernom','Mahakamska 2','12345678920','Roche@gmail.com','123230321','roche20',0);
+INSERT INTO `osoba` VALUES (1,'Kowalski','Michał','Słoneczna 58 Katowice','11111111111','michal@o2.pl','111111111','haslo',0),(2,'Nowak','Michał','Szeroka 3','12345678902','nowak123@gmail.com','222444888','nowak02',0),(3,'Wiśniewski ','Robert','Jagodowa 26','12345678903','wisniewskiRobert@wp.pl','333666999','wisniewski03',0),(4,'Wójcik ','Kajetan','Łokietka 11','12345678904','wojcik.official@gmail.com','444000111','wojcik04',0),(5,'Kowalczyk','Kamil','Katowicka 1','12345678905','kowalczyk.kam@wp.pl','333222111','kowalczyk05',0),(6,'Kamiński','Andrzej','Bytomska 15','12345678906','kaminski@o2.pl','999000222','kaminski06',0),(7,'Lewandowski','Lech','Warszawska 7','12345678907','lewy@wp.pl','555777333','lewandowski07',0),(8,'Zieliński ','Zenon','Głęboka 33','12345678908','zielinski@wp.pl','111000111','zielinski08',0),(9,'Szymański ','Szymon','Powstańców 5','12345678909','szymanski@gmail.com','222333000','szymanski09',0),(10,'Kubicki','Kuba','Kubowska 8','888000888','kubicki88@wp.pl','808888000','kubicki10',0),(11,'Dąbrowska ','Jolanta','Orkowa 32','12345678911','jd@wp.pl','131121111','dabrowska11',0),(12,'Scott','Micheal','Dunder Mifflin','12345678912','Scott@gmail.com','999999999','scott12',0),(13,'Lindemann','Till','TeilStraße','12345678913','Rammstein@gmail.com','669996969','lindemann13',0),(14,'Szcześniak','Filip','Marmurowa 515','12345678914','Taco@wp.pl','515202105','szczesniak14',0),(15,'Ketchum','Ash','Kanto 1','12345678915','CathThemAll@gmail.com','999999','ketchum15',0),(16,'Najman','Marcin','Częstochowska 0','12345678916','vip@o2.pl','10000100','najman16',0),(17,'Malinowski','Łukasz','Skramblowa 2','12345678917','Malin@gmail.com','251251251','malinowski17',0),(18,'Kwiatkowska ','Maria','Wiosenna','12345678918','Kwiatkowska@wp.pl','345345345','kwiatkowska18',0),(19,'Grabowska','Gabriela','Dworcowa','12345678919','Grabowska@gmail.com','223332211','grabowska19',0),(20,'Roche','Vernom','Mahakamska 2','12345678920','Roche@gmail.com','123230321','roche20',0),(21,'Administracyjny','Adam','Szefowska','222333111','admin@gmail.com','123456789','admin',1);
 /*!40000 ALTER TABLE `osoba` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -282,4 +305,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-21 22:51:16
+-- Dump completed on 2022-06-27 12:29:59
