@@ -63,7 +63,8 @@ namespace Panel_Gościa
                             {
                                 case "analityk":
                                     this.Close();
-                                    var f = new admin();
+                                    int idaa = Getters.getIdOsoby(txtLogin.Text);
+                                    var f = new PanelAnalityka(idaa);
                                     f.ShowDialog();
                                     break;
                                 case "personel recepcji":
