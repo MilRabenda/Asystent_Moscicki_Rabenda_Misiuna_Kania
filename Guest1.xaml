@@ -23,7 +23,6 @@
         </Grid.ColumnDefinitions>
 
         <Image x:Name="ImageBaner" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"  VerticalAlignment="Center"  Margin="0,0"/>
-        <Button x:Name="btn_test"  Content="Pacjent" Grid.Column="3" HorizontalAlignment="Left" Margin="56,284,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btn_test_Click"/>
         <Button x:Name="btnRight" HorizontalAlignment="Left" Margin="5,110,0,200" Grid.Row="1" VerticalAlignment="Top"  Grid.Column="2" Background="{x:Null}" BorderThickness="0" Click="btnRight_Click" Width="25" Height="30">
             <Button.Style>
                 <Style TargetType="Button">
@@ -53,8 +52,6 @@
             <Image Source="images/controls/left-arrow.png"  Stretch="Fill"/>
         </Button>
         <Label x:Name="lblBaner" Content=""  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center"   VerticalAlignment="Bottom" FontFamily="Calibri Light" FontSize="15" FontStyle="Oblique" />
-        <Button x:Name="btnPielegniarka" Content="Pielęgniarka" Grid.Column="3" HorizontalAlignment="Left" Margin="56,250,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnPielegniarka_Click"/>
-        <Button x:Name="btnAdmin" Content="Admin" Grid.Column="3" HorizontalAlignment="Left" Margin="56,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnAdmin_Click"/>
         <Image x:Name="ImageFrame" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top"  Stretch="Fill" Height="250" Width="350" UseLayoutRounding="True" MouseLeftButtonDown="ImageFrame_Click"/>
 
         <Label x:Name="lblName" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Width="300" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,110,0,110" FontSize="18" FontWeight="Bold" Foreground="Black">

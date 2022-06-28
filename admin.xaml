@@ -29,9 +29,9 @@
                 <TextBlock TextWrapping="Wrap" Text="Edytuj Osobe"/>
             </Button.Content>
         </Button>
-        <Button x:Name="btnKonto" Content="Konto" HorizontalAlignment="Left" Margin="394,0,0,0" VerticalAlignment="Bottom" Width="80" Height="80" Grid.Row="2" Click="btnKonto_Click"/>
+
         <Frame x:Name="AdminContent"  HorizontalAlignment="Left" Height="440" Grid.Row="1" VerticalAlignment="Top" Width="480
                " NavigationUIVisibility="Hidden" Margin="0,0,-6,0"/>
-        <Button x:Name="btnWyloguj" Content="Wyloguj" HorizontalAlignment="Left" Margin="394,430,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" Height="21" Click="btnWyloguj_Click"/>
+        <Button x:Name="btnWyloguj" Content="Wyloguj" HorizontalAlignment="Left" Margin="395,0,-6,0" Grid.Row="2" VerticalAlignment="Top" Width="85" Height="80" Click="btnWyloguj_Click"/>
     </Grid>
 </Window>

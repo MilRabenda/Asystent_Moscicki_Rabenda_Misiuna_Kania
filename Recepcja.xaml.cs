@@ -141,7 +141,7 @@ namespace Panel_Gościa
                         bool inAct = reader.GetBoolean(8);
 
 
-                        if (inAct) lista.Add(new Osoba(id, n, i, a, p, m, t, h, inAct));
+                        lista.Add(new Osoba(id, n, i, a, p, m, t, h, inAct));
                     }
                 }
                 reader.Close();
