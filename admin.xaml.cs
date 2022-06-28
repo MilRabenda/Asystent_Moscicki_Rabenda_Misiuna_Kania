@@ -131,5 +131,10 @@ namespace Panel_Gościa
                     this.Close();
                 }
         }
+
+        private void btnraporty_Click(object sender, RoutedEventArgs e)
+        {
+            AdminContent.Content = new StronyAdmin.Raporty();
+        }
     }
 }

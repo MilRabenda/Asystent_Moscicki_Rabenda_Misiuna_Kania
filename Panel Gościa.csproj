@@ -150,6 +150,9 @@
     <Compile Include="StronyAdmin\Projekcja.xaml.cs">
       <DependentUpon>Projekcja.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StronyAdmin\Raporty.xaml.cs">
+      <DependentUpon>Raporty.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StronyAdmin\ZmienSwojeDane.xaml.cs">
       <DependentUpon>ZmienSwojeDane.xaml</DependentUpon>
     </Compile>
@@ -265,6 +268,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StronyAdmin\Projekcja.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StronyAdmin\Raporty.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
