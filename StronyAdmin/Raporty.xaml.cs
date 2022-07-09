@@ -75,7 +75,8 @@ namespace Panel_Gościa.StronyAdmin
                 case 0:
                     foreach (Badania b in bad)
                     {
-                        sw.Write(b);
+                        sw.WriteLine(b.ToString());
+                       
                     }
 
                     sw.Close();
@@ -83,7 +84,7 @@ namespace Panel_Gościa.StronyAdmin
                 case 1:
                     foreach (Wizyta w in wizyty)
                     {
-                        sw.Write(w);
+                        sw.WriteLine(w.ToString());
                     }
                     sw.Close();
                     break;
@@ -99,16 +100,22 @@ namespace Panel_Gościa.StronyAdmin
             switch (index)
             {
                 case 0:
-                    ts = new TimeSpan(7, 0, 0);
+                    ts = new TimeSpan(7,0, 0, 0);
+                    xtime = DateTime.Now;
                     xtime = xtime - ts;
+                    MessageBox.Show(xtime.ToString());
                     break;
                 case 1:
-                    ts = new TimeSpan(30, 0, 0);
+                    ts = new TimeSpan(30,0, 0, 0);
+                    xtime = DateTime.Now;
                     xtime = xtime - ts;
+                    MessageBox.Show(xtime.ToString());
                     break;
                 case 2:
-                    ts = new TimeSpan(180,0,0);
+                    ts = new TimeSpan(180,0,0,0);
+                    xtime = DateTime.Now;
                     xtime = xtime - ts;
+                    MessageBox.Show(xtime.ToString());
                     break;                    
             }
         }
@@ -116,20 +123,22 @@ namespace Panel_Gościa.StronyAdmin
         private void cbxTyp_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             index_listy = cbxTyp.SelectedIndex;
-            wizyty.Clear();
-            using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
-            {
+            
+            
                 
                 switch (index_listy)
                 {
                     case 0:
-
+                    
+                    using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+                    {
                         MySqlCommand polecenie = new MySqlCommand($@"SELECT idbadania, count(*) as b from wizyta where datawizyty>'{xtime.ToString("yyyy-MM-dd HH:mm:ss")}' group by idbadania order by b DESC", połączenie);
                         połączenie.Open();
                         MySqlDataReader reader = polecenie.ExecuteReader();
-                        if(reader.HasRows)
+                        if (reader.HasRows)
                         {
-                            while(reader.Read())
+                            bad.Clear();
+                            while (reader.Read())
                             {
                                 var a = reader.GetInt32(0);
                                 var b = reader.GetInt32(1);
@@ -138,14 +147,18 @@ namespace Panel_Gościa.StronyAdmin
                             }
                         }
                         reader.Close();
+                    }
                         break;
                     case 1:
-
+                    
+                    using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
+                    {
                         MySqlCommand polecenie1 = new MySqlCommand($@"SELECT * FROM wizyta where datawizyty> '{xtime.ToString("yyyy-MM-dd HH:mm:ss")}'", połączenie);
                         połączenie.Open();
                         MySqlDataReader reader2 = polecenie1.ExecuteReader();
                         if (reader2.HasRows)
                         {
+                            wizyty.Clear();
                             while (reader2.Read())
                             {
                                 var f = reader2.GetInt32(0);
@@ -157,10 +170,12 @@ namespace Panel_Gościa.StronyAdmin
 
                                 Wizyta wiz = new Wizyta(f, g, h, i, j);
                                 wizyty.Add(wiz);
-                                
+
                             }
                         }
+
                         reader2.Close();
+                    }
                         break;
                 }
                
@@ -168,4 +183,4 @@ namespace Panel_Gościa.StronyAdmin
             }
         }
     }
-}
+
