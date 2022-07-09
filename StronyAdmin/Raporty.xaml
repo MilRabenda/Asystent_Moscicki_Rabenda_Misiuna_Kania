@@ -9,9 +9,9 @@
       Title="Raporty">
 
     <Grid Background="#FFD3E6F0">
-        <ComboBox x:Name="cbxTyp" HorizontalAlignment="Left" Margin="135,76,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.873,-0.946"/>
+        <ComboBox x:Name="cbxTyp" HorizontalAlignment="Left" Margin="135,76,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.873,-0.946" SelectionChanged="cbxTyp_SelectionChanged"/>
         <Button x:Name="btnGeneruj" Content="Generuj" HorizontalAlignment="Left" Margin="158,179,0,0" VerticalAlignment="Top" Width="75" Click="btnGeneruj_Click"/>
-        <ComboBox x:Name="cbxCzas" HorizontalAlignment="Left" Margin="135,123,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbxCzas" HorizontalAlignment="Left" Margin="135,123,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbxCzas_SelectionChanged"/>
 
     </Grid>
 </Page>

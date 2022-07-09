@@ -20,10 +20,35 @@ namespace Panel_Gościa.StronyAdmin
     /// <summary>
     /// Logika interakcji dla klasy Raporty.xaml
     /// </summary>
+    /// 
+
+    public class Badania
+    {
+        public int idBadania;
+        public string nazwaBadania;
+        public int liczbaWykon;
+
+        public Badania(int id, int lw)
+        {
+            idBadania = id;
+            liczbaWykon = lw;
+            nazwaBadania = Getters.getNazwaBadania(idBadania);
+        }
+
+        public override string ToString()
+        {
+            return nazwaBadania + " | " + liczbaWykon;
+        }
+
+    }
     public partial class Raporty : Page
     {
+        DateTime xtime = DateTime.Now;
+        List<Wizyta> wizyty = new List<Wizyta>();
+        List<Badania> bad = new List<Badania>();
         public Raporty()
         {
+            
             InitializeComponent();
             List<string> typy = new List<string>() { "Wykonane badania" };
             List<string> czas = new List<string>() { "ostatni tydzień", "ostatni miesiąc", "ostatnie pół roku" };
@@ -39,22 +64,59 @@ namespace Panel_Gościa.StronyAdmin
 
         private void btnGeneruj_Click(object sender, RoutedEventArgs e)
         {
+          
+
+        }
+
+        private void cbxCzas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = cbxCzas.SelectedIndex;
+            TimeSpan ts;
+            switch (index)
+            {
+                case 1:
+                    ts = new TimeSpan(7, 0, 0);
+                    xtime = xtime - ts;
+                    break;
+                case 2:
+                    ts = new TimeSpan(30, 0, 0);
+                    xtime = xtime - ts;
+                    break;
+                case 3:
+                    ts = new TimeSpan(180,0,0);
+                    xtime = xtime - ts;
+                    break;                    
+            }
+        }
+
+        private void cbxTyp_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = cbxTyp.SelectedIndex;
+            wizyty.Clear();
             using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
             {
-                //MySqlCommand polecenie1 = new MySqlCommand($@"SELECT  FROM pielegniarki where idpielegniarki={idPielegniarki}", połączenie);
-                //połączenie.Open();
-                //switch (cbxTyp)
-                //{
-                //    case 0:
-                //        {
-                //            switch (cbxCzas)
-                //            {
-                //                case 0:
+                MySqlCommand polecenie;
+                switch (index)
+                {
+                    case 1:
+                        bad.Clear();
+                        polecenie = new MySqlCommand($@"SELECT idbadania, count(*) as b from wizyta where datawizyty>'{xtime.ToString("yyyy-MM-dd HH:mm:ss")}' group by idbadania order by b DESC", połączenie);
+                        połączenie.Open();
+                        MySqlDataReader reader = polecenie.ExecuteReader();
+                        if(reader.HasRows)
+                        {
+                            while(reader.Read())
+                            {
+                                var a = reader.GetInt32(0);
+                                var b = reader.GetInt32(1);
+                                Badania ba = new Badania(a, b);
+                                bad.Add(ba);
+                            }
+                        }
+                        break;
+                }
+               
 
-                //            }
-                //            break;
-                //        }
-                //}
             }
         }
     }
