@@ -50,5 +50,10 @@ namespace Panel_Gościa
         {
             anFrame.Content = new StronaRaporty(idAnalityka);
         }
+
+        private void btn_Raport_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            anFrame.Content = new StronyAdmin.Raporty();
+        }
     }
 }

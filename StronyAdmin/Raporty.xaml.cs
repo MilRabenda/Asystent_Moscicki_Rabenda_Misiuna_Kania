@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using DatabaseCommunication;
+using System.IO;
 
 namespace Panel_Gościa.StronyAdmin
 {
@@ -46,11 +47,12 @@ namespace Panel_Gościa.StronyAdmin
         DateTime xtime = DateTime.Now;
         List<Wizyta> wizyty = new List<Wizyta>();
         List<Badania> bad = new List<Badania>();
+        int index_listy = 0;
         public Raporty()
         {
             
             InitializeComponent();
-            List<string> typy = new List<string>() { "Wykonane badania" };
+            List<string> typy = new List<string>() { "Najpopularniejsze badania", "Wizyty" };
             List<string> czas = new List<string>() { "ostatni tydzień", "ostatni miesiąc", "ostatnie pół roku" };
             foreach(string x in czas)
             {
@@ -64,6 +66,28 @@ namespace Panel_Gościa.StronyAdmin
 
         private void btnGeneruj_Click(object sender, RoutedEventArgs e)
         {
+
+
+            FileStream fs = new FileStream("plik.txt", FileMode.Create, FileAccess.ReadWrite);
+           StreamWriter sw = new StreamWriter(fs);
+            switch (index_listy)
+            {
+                case 0:
+                    foreach (Badania b in bad)
+                    {
+                        sw.Write(b);
+                    }
+
+                    sw.Close();
+                    break;
+                case 1:
+                    foreach (Wizyta w in wizyty)
+                    {
+                        sw.Write(w);
+                    }
+                    sw.Close();
+                    break;
+            }
           
 
         }
@@ -74,15 +98,15 @@ namespace Panel_Gościa.StronyAdmin
             TimeSpan ts;
             switch (index)
             {
-                case 1:
+                case 0:
                     ts = new TimeSpan(7, 0, 0);
                     xtime = xtime - ts;
                     break;
-                case 2:
+                case 1:
                     ts = new TimeSpan(30, 0, 0);
                     xtime = xtime - ts;
                     break;
-                case 3:
+                case 2:
                     ts = new TimeSpan(180,0,0);
                     xtime = xtime - ts;
                     break;                    
@@ -91,16 +115,16 @@ namespace Panel_Gościa.StronyAdmin
 
         private void cbxTyp_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int index = cbxTyp.SelectedIndex;
+            index_listy = cbxTyp.SelectedIndex;
             wizyty.Clear();
             using (MySqlConnection połączenie = new MySqlConnection(Getters.connectionString))
             {
-                MySqlCommand polecenie;
-                switch (index)
+                
+                switch (index_listy)
                 {
-                    case 1:
-                        bad.Clear();
-                        polecenie = new MySqlCommand($@"SELECT idbadania, count(*) as b from wizyta where datawizyty>'{xtime.ToString("yyyy-MM-dd HH:mm:ss")}' group by idbadania order by b DESC", połączenie);
+                    case 0:
+
+                        MySqlCommand polecenie = new MySqlCommand($@"SELECT idbadania, count(*) as b from wizyta where datawizyty>'{xtime.ToString("yyyy-MM-dd HH:mm:ss")}' group by idbadania order by b DESC", połączenie);
                         połączenie.Open();
                         MySqlDataReader reader = polecenie.ExecuteReader();
                         if(reader.HasRows)
@@ -113,6 +137,30 @@ namespace Panel_Gościa.StronyAdmin
                                 bad.Add(ba);
                             }
                         }
+                        reader.Close();
+                        break;
+                    case 1:
+
+                        MySqlCommand polecenie1 = new MySqlCommand($@"SELECT * FROM wizyta where datawizyty> '{xtime.ToString("yyyy-MM-dd HH:mm:ss")}'", połączenie);
+                        połączenie.Open();
+                        MySqlDataReader reader2 = polecenie1.ExecuteReader();
+                        if (reader2.HasRows)
+                        {
+                            while (reader2.Read())
+                            {
+                                var f = reader2.GetInt32(0);
+                                var g = reader2.GetInt32(1);
+                                var h = reader2.GetInt32(2);
+                                var i = reader2.GetDateTime(3);
+                                var j = reader2.GetInt32(4);
+                                var k = reader2.GetDecimal(5);
+
+                                Wizyta wiz = new Wizyta(f, g, h, i, j);
+                                wizyty.Add(wiz);
+                                
+                            }
+                        }
+                        reader2.Close();
                         break;
                 }
                

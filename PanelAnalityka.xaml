@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Panel_Gościa"
         mc:Ignorable="d"
         Title="Analityk" Height="500" Width="410" ResizeMode="NoResize" >
-    
+
     <Grid>
         <Grid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="392" Background="#e1f5fe">
             <Label x:Name="lbl_Witaj"  HorizontalAlignment="Center" Margin="10" VerticalAlignment="Center" Width="372" Height="30"/>
@@ -16,10 +16,9 @@
                 <ColumnDefinition Width="131*"/>
                 <ColumnDefinition Width="273*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btn_Raport" Content="Raporty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Click="btn_ZapiszWizytę_Click" Grid.Column="1" Margin="10,0,0,0">
+            <Button x:Name="btn_Raport" Content="Wyniki&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Click="btn_ZapiszWizytę_Click" Margin="104,0,0,0" Grid.ColumnSpan="2"/>
+            <Button x:Name="btn_Raport_Copy" Content="Raporty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="100" Grid.Column="1" Margin="73,0,0,0" Click="btn_Raport_Copy_Click"/>
 
-            </Button>
-            
         </Grid>
         <Frame  x:Name="anFrame"   NavigationUIVisibility="Hidden" HorizontalAlignment="Left" Height="321" Margin="0,50,-6,0" VerticalAlignment="Top" Width="410"/>
     </Grid>
